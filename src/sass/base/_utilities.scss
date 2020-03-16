@@ -1,0 +1,24 @@
+.header-small{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+// .margin-bottom-small{
+//     margin-bottom: 1.5rem;
+// }
+
+
+.input-default{
+    color:$default-font-color;
+    font-size: 2.5rem;
+    font-weight: 400;
+    border-radius:0.2rem;
+    border: 0.1rem solid $form-input-color;
+    padding: 1.5rem 0rem 1.5rem 1rem;
+    width: 100%; //https://stackoverflow.com/questions/11716330/how-to-expand-input-field-to-100-of-the-parent
+    -webkit-appearance: none;
+    margin-bottom: 2rem;
+
+}

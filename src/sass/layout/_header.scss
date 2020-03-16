@@ -2,7 +2,7 @@
     grid-row: [header-start] / [header-end];
     background-color:red;
     //background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../layout/sass/img/hong-kong.jpg);
-    background-image: url(../../img/hong-kong.jpg);
+    background-image: url(../../img/hong-kong.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
     background-size: cover;
     background-position: center;
 
@@ -12,4 +12,28 @@
     grid-template-columns: 10rem 27vw 1fr;
 
 
+}
+
+.header__caption{
+    grid-column: 1/-1;
+
+    color: white;
+    font-weight: 600;
+    line-height: 1.7;
+    font-size: 1.8rem;
+    text-align: right;
+
+    justify-self: end; ///https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self
+    padding-right: 2.5rem;
+
+    margin-top: 5rem;
+
+  
+}
+
+.header__caption:hover{
+    //https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-thickness
+    text-decoration: underline;
+    //text-decoration: underline solid blue 1px;
+    
 }

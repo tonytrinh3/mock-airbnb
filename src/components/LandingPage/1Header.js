@@ -9,6 +9,7 @@ const Header=()=>{
             <Navigation/>
             <Forms/>
 
+            <div className="header__caption">Over 300 unique places <br/> to stay in Hong Kong</div>
 
 
         </header>

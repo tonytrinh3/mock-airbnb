@@ -1,0 +1,14 @@
+.button{
+    background-color:$airbnb-default-color;
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.button:active{
+    //https://codepen.io/baudoin/pen/HdliD
+    background-color: darken($airbnb-default-color,10%);
+    // border: 1rem solid black;
+
+    // transform-origin: 20% 40%;
+}

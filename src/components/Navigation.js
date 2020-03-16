@@ -6,7 +6,7 @@ const Navigation=()=>{
         <nav className="navigation">
             <div className = "nav__item nav__item--1">
                 {/* <img className = "nav__item--1__img" src={airbnb_logo} alt="airbnb_logo"/> */}
-                Airbnb
+                Airbnb Logo
             </div>
             <div className = "nav__item nav__item--2">English (US)</div>
             <div className = "nav__item nav__item--3">USD</div>
