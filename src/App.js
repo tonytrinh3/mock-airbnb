@@ -1,11 +1,11 @@
 import React from 'react';
 import LandingPage from './components/LandingPage/LandingPage';
+import './sass/main.scss';
 
 class App extends React.Component{
   render(){
     return(
-      <div className="hi">
-        hi
+      <div className="container">
         <LandingPage/>
       </div>
     )

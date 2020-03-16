@@ -1,10 +1,17 @@
 import React from 'react';
+import Navigation from '../Navigation';
+import Forms from '../Forms';
 
 const Header=()=>{
     return (
-        <div className="Header">
-            Header
-        </div>
+        <header className="header">
+         
+            <Navigation/>
+            <Forms/>
+
+
+
+        </header>
     )
 };
 
