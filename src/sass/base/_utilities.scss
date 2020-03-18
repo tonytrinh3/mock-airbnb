@@ -12,8 +12,11 @@
 .header-big{
     font-weight: 600;
     font-size: 3.5rem;
+}
 
-
+.header-big-sub{
+    font-weight: 400;
+    font-size: 2.5rem;
 }
 
 .header-medium{
@@ -23,8 +26,14 @@
 
 
 .margin-bottom-medium{
-    margin-bottom:3rem;
+    margin-bottom:1rem;
 }
+
+.margin-bottom-large{
+    margin-bottom:4rem;
+}
+
+
 
 .input-default{
     color:$default-font-color;
@@ -37,5 +46,9 @@
     -webkit-appearance: none;
     margin-bottom: 2rem;
 
+}
+
+.section-margin{
+    margin: 5rem 7rem 5rem 7rem;
 }
 

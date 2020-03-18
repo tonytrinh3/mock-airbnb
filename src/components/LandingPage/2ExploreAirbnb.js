@@ -5,7 +5,7 @@ import stays from '../../img/landing-page/stays-image.jpg';
 
 const ExploreAirbnb=()=>{
     return (
-        <div className="explore-airbnb">
+        <div className="explore-airbnb section-margin">
             <h2 className="explore-airbnb__header header-big">
                 Explore Airbnb
             </h2>
