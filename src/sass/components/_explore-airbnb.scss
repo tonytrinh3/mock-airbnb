@@ -1,0 +1,50 @@
+.explore-airbnb{
+    margin: 3rem;
+}
+
+
+.explore-airbnb__cards{
+    display:grid;
+
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    
+    margin-top: 2rem;
+}
+
+
+.explore-airbnb__card{
+    border-radius: 2rem;
+    box-shadow: $default-box-shadow;
+    height: 14rem;
+
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+
+    &--1{
+        grid-column:1;
+        
+    }
+    &--2{
+        grid-column:2;
+    }
+    &--3{
+        grid-column:3;
+    }
+}
+
+.explore-airbnb__card__picture{
+    grid-column: 1;
+  
+    border-radius: 2rem 0 0 2rem;
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+
+}
+
+.explore-airbnb__card__caption{
+    grid-column: 2;
+    align-self:center;
+    margin: 3rem
+}
