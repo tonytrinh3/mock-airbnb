@@ -33,6 +33,11 @@
     margin-bottom:4rem;
 }
 
+.rating-font{
+    font-size:$default-font-rating-size;
+    font-weight:500;
+}
+
 
 
 .input-default{
@@ -52,3 +57,7 @@
     margin: 5rem 7rem 5rem 7rem;
 }
 
+.continue-link{
+    font-weight: 600;
+    text-decoration: underline;
+}

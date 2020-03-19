@@ -1,0 +1,35 @@
+.adventure-card{
+    display: grid;
+
+    &__picture{
+        border-radius:$picture-border-radius-medium;
+        margin-bottom: 2rem;
+    };
+
+    &__header{
+        font-size:$default-card-country-header-size;
+       font-weight: 600;
+
+    };
+
+    &__description{
+
+    }
+
+    &__pricing{
+
+        margin-bottom: .5rem;
+    }
+
+    &__rating{
+ 
+
+    }
+
+    &__continue_link{
+
+    }
+
+}
+
+

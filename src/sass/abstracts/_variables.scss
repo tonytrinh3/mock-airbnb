@@ -1,5 +1,14 @@
 //font
-$default-font-size: 1.6rem;
+$default-font-size: 2.5rem;
+
+$default-card-country-header-size: 2rem;
+
+$default-font-rating-size: 2.3rem;
+
+
+
+
+
 
 //color
 $default-font-color:rgba(72, 72, 72, 1);
@@ -14,9 +23,18 @@ $nav-font-color: white;
 
 $form-input-color: rgba(118, 118, 118, .5);
 
+//shadow
 /* offset-x | offset-y | blur-radius | spread-radius | color */
 //https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
 //https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_box-shadow
 $default-box-shadow: 0rem 0rem 2rem .1rem rgba(72, 72, 72, .4); 
 
 
+
+//border
+$picture-border-radius-small: 1rem;
+
+$picture-border-radius-medium:1.5rem;
+
+
+$picture-border-radius-large:2rem;

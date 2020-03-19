@@ -20,7 +20,7 @@
     grid-row: 3;
     background-color: orange;
     background-image: url('../../img/landing-page/airbnb-plus2.jpg');
-    border-radius: 1rem;
+    border-radius: $picture-border-radius-small;
 
     background-size: cover;
     background-position: center;
