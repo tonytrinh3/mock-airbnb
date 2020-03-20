@@ -1,17 +1,19 @@
 import React from 'react';
 
 
-
-const AdventureCard=(props)=>{
+//props.picture but you can do this due to destructuring
+const AdventureCard=({picture,header,description,pricing,rating})=>{
     return (
         <div className="adventure-card">
-            <img src={props.picture} alt="" className="adventure-card__picture"/>
-            <h3 className="adventure-card__header margin-bottom-medium">CANADA</h3>
-            <div className="adventure-card__description margin-bottom-medium">Bioluminescent Overnight Yachtstay</div>
-            <div className="adventure-card__pricing margin-bottom-medium">From $150/person · 2 days </div>
-            <div className="adventure-card__rating rating-font">4.76 (55) </div>
+            <img src={picture} alt="" className="adventure-card__picture"/>
+            <h3 className="adventure-card__header margin-bottom-medium">{header}</h3>
+            <div className="adventure-card__description margin-bottom-medium">{description}</div>
+            <div className="adventure-card__pricing margin-bottom-medium">{pricing}</div>
+            <div className="adventure-card__rating rating-font">{rating} </div>
         </div>
     )
 };
 
 export default AdventureCard;
+
+
