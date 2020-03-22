@@ -1,0 +1,54 @@
+.places-card{
+
+
+    display:grid;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(4,1fr);
+    
+    &__picture{
+        grid-column: 1/-1;
+        border-radius: $picture-border-radius-small;
+        width: 100%;
+    }
+
+    &__superhost{
+        grid-column: 1/2;
+        border: solid 0.2rem black;
+        border-radius: .6rem;
+        color: black;
+        font-size: 2rem;
+        font-weight: 600;
+        padding: .2rem .6rem .2rem .6rem;
+        text-transform: uppercase;
+        align-self:center;
+
+    }
+
+    &__country{
+        grid-column: 2/3;
+        margin-left: 1rem;
+        font-size: 2.2rem;
+        color:$airbnb-button-press-color;
+        font-weight: 500;
+        align-self:center;
+    }
+
+    &__rating{
+        grid-column: 4/-1;
+        text-align: end;
+        align-self:center;
+    }
+
+
+
+    &__description{
+        grid-column: 1/-1;
+        width: 100%;
+    }
+
+    &__pricing{
+        grid-column: 1/-1;
+        width: 100%;
+    }
+}
+

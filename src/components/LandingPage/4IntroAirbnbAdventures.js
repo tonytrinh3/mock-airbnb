@@ -43,7 +43,7 @@ const countries = [
         description: "Food & Faith in Southwestern India",
         picture: india,
         pricing: "From $5,225/person · 10 days",
-        rating:"4.90 (80)"
+        rating: `4.90 (80)`
     },
 
 ]
@@ -61,6 +61,7 @@ const renderAdventureCard = countries.map(country=>{
         description = {country.description}
         pricing = {country.pricing} 
         rating = {country.rating}
+        key = {country.header} 
         />
 });
 
