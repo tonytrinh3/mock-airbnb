@@ -1,0 +1,9 @@
+.stay-superhost{
+
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        grid-column-gap:$default-grid-column-gap;
+    }
+}

@@ -81,3 +81,15 @@
     font-weight: 600;
     text-decoration: underline;
 }
+
+.superhost-tag{
+    grid-column: 1/2;
+    border: solid 0.2rem black;
+    border-radius: .6rem;
+    color: black;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: .2rem .6rem .2rem .6rem;
+    text-transform: uppercase;
+    align-self:center;
+}
