@@ -47,7 +47,7 @@ const tile = (tile_state,tile_pricing) => {
     return (
     <div className="popular-destination-US__tile">
         <div className="popular-destination-US__tile__state margin-bottom-small">{tile_state}</div>
-        <div className="popular-destination-US__tile__pricing margin-bottom-large">{tile_pricing}/night average</div>
+        <div className="popular-destination-US__tile__pricing text-sub margin-bottom-large">{tile_pricing}/night average</div>
     </div>
     );
 };

@@ -1,0 +1,7 @@
+.featured-airbnb-plus{
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-column-gap: $default-grid-column-gap;
+    }
+}
