@@ -46,7 +46,12 @@
     &__description{
         grid-column: 1/-1;
         width: 100%;
+     
+        //https://css-tricks.com/almanac/properties/t/text-overflow/
+        text-overflow: ellipsis;
+
         white-space: nowrap;
+        overflow: hidden;
     }
 
     &__pricing{

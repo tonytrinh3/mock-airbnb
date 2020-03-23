@@ -11,7 +11,7 @@ const states = [
     },
     {
         state:"New York",
-        pricing:"$213"
+        pricing:"$159"
     },
     {
         state:"Seattle",
