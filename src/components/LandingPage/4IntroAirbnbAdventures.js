@@ -11,35 +11,35 @@ import AdventureCard from '../AdventureCard';
 
 const countries = [
     {
-        header: "Canada",
+        country: "Canada",
         description: "Bioluminescent Overnight Yachtstay",
         picture: canada,
         pricing: "From $150/person · 2 days",
         rating:"4.76 (55)"
     },
     {
-        header: "Russian Federation",
+        country: "Russian Federation",
         description: "Окунитесь в настоящую сельскую жизнь",
         picture: russia,
         pricing: "From $88/person · 2 days",
         rating:"4.50 (67)"
     },
     {
-        header: "United States",
+        country: "United States",
         description: "Up North: Kayaking, Glamping, and FUN",
         picture: us,
         pricing: "From $365/person · 3 days",
         rating:"4.80 (452)"
     },
     {
-        header: "Madagascar",
+        country: "Madagascar",
         description: "Nature Photography in Madagascar",
         picture: madagascar,
         pricing: "From $7,310/person · 14 days",
         rating:"4.88 (49)"
     },
     {
-        header: "India",
+        country: "India",
         description: "Food & Faith in Southwestern India",
         picture: india,
         pricing: "From $5,225/person · 10 days",
@@ -54,14 +54,14 @@ const countries = [
 //     })
 // };
 
-const renderAdventureCard = countries.map(country=>{
+const renderAdventureCard = countries.map(xcountry=>{
         return <AdventureCard 
-        picture = {country.picture} 
-        header = {country.header} 
-        description = {country.description}
-        pricing = {country.pricing} 
-        rating = {country.rating}
-        key = {country.header} 
+        country = {xcountry.country}
+        description = {xcountry.description}
+        picture = {xcountry.picture} 
+        pricing = {xcountry.pricing} 
+        rating = {xcountry.rating}
+        key = {xcountry.country} 
         />
 });
 

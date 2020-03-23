@@ -28,9 +28,11 @@
         grid-column: 2/3;
         margin-left: 1rem;
         font-size: 2.2rem;
-        color:$airbnb-button-press-color;
+        color:$airbnb-default-color-light-grey;
         font-weight: 500;
         align-self:center;
+        width: 100%;
+        white-space: nowrap;
     }
 
     &__rating{
@@ -44,6 +46,7 @@
     &__description{
         grid-column: 1/-1;
         width: 100%;
+        white-space: nowrap;
     }
 
     &__pricing{
