@@ -1,0 +1,24 @@
+.booking-page {
+    display: grid;
+
+    // grid-template-columns:[pile-start-column] minmax(22.6rem,1fr) 
+    // [pile-end-column play-area-start-column] minmax(50vw,2fr)
+    // [play-area-end-column deck-start-column] minmax(22.6rem,1fr)  [deck-end-column];
+
+    grid-template-rows: 
+  
+    repeat(9,min-content) 
+    // this is for (1) explore airbnb,
+    // (2)airbnb plus explore
+    // (3) intro airbnbn adventures
+    // (4) places stay around world
+    // (5) popular destination us
+    // (6) featured airbnb plus
+    // (7) stay superhost
+    // (8) that next and prev button
+    // (9) footer
+    ;
+
+    color: $default-landing-page-color;
+
+}
