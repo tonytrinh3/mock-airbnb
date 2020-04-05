@@ -1,5 +1,6 @@
 import React from 'react';
 import airbnb_logo from "../img/airbnb-logo.png";
+import GoogleAuth from "./GoogleAuth";
 
 const Navigation=()=>{
     return (
@@ -8,6 +9,7 @@ const Navigation=()=>{
                 {/* <img className = "nav__item--1__img" src={airbnb_logo} alt="airbnb_logo"/> */}
                 Airbnb Logo
             </div>
+            <GoogleAuth />
             <div className = "nav__item nav__item--2">English (US)</div>
             <div className = "nav__item nav__item--3">USD</div>
             <div className = "nav__item nav__item--4">Host a home</div>
