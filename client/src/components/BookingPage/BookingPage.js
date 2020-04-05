@@ -16,7 +16,6 @@ import Footer from '../Footer';
 const BookingPage = () =>{
     return(
         <div className="booking-page">
-            
             <Navigation/>
             <PictureHeader/>
             <BookingCard/>
