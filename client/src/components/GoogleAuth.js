@@ -33,11 +33,12 @@ class GoogleAuth extends React.Component{
     }
 
     //you are doing this in order for the text to change every time you sign in and out
-    onAuthChange = (isSignedIn)=>{
+    onAuthChange = (isSignedInnn)=>{
         // this.setState({isSignedIn: this.auth.isSignedIn.get() });
 
-        if (isSignedIn){
-            this.props.signIn();
+        if (isSignedInnn){
+            //what is passed in here is the id you get from google api
+            this.props.signIn(this.auth.currentUser.get().getId());
         } else {
             this.props.signOut();
         }
@@ -56,9 +57,9 @@ class GoogleAuth extends React.Component{
 
     //this is just rendering logic
     renderAuthButton(){
-        if(this.props.isSignedIn === null){
+        if(this.props.isSignedInM === null){
             return null;
-        } else if (this.props.isSignedIn){
+        } else if (this.props.isSignedInM){
             return <button onClick = {this.onSignOutClick} className="google-auth-button">Sign Out</button>;
         } else {
             return <button onClick = {this.onSignInClick} className="google-auth-button">Sign In with Google</button>;
@@ -72,9 +73,10 @@ class GoogleAuth extends React.Component{
     }
 }
 
+//this state is the state that you have in authReducer.js
 const mapStateToProps = (state) =>{
     console.log(state);
-    return {isSignedIn:state.auth.isSignedIn};
+    return {isSignedInM: state.authy.isSignedInssss};
 }
 
 export default connect(
