@@ -74,8 +74,9 @@ class GoogleAuth extends React.Component{
 }
 
 //this state is the state that you have in authReducer.js
+//you call mapstatetoprops when you want to access the state through the redux store 
 const mapStateToProps = (state) =>{
-    console.log(state);
+    // console.log(state);
     return {isSignedInM: state.authy.isSignedInssss};
 }
 
