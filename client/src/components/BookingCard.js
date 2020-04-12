@@ -19,7 +19,7 @@ class BookingCard extends React.Component{
     renderInput=(formProps)=>{
         // console.log(formProps);
         // return <input onChange = {formProps.input.onChange} value = {formProps.input.value}/>;
-        console.log(formProps.meta)
+        //console.log(formProps.meta)
         return(
             <div className="aerwf">
               
@@ -45,7 +45,7 @@ class BookingCard extends React.Component{
     onSubmit=(formValues)=>{
         //prevent broswer to refresh when you submit
         // event.preventDefault();
-        console.log(formValues);
+        //console.log(formValues);
         // const testing = {
         //     tony: 1,
         //     tonyss: 2
@@ -58,7 +58,7 @@ class BookingCard extends React.Component{
 
     render(){
         //this.props is from reduxform
-        console.log(this.props);
+        //console.log(this.props);
         return( 
             <div className="awef">
          <form onSubmit={this.props.handleSubmit(this.onSubmit)}>

@@ -87,7 +87,7 @@ const renderPlacesCard = countries.map(xcountry =>{
     pricing = {xcountry.pricing} 
     rating = {xcountry.rating}
     superhost = {xcountry.superhost}
-    key = {xcountry.country} 
+    key = {xcountry.description} 
     />
 })
 

@@ -43,11 +43,11 @@ const states = [
     },
 ];
 
-const tile = (tile_state,tile_pricing) => {
+const tile = (states) => {
     return (
-    <div className="popular-destination-US__tile">
-        <div className="popular-destination-US__tile__state margin-bottom-small">{tile_state}</div>
-        <div className="popular-destination-US__tile__pricing text-sub margin-bottom-large">{tile_pricing}/night average</div>
+    <div className="popular-destination-US__tile" key= {states.state}>
+        <div className="popular-destination-US__tile__state margin-bottom-small">{states.state}</div>
+        <div className="popular-destination-US__tile__pricing text-sub margin-bottom-large">{states.pricing}/night average</div>
     </div>
     );
 };
@@ -55,7 +55,7 @@ const tile = (tile_state,tile_pricing) => {
 
 
 const renderTile = states.map(xstate =>{
-    return tile(xstate.state, xstate.pricing);
+    return tile(xstate);
 })
 
 

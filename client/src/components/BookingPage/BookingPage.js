@@ -12,8 +12,7 @@ import Cancellations from './Cancellations';
 import ExploreOptions from './ExploreOptions';
 import Footer from '../Footer';
 
-import { connect } from 'react-redux';
-import {createStream} from '../../actions';
+
 
 
 
