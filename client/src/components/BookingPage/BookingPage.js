@@ -12,6 +12,8 @@ import Cancellations from './Cancellations';
 import ExploreOptions from './ExploreOptions';
 import Footer from '../Footer';
 
+import {connect} from 'react-redux';
+
 
 
 
@@ -38,4 +40,11 @@ class BookingPage extends React.Component{
 
 };
 
-export default BookingPage;
+const mapStateToProps = (state,ownProps) =>{
+    console.log(ownProps);
+    return{
+        state
+    }
+}
+
+export default connect(mapStateToProps)(BookingPage);
