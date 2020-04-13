@@ -1,9 +1,8 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
-import { connect } from 'react-redux';
-import {createBooking} from "../actions";
 
-class BookingCard extends React.Component{
+
+class BookingForm extends React.Component{
 
     renderError(error,touched){
         if(error && touched){
@@ -52,7 +51,7 @@ class BookingCard extends React.Component{
         // }
         //so basically when you pass something through the actions - that gets posted in the db.json... - you can click a button to trigger the function or even have the function run when you load the sheet 
         // this.props.createBooking(testing);
-        this.props.createBooking(formValues);
+        this.props.onSubmit(formValues);
     }
 
 
@@ -90,31 +89,9 @@ const validate = (formValues) =>{
 }
 
 
-const formWrapped = reduxForm({
-    form: "BookingCard",
+export default reduxForm({
+    form: "BookingForm",
     validate: validate
-})(BookingCard);
-
-//state has all the state in the store
-const mapStateToProps = (state) =>{
-    console.log(state);
-    return {something: state}
-}
-
-export default connect(mapStateToProps,{createBooking})(formWrapped);
-
-// export default connect(mapStateToProps,{createBooking})(BookingCard);
+})(BookingForm);
 
 
-
-// const mapStateToProps = (state) =>{
-//     console.log(state);
-//     return {isSignedInM: state.authy.isSignedInssss};
-// }
-
-// export default connect(
-//     mapStateToProps,
-//     {signIn, signOut}
-// )(GoogleAuth);
-
-{/* <div className="aewf">Booking Ccard</div> */}

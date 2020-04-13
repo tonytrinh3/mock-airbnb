@@ -59,9 +59,13 @@ export const fetchBooking = (id) => async dispatch =>{
 };
 
 export const editBooking = (id, formValues) => async dispatch =>{
-    const response = await bookings.get(`/bookings/${id}`,formValues );
+    const response = await bookings.patch(`/bookings/${id}`,formValues );
+    //put request - update all properties of a record
+    //patch - update some of the properties of a record
 
     dispatch({type: EDIT_BOOKING, payload: response.data});
+
+    history.push('/booking');
 };
 
 export const deleteBooking = (id) => async dispatch =>{
