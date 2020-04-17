@@ -1,20 +1,20 @@
 import React from 'react';
 // import {Field, reduxForm} from 'redux-form';
 import { connect } from 'react-redux';
-import {createBooking} from "../../actions";
+import {createUserReservation} from "../../actions";
  import BookingForm from './BookingForm';
 
 class BookingCard extends React.Component{
 
 
 onSubmit = (formValues) =>{
-    this.props.createBooking(formValues);
+    this.props.createUserReservation(formValues);
 }
 
     
     render(){
         //this.props is from reduxform
-        //console.log(this.props);
+        console.log(this.props);
         return( 
             <div className="awef">
                 <div className="awef" style = {{color:"blue"}}>Create a Booking</div>
@@ -30,7 +30,7 @@ onSubmit = (formValues) =>{
 
 
 
-export default connect(null,{createBooking})(BookingCard);
+export default connect(null,{createUserReservation})(BookingCard);
 
 // export default connect(mapStateToProps,{createBooking})(BookingCard);
 

@@ -42,7 +42,7 @@ class BookingPage extends React.Component{
                 <Navigation/>
                 <PictureHeader/>
                 {this.renderStuff()}
-                <BookingCard/>
+                <BookingCard bookingId = {this.props.booking.id}/>
                 <Amenities/>
                 <SleepingArrangement/>
                 <AvailabilitySection/>
@@ -62,8 +62,8 @@ class BookingPage extends React.Component{
 //so you can pull it one time and just pass it down as props...
 
 const mapStateToProps = (state,ownProps) =>{
-    console.log(ownProps);
-    console.log(state);
+    //console.log(ownProps);
+    //console.log(state);
     return{
         booking: state.bookings[ownProps.match.params.id]
     }

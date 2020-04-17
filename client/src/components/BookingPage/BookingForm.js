@@ -61,8 +61,8 @@ class BookingForm extends React.Component{
         return( 
             <div className="awef">
          <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-                <Field name = "title" component = {this.renderInput}  label ="enter something"/>
-                <Field name = "description" component = {this.renderInput} label ="enter nothing" />
+                <Field name = "usertitle" component = {this.renderInput}  label ="enter something"/>
+                <Field name = "userdescription" component = {this.renderInput} label ="enter nothing" />
                 <button  className="awef">Submit</button>
             </form>
           {/* <button  onClick = {this.onSubmit} className="awef">Submit</button> */}

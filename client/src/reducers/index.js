@@ -2,9 +2,11 @@ import {combineReducers} from 'redux';
 import {reducer as formReducer} from 'redux-form';
 import authReducer from './authReducer';
 import bookingReducer from './bookingReducer';
+import userReducer from './userReducer'
 
 export default combineReducers({
     authy: authReducer,
     form: formReducer,
-    bookings: bookingReducer
+    bookings: bookingReducer,
+    userReservations: userReducer
 });

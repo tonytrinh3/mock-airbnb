@@ -8,6 +8,7 @@ import {
     FETCH_BOOKING,
     DELETE_BOOKING,
     EDIT_BOOKING,
+    CREATE_USER_RESERVATION
 } from './types';
 
 
@@ -73,3 +74,28 @@ export const deleteBooking = (id) => async dispatch =>{
 
     dispatch ({type: DELETE_BOOKING, payload: id });
 }
+
+export const createUserReservation = (formValues)=>{
+    return async (dispatch, getState) =>{
+        //getState is another function from redux to reach other to other reducers and get the state and use it in other reducers
+        //this will be helpful when creating a reservation for the user
+        const {userId} = getState().authy;
+        //this user variable ends up in the db.json
+        const something = getState().bookings;
+
+        //have it saved to a variable so you can use it 
+        // /bookings , the bookings part is actually the name of the object that you are dumping and calling info from
+        
+        const response = await bookings.post('/user',{...formValues,userId,something});
+        console.log(response);
+        //await bookings.post('/bookings', formValues);
+
+        //dispatch is from redux, payload property from axios has response
+        //  const test = dispatch({type: CREATE_BOOKING, payload: response.data});
+
+        dispatch({type: CREATE_USER_RESERVATION, payload: response.data});
+        //programmatically navigator user - push is how to nav user around
+        history.push('/roomlisting');
+        //  console.log(test);
+    }
+};
