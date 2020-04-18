@@ -8,7 +8,7 @@ class BookingCard extends React.Component{
 
 
 onSubmit = (formValues) =>{
-    this.props.createUserReservation(formValues);
+    this.props.createUserReservation(this.props.bookingId, formValues);
 }
 
     
