@@ -17,8 +17,11 @@ import {fetchBooking} from '../../actions/index';
 
 
 
-
 class BookingPage extends React.Component{
+
+
+    
+
 
     componentDidMount(){
         this.props.fetchBooking(this.props.match.params.id);
@@ -37,6 +40,10 @@ class BookingPage extends React.Component{
             return (<div className="awef">Loading!</div>);
         }
         console.log(this.props.booking);
+
+       
+    
+          
         return(
             <div className="booking-page">
                 <Navigation/>
@@ -52,6 +59,7 @@ class BookingPage extends React.Component{
                 <Cancellations/>
                 <ExploreOptions/>
                 <Footer/>
+                
             </div>
         )
     }
@@ -62,8 +70,8 @@ class BookingPage extends React.Component{
 //so you can pull it one time and just pass it down as props...
 
 const mapStateToProps = (state,ownProps) =>{
-    console.log(ownProps);
-    console.log(state);
+    // console.log(ownProps);
+    // console.log(state);
     return{
         booking: state.bookings[ownProps.match.params.id]
     }

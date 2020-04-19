@@ -2,26 +2,139 @@ import React from 'react';
 // import {Field, reduxForm} from 'redux-form';
 import { connect } from 'react-redux';
 import {createUserReservation} from "../../actions";
- import BookingForm from './BookingForm';
+
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+import "./react_dates_overrides.css"
+import { DateRangePicker } from 'react-dates';
+import moment from 'moment';
 
 class BookingCard extends React.Component{
 
+    state = {
+        startDate: null,
+        endDate: null,
+        focusedInput: null,
+        numAdults: 0,
+        numChildren: 0,
+        numInfants: 0
+    };
 
-onSubmit = (formValues) =>{
-    this.props.createUserReservation(this.props.bookingId, formValues);
-}
+    //yeah so you just need a button to increase a number and that number is saved in the state.
+ 
+    onSubmit = () =>{
+        const reservation = {
+            "reservation": {
+                bookingId: this.props.bookingId,
+                startDate: moment(this.state.startDate).format('MMMM Do YYYY'),
+                endDate: moment(this.state.endDate).format('MMMM Do YYYY'),
+            }
+
+        }
+
+        this.props.createUserReservation(reservation);
+    }
+
+    renderNumPeople = ()=>{
+        return(
+            <div className="awef">
+                Adults
+                <button className="awef" onClick= {()=>{this.subtractionButton("adults")}} >-</button>
+                {this.state.numAdults}
+                <button className="awef" onClick= {()=>{this.additionButton("adults")}}>+</button>
+                <br/>
+                Children
+                <button className="awef" onClick= {()=>{this.subtractionButton("children")}} >-</button>
+                {this.state.numChildren}
+                <button className="awef" onClick= {()=>{this.additionButton("children")}}>+</button>
+                <br/>
+                Infants
+                <button className="awef" onClick= {()=>{this.subtractionButton("infants")}} >-</button>
+                {this.state.numInfants}
+                <button className="awef" onClick= {()=>{this.additionButton("infants")}}>+</button>
+            </div>
+        )
+    }
+
+
+
+    additionButton (type) {
+        //have this work for whatever type of people passed in
+        //have if statement to stop button when the number of guest from booking exceeds it
+        switch(type){
+            case "adults":
+                this.setState({
+                    numAdults: this.state.numAdults + 1
+                });
+                break;
+            case "children":
+                this.setState({
+                    numChildren: this.state.numChildren + 1
+                });
+                break;
+            case "infants":
+                this.setState({
+                    numInfants: this.state.numInfants + 1
+                });
+                break;
+        }
+    }
+
+    subtractionButton(type){
+    
+            switch(type){
+                case "adults":
+                    if(this.state.numAdults > 0){ 
+                        this.setState({
+                            numAdults: this.state.numAdults - 1
+                        });
+                    }
+                    break;
+                case "children":
+                    if(this.state.numChildren > 0){ 
+                        this.setState({
+                            numChildren: this.state.numChildren - 1
+                        });
+                    }
+                    break;
+                case "infants":
+                    if(this.state.numInfants > 0){ 
+                        this.setState({
+                            numInfants: this.state.numInfants - 1
+                        });
+                    }
+                    break;
+            }
+           
+    }
+
+   
+
 
     
     render(){
         //this.props is from reduxform
         console.log(this.props);
         return( 
-            <div className="awef">
-                <div className="awef" style = {{color:"blue"}}>Create a Booking</div>
-                <BookingForm onSubmit = {this.onSubmit}/>
-            </div>
-   
+            <div className="aewf">
+                bookingcard <br/>
           
+               {this.renderNumPeople()}
+
+
+                <DateRangePicker
+                startDateId="startDate"
+                endDateId="endDate"
+                startDate={this.state.startDate}
+                endDate={this.state.endDate}
+                onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
+                focusedInput={this.state.focusedInput}
+                onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
+            />
+            <button className="awef" onClick = {this.onSubmit}>Reserve</button>
+
+            </div>
+
         )
     }
 };
@@ -31,6 +144,23 @@ onSubmit = (formValues) =>{
 
 
 export default connect(null,{createUserReservation})(BookingCard);
+
+
+
+// onSubmit = (formValues) =>{
+//     this.props.createUserReservation(this.props.bookingId, formValues);
+// }
+
+// <div className="awef">
+// <div className="awef" style = {{color:"blue"}}>Create a Booking</div>
+// <BookingForm onSubmit = {this.onSubmit}/>
+// </div>
+
+
+
+
+
+
 
 // export default connect(mapStateToProps,{createBooking})(BookingCard);
 
