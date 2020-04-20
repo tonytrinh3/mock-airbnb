@@ -28,6 +28,9 @@ class BookingCard extends React.Component{
                 bookingId: this.props.bookingId,
                 startDate: moment(this.state.startDate).format('MMMM Do YYYY'),
                 endDate: moment(this.state.endDate).format('MMMM Do YYYY'),
+                numAdults: this.state.numAdults,
+                numChildren: this.state.numChildren,
+                numInfants: this.state.numInfants
             }
 
         }
@@ -116,7 +119,7 @@ class BookingCard extends React.Component{
         //this.props is from reduxform
         console.log(this.props);
         return( 
-            <div className="aewf">
+            <div className="booking-card">
                 bookingcard <br/>
           
                {this.renderNumPeople()}

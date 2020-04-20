@@ -1,0 +1,9 @@
+.booking-section{
+    display: grid;
+
+    grid-template-columns: repeat(2,minmax(30rem,1fr));
+}
+
+.listing-description{
+    background-color:green;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import Navigation from '../Navigation';
 import PictureHeader from './1PictureHeader';
-import BookingCard from './BookingCard';
+import BookingCard from './2BookingCard';
+import ListingDescription from './ListingDescription';
 import Amenities from './Amenities';
 import SleepingArrangement from './SleepingArrangement';
 import AvailabilitySection from './AvailabilitySection';
@@ -15,41 +16,35 @@ import Footer from '../Footer';
 import {connect} from 'react-redux';
 import {fetchBooking} from '../../actions/index';
 
-
+// import { Button, Alert } from 'reactstrap';
 
 class BookingPage extends React.Component{
-
-
-    
-
 
     componentDidMount(){
         this.props.fetchBooking(this.props.match.params.id);
     }
 
-
-    renderStuff(){
-        return(
-            <div className="aewf" style={{color: "red"}}>{this.props.booking.title}</div>
-        )
-
-    }
+    // renderStuff(){
+    //     return(
+    //         <div className="aewf" style={{color: "red"}}>{this.props.booking.title}</div>
+    //     )
+    // }
 
     render(){
         if (!this.props.booking){
             return (<div className="awef">Loading!</div>);
         }
         console.log(this.props.booking);
-
-       
-    
-          
+ 
         return(
             <div className="booking-page">
                 <Navigation/>
                 <PictureHeader/>
-                {this.renderStuff()}
-                <BookingCard bookingId = {this.props.booking.id}/>
+                <div className="booking-section">
+                    <ListingDescription/>
+                    <BookingCard bookingId = {this.props.booking.id}/>
+                </div>
+
                 <Amenities/>
                 <SleepingArrangement/>
                 <AvailabilitySection/>
