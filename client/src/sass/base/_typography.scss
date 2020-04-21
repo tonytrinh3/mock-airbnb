@@ -5,3 +5,77 @@ body {
     color: $default-font-color;
     
 }
+
+.header-small{
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+// .margin-bottom-small{
+//     margin-bottom: 1.5rem;
+// }
+
+//header for all big words on main page
+.header-big{
+    font-weight: 600;
+    font-size: 3.5rem;
+
+}
+
+//not usedd
+// .header-big-sub{
+//     font-weight: 400;
+//     font-size: 2.5rem;
+    
+// }
+
+//used in explore airbnb front page
+.header-medium{ 
+    font-weight: 700;
+    font-size: 2.3rem;
+  
+}
+
+//used in intro airbnb adv and booking
+.header-small{
+    font-weight: 600;
+    font-size: 2rem;
+
+}
+
+.text-sub{
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.rating-font{
+    font-size:2.3rem;
+    font-weight:500;
+}
+
+
+.input-default{
+    color:$default-font-color;
+    font-size: 2.5rem;
+    font-weight: 400;
+    border-radius:0.2rem;
+    border: 0.1rem solid $form-input-color;
+    padding: 1.5rem 0rem 1.5rem 1rem;
+    width: 100%; //https://stackoverflow.com/questions/11716330/how-to-expand-input-field-to-100-of-the-parent
+    -webkit-appearance: none;
+    margin-bottom: 2rem;
+
+}
+
+.continue-link{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.booking-page__link{
+    font-weight: 700;
+    color: $airbnb-default-blue;
+    text-decoration: none;
+}

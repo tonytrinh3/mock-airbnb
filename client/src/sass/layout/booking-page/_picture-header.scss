@@ -1,5 +1,6 @@
 .picture-header{
     height: 50vh;
+    grid-column: full-start/ full-end;
     display:grid;
     background-color: blue;
 }

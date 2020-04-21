@@ -5,6 +5,7 @@ import BookingCard from './2BookingCard';
 import ListingDescription from './ListingDescription';
 import Amenities from './Amenities';
 import SleepingArrangement from './SleepingArrangement';
+import Accessibility from './Accessibility';
 import AvailabilitySection from './AvailabilitySection';
 import ReviewSection from './ReviewSection';
 import AboutHost from './AboutHost';
@@ -47,6 +48,7 @@ class BookingPage extends React.Component{
 
                 <Amenities/>
                 <SleepingArrangement/>
+                <Accessibility/>
                 <AvailabilitySection/>
                 <ReviewSection/>
                 <AboutHost/>

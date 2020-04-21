@@ -12,3 +12,13 @@
 
     // transform-origin: 20% 40%;
 }
+
+.contact-host__button{
+    color: $airbnb-default-blue;
+    font-size:$default-font-size;
+    font-weight: 500;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: solid .3rem $airbnb-default-blue;
+}

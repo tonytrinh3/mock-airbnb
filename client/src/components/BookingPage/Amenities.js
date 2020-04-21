@@ -15,7 +15,20 @@ class Amenities extends React.Component{
     render(){
 
         return(
-            <div className="amenities">Amenities
+            <div className="amenities">
+                <h3 className="amenities__header header-small margin-bottom-medium">Amenities</h3>
+                <ul className="amenities__column">
+                    <li className="amenities__item">Elevator</li>
+                    <li className="amenities__item">Kitchen</li>
+                    <li className="amenities__item"> Wifi</li>
+                    <li className="amenities__item">Laptop-friendly workspace</li>
+                    <li className="amenities__item">Smoke alarm</li>
+                    <li className="amenities__item">Carbon monoxide alarm</li>
+                </ul>
+                <p className = "amenities__paragraph margin-bottom-medium">The host hasn't reported smoke or carbon monoxide detectors on the property</p>
+                <a className = "amenities__link booking-page__link margin-bottom-medium ">Show all 25 amenities</a> 
+                    {/* needs to be modal */}
+
 
             </div>
             
