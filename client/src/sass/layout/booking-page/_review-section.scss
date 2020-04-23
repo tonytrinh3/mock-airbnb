@@ -1,3 +1,25 @@
 .review-section{
     background-color: orange;
+    grid-column: center-start/center-end;
+
+    &__preview{
+        display:grid;
+        grid-template-columns: repeat (3,1fr);
+
+        &--rating{
+            grid-column: 1/2;
+        }
+        &--count{
+            grid-column: 2/3;
+        }
+        &--search{
+            grid-column: 3/3;
+        }
+    }
+
+    &__breakdown{
+        list-style: none;
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+    }
 }
