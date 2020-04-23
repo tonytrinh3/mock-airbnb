@@ -1,4 +1,6 @@
 .popular-destination-US {
+    grid-column:full-start/full-end;
+
     
     &__tiles{
         display:grid;

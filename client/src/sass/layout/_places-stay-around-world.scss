@@ -1,4 +1,6 @@
 .places-stay-around-world{
+    grid-column:full-start/full-end;
+
 
     &__cards{
         display: grid;

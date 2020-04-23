@@ -3,7 +3,7 @@
     // background-color:red;
     // opacity: 20%;
     
-    grid-column: 1/-1;
+    grid-column:full-start/full-end;
 
     display: grid;
     grid-template-columns: 1fr 2fr repeat(7,min-content);

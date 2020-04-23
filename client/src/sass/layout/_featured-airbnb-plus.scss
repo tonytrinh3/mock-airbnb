@@ -1,4 +1,6 @@
 .featured-airbnb-plus{
+    grid-column:full-start/full-end;
+
     &__cards{
         display: grid;
         grid-template-columns: repeat(3,1fr);

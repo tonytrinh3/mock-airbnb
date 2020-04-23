@@ -1,4 +1,6 @@
 .airbnb-plus-explore{
+    grid-column:full-start/full-end;
+
     display:grid;
     grid-template-rows: repeat(2, min-content) 47rem;
    

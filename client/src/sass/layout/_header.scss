@@ -1,5 +1,6 @@
 .header{
     grid-row: [header-start] / [header-end];
+    grid-column:full-start/full-end;
     
     //background-image: linear-gradient(rgba($color-secondary, .93), rgba($color-secondary, .93)), url(../layout/sass/img/hong-kong.jpg);
     background-image: url(../../img/hong-kong.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
