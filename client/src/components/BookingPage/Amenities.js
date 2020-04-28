@@ -26,7 +26,7 @@ class Amenities extends React.Component{
                     <li className="amenities__item">Carbon monoxide alarm</li>
                 </ul>
                 <p className = "amenities__paragraph margin-bottom-medium">The host hasn't reported smoke or carbon monoxide detectors on the property</p>
-                <a className = "amenities__link booking-page__link margin-bottom-medium ">Show all 25 amenities</a> 
+                <a className = "amenities__link booking-page__link">Show all 25 amenities</a> 
                     {/* needs to be modal */}
 
 

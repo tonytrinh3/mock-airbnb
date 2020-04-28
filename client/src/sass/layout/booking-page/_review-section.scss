@@ -1,5 +1,5 @@
 .review-section{
-    background-color: orange;
+    // background-color: orange;
     grid-column: center-start/center-end;
 
     &__preview{
@@ -21,5 +21,11 @@
         list-style: none;
         display:grid;
         grid-template-columns: repeat(4,1fr);
+    }
+
+    &__hr{
+        grid-column: center-start/center-end;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
     }
 }

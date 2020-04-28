@@ -5,7 +5,7 @@ const Accessibility = () =>{
         <div className="accessibility">
             <h3 className="header-small margin-bottom-medium">Accessibility</h3>
             <h3 className="header-small margin-bottom-medium">MOVING AROUND THE SPACE</h3>
-            <p className="margin-bottom-medium">Elevator</p>
+            <p className="">Elevator</p>
         </div>
     )
 }

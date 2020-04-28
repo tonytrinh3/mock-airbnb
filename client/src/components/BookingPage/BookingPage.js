@@ -41,20 +41,27 @@ class BookingPage extends React.Component{
             <div className="booking-page">
                 <Navigation/>
                 <PictureHeader/>
-                <div className="booking-section">
-                    <ListingDescription/>
-                    <BookingCard bookingId = {this.props.booking.id}/>
-                </div>
-
+                <ListingDescription/>
+                <hr className="booking-page__hr hr"/>
+                <BookingCard bookingId = {this.props.booking.id}/>
                 <Amenities/>
+                <hr className="booking-page__hr hr"/>
                 <SleepingArrangement/>
+                <hr className="booking-page__hr hr"/>
                 <Accessibility/>
+                <hr className="booking-page__hr hr"/>
                 <AvailabilitySection/>
+                <hr className="booking-page__hr hr"/>
                 <ReviewSection/>
+                <hr className="booking-page__hr hr"/>
                 <AboutHost/>
+                <hr className="booking-page__hr hr"/>
                 <Neighborhood/>
+                <hr className="booking-page__hr hr"/>
                 <Cancellations/>
+                <hr className="booking-page__hr hr"/>
                 <ExploreOptions/>
+                <hr className="footer__hr hr"/>
                 <Footer/>
                 
             </div>

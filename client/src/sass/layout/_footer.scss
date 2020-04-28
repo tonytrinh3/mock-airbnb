@@ -6,7 +6,10 @@
 
     margin: 5rem 10rem 10rem 10rem;
 
-    
+    &__hr{
+        grid-column: full-start / full-end;
+        margin-top: 5rem;
+    }
 }
 
 .footer-nav{

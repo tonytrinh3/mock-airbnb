@@ -23,6 +23,12 @@
     // (9) footer
     ;
 
-    color: $default-landing-page-color;
+    // color: $default-font-color;
+
+    &__hr{
+        grid-column: center-start/center-end;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
 
 }

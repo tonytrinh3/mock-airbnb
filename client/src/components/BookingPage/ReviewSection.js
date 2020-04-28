@@ -24,14 +24,16 @@ const ReviewSection = () => {
             <li className="review-section__breakdown--item">Value</li>
         </ul>
 
-        <div className="review-section__reviews margin-bottom-large">
+        <div className="review-section__reviews">
             <h3 className="header-small">Laurie</h3>
-            <h3 className="header-small margin-bottom-medium">March 2020</h3>
-            <p className="margin-bottom-medium">Our stay was great.... until the COVID virus threw a wrench in everyone's lives. Yael was very sweet - offering to share a meal, her car, and any help we needed during our stay. We'd love to come back another time and enjoy the restaurants in the neighborhood. 
+            <h3 className="header-small">March 2020</h3>
+            <p className="">Our stay was great.... until the COVID virus threw a wrench in everyone's lives. Yael was very sweet - offering to share a meal, her car, and any help we needed during our stay. We'd love to come back another time and enjoy the restaurants in the neighborhood. 
             Highly recommend the both the host and the location.</p>
         </div>
 
-        <div className="review-section__reviews margin-bottom-large">
+        <hr className="review-section__hr hr"/>
+        
+        <div className="review-section__reviews">
             <h3 className="header-small">Shannon</h3>
             <h3 className="header-small margin-bottom-medium">March 2020</h3>
             <p className="margin-bottom-medium">Yale’s place was very clean and exactly as pictured. She was easy to communicate with and very helpful. 

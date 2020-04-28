@@ -1,5 +1,9 @@
 .about-host{
-    background-color: plum;
+    // background-color: plum;
     grid-column: center-start / center-end;
 
+    &__hr{
+        margin-top:2rem;
+        margin-bottom: 2rem;
+    }
 }

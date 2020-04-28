@@ -1,10 +1,11 @@
-.booking-section{
-    grid-column: center-start / center-end;
-    display: grid;
-
-    grid-template-columns: repeat(2,minmax(30rem,1fr));
-}
-
 .listing-description{
-    background-color:green;
+    // background-color:green;
+    grid-column: center-start / center-end;
+
+    &__capacity{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        list-style-type: none;
+    }
 }
+
