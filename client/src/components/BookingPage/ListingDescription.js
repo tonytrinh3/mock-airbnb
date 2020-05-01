@@ -5,7 +5,7 @@ const ListingDescription = () =>{
         //all of this needs to come from backend and all dynamic per person
         <div className="listing-description">
             <h2 className="listing-description__header header-big margin-bottom-medium">Private, modern Central Sunset suite</h2>
-            <p className="listing-description__location">Outer Sunset, San Francisco, California</p>
+            <p className="listing-description__location  margin-bottom-medium">Outer Sunset, San Francisco, California</p>
             <ul className = "listing-description__capacity margin-bottom-medium">
                 <li>4 guests</li>
                 <li>1 bedroom</li>

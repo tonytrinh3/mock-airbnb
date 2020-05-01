@@ -9,7 +9,7 @@ const ReviewSection = () => {
             <p className="review-section__preview--count margin-bottom-medium">523 reviews</p>
             <p className="review-section__preview--search margin-bottom-medium">Search Review</p>
         </div>
-        <ul className="review-section__breakdown margin-bottom-medium">
+        <ul className="review-section__breakdown margin-bottom-large">
             <li className="review-section__breakdown--item">Communication</li>
             <li className="review-section__breakdown--item">Communication</li>
             <li className="review-section__breakdown--item">Check-in</li>
