@@ -11,9 +11,9 @@ class Amenities extends React.Component{
 
  
 
-
     render(){
 
+        console.log(this.props)
         return(
             <div className="amenities">
                 <h3 className="amenities__header header-small margin-bottom-medium">Amenities</h3>

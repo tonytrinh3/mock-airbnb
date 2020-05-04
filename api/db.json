@@ -30,17 +30,17 @@
       "title":"Private, modern Central Sunset suite",
       "location": "Outer Sunset, San Francisco, California",
       "description":"Your partner will love you for bringing them to this romantic spot. Private, stylish master bedroom. Private entrance, king bed, bathroom, and garden courtyard. You’ll love the comfy, quality furnishings and linens. Relax in the hot tub at the end of your day. Huge closet. Fridge. Snacks and drinks. Immaculately clean. As little as 20 minutes by car to the Civic Center, Golden Gate Bridge, and airport (traffic permitting). Lots more.",
-      "home-type":{
+      "home_type":{
         "house": false,
         "apartment":true,
-        "guest-suite": false,
+        "guest_suite": false,
         "townhouse":false
       },
-      "space-type":{
-        "private-room":false,
-        "entire-space": true
+      "space_type":{
+        "private_room":false,
+        "entire_space": true
       },
-      "home-specs":{
+      "home_specs":{
         "numGuests": 4,
         "numBedrooms": 1,
         "numBeds": 2,
@@ -49,24 +49,24 @@
           "shared": false
         }
       },
-      "self-check-in":true,
-      "check-in": "15:00:00",
-      "check-out": "11:00:00",
-      "sleeping-arrangements":{
-        "bedroom-1": {
-          "queen-bed": 1,
-          "king-bed": 0,
-          "double-bed": 0,
-          "sofa-bed":0
+      "self_check_in":true,
+      "check_in": "15:00:00",
+      "check_out": "11:00:00",
+      "sleeping_arrangements":{
+        "bedroom_1": {
+          "queen_bed": 1,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed":0
         },
         "common-spaces":{
-          "queen-bed": 0,
-          "king-bed": 0,
-          "double-bed": 0,
-          "sofa-bed": 1
+          "queen_bed": 0,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed": 1
         }
       },
-      "house-rules":{
+      "house_rules":{
         "smoking": false,
         "pets": false,
         "parties": false
@@ -83,21 +83,21 @@
       },
       "availability":{
         "reservations":{
-          "reservation-1":{
-            "date-start": "2020-07-01",
-            "date-end": "2020-07-06"
+          "reservation_1":{
+            "date_start": "2020-07-01",
+            "date_end": "2020-07-06"
           },
-          "reservation-2":{
-            "date-start": "2020-08-01",
-            "date-end": "2020-08-06"
+          "reservation_2":{
+            "date_start": "2020-08-01",
+            "date_end": "2020-08-06"
           }
         },
-        "not-avail":["2020-07-01","2020-05-30"]
+        "not_avail":["2020-07-01","2020-05-30"]
       },
       "reviews":{
         "total": 137,
-        "avg-rating": 4.91,
-        "review-1":{
+        "avg_rating": 4.91,
+        "review_1":{
           "name":"Jasmine",
           "date": "2020-05-01",
           "img":"something",
@@ -109,7 +109,7 @@
           "communication":5,
           "location":5
         },
-        "review-2":{
+        "review_2":{
           "name":"Natasha",
           "date": "2020-05-01",
           "img":"something",
@@ -122,17 +122,17 @@
           "location":4
         }
       },
-      "host-info": {
+      "host_info": {
         "name":"Todd Smith",
         "img": "something",
-        "date-joined": "2012-01-20",
-        "identity-verified":true,
+        "date_joined": "2012-01-20",
+        "identity_verified":true,
         "superhost":true,
         "description":"We live in San Francisco and love to spend time outdoors—hiking, running, gardening, playing in the park. I am an Associate Professor at UCSF and my wife, Supryia, is an attorney with the U.S. Courts. We have two young children—an 9-year-old son and a 5-year-old daughter. As guests, we will treat your place with care and strive to \"leave no trace\". As hosts, we will do our best to make you feel welcome.",
-        "interaction-guests": "My wife, Supryia, and I love meeting new people and have hosted people from all over the world. We have separate space upstairs, so you will be free to keep to yourself, but if you have any questions or want to chat for a while, do let us know! Supryia loves languages–she speaks French and some Spanish. She can also understand some Italian.",
-        "living-wage-pledge":true,
-        "response-rate": 100,
-        "response-time": "an hour"
+        "interaction_guests": "My wife, Supryia, and I love meeting new people and have hosted people from all over the world. We have separate space upstairs, so you will be free to keep to yourself, but if you have any questions or want to chat for a while, do let us know! Supryia loves languages–she speaks French and some Spanish. She can also understand some Italian.",
+        "living_wage_pledge":true,
+        "response_rate": 100,
+        "response_time": "an hour"
       }
     },
     {

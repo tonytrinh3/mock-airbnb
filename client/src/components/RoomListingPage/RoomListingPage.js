@@ -42,7 +42,7 @@ class RoomListingPage extends React.Component{
         return this.props.bookings.map(booking=>{
             return (
                 <div className="booking" key = {booking.id}>
-                    <Link to={`/booking/${booking.id}`}> {booking.title} <br />  {booking.description}</Link>
+                    <Link to={`/booking/${booking.id}`}> {booking.title}</Link>
                   
                     {/* {this.renderAdmin(booking)} */}
                 </div>
