@@ -1,19 +1,50 @@
 import React from 'react';
 
-const ListingDescription = () =>{
+const renderNumBaths = (baths)=>{
+    if (baths.shared == false){
+        return <li>{baths.private} baths </li>
+    } else {
+        return <li>{baths.private} shared baths </li>
+    }
+};
+
+const renderSpace_Type = (space_type) =>{
+    console.log(space_type.entire_space)
+    if(space_type.entire_space === true){
+        return(
+            <div>
+                <h3 className="header-small">Entire home</h3>
+                <p className = "margin-bottom-medium">You’ll have the apartment to yourself.</p>
+            </div>
+        )
+    } else {
+        return(
+            <div>
+                <h3 className="header-small">Private room in house</h3>
+                <p className = "margin-bottom-medium">You’ll have a private room in a house</p>
+            </div>
+        )
+    }
+};
+
+
+const ListingDescription = ({title, location, description, home_type, space_type, home_specs,host_info}) =>{
+
+
+
+
     return (
         //all of this needs to come from backend and all dynamic per person
         <div className="listing-description">
-            <h2 className="listing-description__header header-big margin-bottom-medium">Private, modern Central Sunset suite</h2>
-            <p className="listing-description__location  margin-bottom-medium">Outer Sunset, San Francisco, California</p>
+            <h2 className="listing-description__header header-big margin-bottom-medium">{title}</h2>
+            <p className="listing-description__location  margin-bottom-medium">{location}</p>
             <ul className = "listing-description__capacity margin-bottom-medium">
-                <li>4 guests</li>
-                <li>1 bedroom</li>
-                <li>2 beds</li>
-                <li>2 beds</li>
+                <li>{home_specs.numGuests} guests</li>
+                <li>{home_specs.numBedrooms} bedroom</li>
+                <li>{home_specs.numBeds} beds</li>
+                {renderNumBaths(home_specs.numBaths)}
             </ul>
-            <h3 className="header-small">Entire home</h3>
-            <p className = "margin-bottom-medium">You’ll have the apartment to yourself.</p>
+            {renderSpace_Type({space_type})}
             <h3 className="header-small">Self check-in</h3>
             <p className = "margin-bottom-medium">Check yourself in with the keypad.</p>
             <h3 className="header-small">Sparkling clean</h3>

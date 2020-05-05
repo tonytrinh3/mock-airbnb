@@ -45,10 +45,10 @@ class BookingPage extends React.Component{
                 title = {this.props.booking.title}
                 location = {this.props.booking.location}
                 description = {this.props.booking.description}
-                home-type = {this.props.booking.home_type}
-                space-type = {this.props.booking.space_type}
-                home-specs = {this.props.booking.home_specs}
-                host-info = {this.props.booking.host_info}
+                home_type = {this.props.booking.home_type}
+                space_type = {this.props.booking.space_type}
+                home_specs = {this.props.booking.home_specs}
+                host_info = {this.props.booking.host_info}
                 
                 />
                 <hr className="booking-page__hr hr"/>
@@ -60,7 +60,7 @@ class BookingPage extends React.Component{
                 />
                 <hr className="booking-page__hr hr"/>
                 <SleepingArrangement
-                sleeping-arrangement = {this.props.sleeping_arrangement}
+                sleeping_arrangement = {this.props.sleeping_arrangement}
                 />
                 <hr className="booking-page__hr hr"/>
                 <Accessibility/>
@@ -74,17 +74,17 @@ class BookingPage extends React.Component{
                 />
                 <hr className="booking-page__hr hr"/>
                 <AboutHost
-                host-info = {this.props.booking.host_info}
+                host_info = {this.props.booking.host_info}
                 />
                 <hr className="booking-page__hr hr"/>
                 <Neighborhood/>
                 <hr className="booking-page__hr hr"/>
                 <Cancellations 
                 cancellations = {this.props.booking.cancellations}
-                house-rules = {this.props.booking.house_rules}
-                check-in = {this.props.booking.check_in}
-                check-out = {this.props.booking.check_out}
-                self-check-in = {this.props.booking.self_check_in}
+                house_rules = {this.props.booking.house_rules}
+                check_in = {this.props.booking.check_in}
+                check_out = {this.props.booking.check_out}
+                self_check_in = {this.props.booking.self_check_in}
                 />
                 <hr className="booking-page__hr hr"/>
                 <ExploreOptions/>
