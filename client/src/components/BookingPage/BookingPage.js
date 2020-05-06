@@ -35,7 +35,7 @@ class BookingPage extends React.Component{
         if (!this.props.booking){
             return (<div className="awef">Loading!</div>);
         }
-        console.log(this.props.booking);
+        //console.log(this.props.booking);
  
         return(
             <div className="booking-page">
@@ -49,7 +49,8 @@ class BookingPage extends React.Component{
                 space_type = {this.props.booking.space_type}
                 home_specs = {this.props.booking.home_specs}
                 host_info = {this.props.booking.host_info}
-                
+                self_check_in = {this.props.booking.self_check_in}
+                reviews = {this.props.booking.reviews}
                 />
                 <hr className="booking-page__hr hr"/>
                 <BookingCard 

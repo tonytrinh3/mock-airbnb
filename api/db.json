@@ -29,7 +29,7 @@
       "id": 9,
       "title":"Private, modern Central Sunset suite",
       "location": "Outer Sunset, San Francisco, California",
-      "description":"Your partner will love you for bringing them to this romantic spot. Private, stylish master bedroom. Private entrance, king bed, bathroom, and garden courtyard. You’ll love the comfy, quality furnishings and linens. Relax in the hot tub at the end of your day. Huge closet. Fridge. Snacks and drinks. Immaculately clean. As little as 20 minutes by car to the Civic Center, Golden Gate Bridge, and airport (traffic permitting). Lots more.",
+      "description":"Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "home_type":{
         "house": false,
         "apartment":true,
@@ -37,7 +37,7 @@
         "townhouse":false
       },
       "space_type":{
-        "private_room":false,
+        "private_room": false,
         "entire_space": true
       },
       "home_specs":{
@@ -45,7 +45,7 @@
         "numBedrooms": 1,
         "numBeds": 2,
         "numBaths": {
-          "private":1,
+          "private": 1,
           "shared": false
         }
       },
@@ -94,10 +94,8 @@
         },
         "not_avail":["2020-07-01","2020-05-30"]
       },
-      "reviews":{
-        "total": 137,
-        "avg_rating": 4.91,
-        "review_1":{
+      "reviews":[
+        {
           "name":"Jasmine",
           "date": "2020-05-01",
           "img":"something",
@@ -109,20 +107,20 @@
           "communication":5,
           "location":5
         },
-        "review_2":{
+        {
           "name":"Natasha",
           "date": "2020-05-01",
           "img":"something",
           "description": "HIS PLACE IS AMAZING !",
-          "cleanliness": 5,
+          "cleanliness": 4.5,
           "check-in":4,
           "value":4,
           "accuracy": 4,
           "communication":4,
           "location":4
         }
-      },
-      "host_info": {
+      ],
+      "host_info":{
         "name":"Todd Smith",
         "img": "something",
         "date_joined": "2012-01-20",

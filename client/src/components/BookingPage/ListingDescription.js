@@ -1,7 +1,7 @@
 import React from 'react';
 
 const renderNumBaths = (baths)=>{
-    if (baths.shared == false){
+    if (baths.shared === false){
         return <li>{baths.private} baths </li>
     } else {
         return <li>{baths.private} shared baths </li>
@@ -9,7 +9,7 @@ const renderNumBaths = (baths)=>{
 };
 
 const renderSpace_Type = (space_type) =>{
-    console.log(space_type.entire_space)
+    //console.log(space_type.entire_space === true)
     if(space_type.entire_space === true){
         return(
             <div>
@@ -27,8 +27,63 @@ const renderSpace_Type = (space_type) =>{
     }
 };
 
+const renderSelf_check_in = (self_check_in) =>{
+    if (self_check_in = true){
+        return(
+            <div>
+                <h3 className="header-small">Self check-in</h3>
+                <p className = "margin-bottom-medium">Check yourself in with the keypad.</p>
+            </div>   
+        ) 
+    } else {
+        return null
+    }
+};
 
-const ListingDescription = ({title, location, description, home_type, space_type, home_specs,host_info}) =>{
+const renderSuperhost = (host_info) =>{
+    if (host_info.superhost === true){
+        //console.log(host_info);
+        
+        return(
+            <div>
+                <h3 className="header-small">{host_info.name.split(" ")[0]} is a Superhost</h3>
+                <p className = "margin-bottom-medium">Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.</p>
+            </div>
+        )
+    } else {
+        return null;
+    }
+};
+
+const renderSparklingClean = (reviews) =>{
+
+    console.log(reviews);
+
+    let sumCleanliness = 0;
+    reviews.map((review)=>{
+        return sumCleanliness += review.cleanliness
+    })
+
+   const avgCleanliness = sumCleanliness/reviews.length;
+   console.log(avgCleanliness);
+
+   
+
+    if (avgCleanliness >= 4.5){
+        return (
+            <div className="awef">
+                <h3 className="header-small">Sparkling clean</h3>
+                <p className = "margin-bottom-medium">{reviews.length} recent guests said this place was sparkling clean.</p>
+            </div>
+        )
+    } else {
+        return null;
+    }
+
+}
+
+
+const ListingDescription = ({title, location, description, home_type, space_type, home_specs, host_info, self_check_in, reviews}) =>{
 
 
 
@@ -44,14 +99,11 @@ const ListingDescription = ({title, location, description, home_type, space_type
                 <li>{home_specs.numBeds} beds</li>
                 {renderNumBaths(home_specs.numBaths)}
             </ul>
-            {renderSpace_Type({space_type})}
-            <h3 className="header-small">Self check-in</h3>
-            <p className = "margin-bottom-medium">Check yourself in with the keypad.</p>
-            <h3 className="header-small">Sparkling clean</h3>
-            <p className = "margin-bottom-medium">12 recent guests said this place was sparkling clean.</p>
-            <h3 className="header-small">Todd is a Superhost</h3>
-            <p className = "margin-bottom-medium">Superhosts are experienced, highly rated hosts who are committed to providing great stays for guests.</p>
-            <p className = "margin-bottom-medium">Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!</p>
+            {renderSpace_Type(space_type)}
+            {renderSelf_check_in(self_check_in)}
+            {renderSparklingClean(reviews)}
+            {renderSuperhost(host_info)}
+            <p className = "margin-bottom-medium">{description}</p>
             <a className = "booking-page__link margin-bottom-medium">Read more about the space</a>
             <br/>
             <a className = "booking-page__link margin-bottom-medium">Contact Page</a>
