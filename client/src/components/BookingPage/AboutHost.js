@@ -4,7 +4,7 @@ import React from 'react';
 
 
 
-const AboutHost = () =>{
+const AboutHost = ({host_info}) =>{
     return(
         <div className="about-host">
             <h2 className="about-host__header header-big margin-bottom-medium">Hosted by Mia</h2>

@@ -2,5 +2,6 @@
     "git.ignoreLimitWarning": true,
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
-     }
+     },
+     "editor.fontSize": 14
 }

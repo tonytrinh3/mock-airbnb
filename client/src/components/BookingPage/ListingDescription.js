@@ -56,7 +56,7 @@ const renderSuperhost = (host_info) =>{
 };
 
 const renderSparklingClean = (reviews) =>{
-
+//this could be in a separate function file
     console.log(reviews);
 
     let sumCleanliness = 0;
@@ -80,7 +80,7 @@ const renderSparklingClean = (reviews) =>{
         return null;
     }
 
-}
+};
 
 
 const ListingDescription = ({title, location, description, home_type, space_type, home_specs, host_info, self_check_in, reviews}) =>{
