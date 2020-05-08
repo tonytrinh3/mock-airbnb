@@ -1,22 +1,31 @@
 import React from 'react';
+import moment from 'moment';
+
+// const avgReview = (reviews,type) =>{
+//     //this could be in a separate function file
+//         //console.log(reviews);
+//         let sum = 0;
+//         reviews.map((review)=>{
+//             return sum += eval("review." + type)
+//         });
+//       return sum/reviews.length;  
+// };
 
 
 
-
-
-const AboutHost = ({host_info}) =>{
+const AboutHost = ({host_info,reviews}) =>{
     return(
         <div className="about-host">
-            <h2 className="about-host__header header-big margin-bottom-medium">Hosted by Mia</h2>
-            <p className="margin-bottom-medium">Madrid, Spain · Joined in April 2014</p>
-            <p className="">523 Reviews</p>
+            <h2 className="about-host__header header-big margin-bottom-medium">Hosted by {host_info.name.split(" ")[0]}</h2>
+            <p className="margin-bottom-medium">{host_info.location} · Joined in {moment(host_info.date_joined).format("MMMM YYYY")}</p>
+            <p className=""> {reviews.length} Reviews</p>
             
             <hr className="about-host__hr hr"/>
 
-            <p className="about-host__paragraph margin-bottom-medium">Hi, there. I love to travel and meet people. A cup of great coffee, tasty tapas, wine and cold beer, walking in the park etc.. those make me always happy. Really hope to see you, and wish your happy journey.</p>
-            <p className="margin-bottom-medium">Languages: <span className="p-bold">English, 한국어, Español</span></p>
-            <p className="margin-bottom-medium">Response rate: <span className="p-bold">100%</span></p>
-            <p className="margin-bottom-medium">Response time: <span className="p-bold">within an hour</span></p>
+            <p className="about-host__paragraph margin-bottom-medium">{host_info.description}</p>
+            <p className="margin-bottom-medium">Languages: <span className="p-bold">{host_info.languages}</span></p>
+            <p className="margin-bottom-medium">Response rate: <span className="p-bold">{host_info.response_rate}%</span></p>
+            <p className="margin-bottom-medium">Response time: <span className="p-bold">within {host_info.response_time}</span></p>
             
             <button className="contact-host__button">Contact Host</button>
 
@@ -32,9 +41,7 @@ const AboutHost = ({host_info}) =>{
             <hr className="about-host__hr hr"/>
             
             <div className="about-host__host-split">
-                <p className="">This is Mia's Place</p>
-                <p className="">Juana Y Oleg helps host.</p>
-            
+                <p className="">This is {host_info.name.split(" ")[0]}'s Place</p>            
             </div>
         </div>
     )

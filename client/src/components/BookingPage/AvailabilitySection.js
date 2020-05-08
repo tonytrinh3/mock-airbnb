@@ -18,7 +18,8 @@ class AvailabilitySection extends React.Component{
     render(){
         return(
             <div className="availability-section">
-                AvailabilitySection
+                <h2 className="margin-bottom-large header-medium">Availability</h2>
+                
                 <DayPickerRangeController
                     startDateId="startDate"
                     endDateId="endDate"

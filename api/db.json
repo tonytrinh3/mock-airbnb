@@ -126,10 +126,12 @@
         "name":"Todd Smith",
         "img": "something",
         "date_joined": "2012-01-20",
+        "location": "San Francisco, California",
         "identity_verified":true,
         "superhost":true,
         "description":"We live in San Francisco and love to spend time outdoors—hiking, running, gardening, playing in the park. I am an Associate Professor at UCSF and my wife, Supryia, is an attorney with the U.S. Courts. We have two young children—an 9-year-old son and a 5-year-old daughter. As guests, we will treat your place with care and strive to \"leave no trace\". As hosts, we will do our best to make you feel welcome.",
         "interaction_guests": "My wife, Supryia, and I love meeting new people and have hosted people from all over the world. We have separate space upstairs, so you will be free to keep to yourself, but if you have any questions or want to chat for a while, do let us know! Supryia loves languages–she speaks French and some Spanish. She can also understand some Italian.",
+        "languages": "English, 한국어, Español",
         "living_wage_pledge":true,
         "response_rate": 100,
         "response_time": "an hour"

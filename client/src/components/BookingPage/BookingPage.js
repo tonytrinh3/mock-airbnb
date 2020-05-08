@@ -56,6 +56,9 @@ class BookingPage extends React.Component{
                 <BookingCard 
                 bookingId = {this.props.booking.id}
                 />
+                
+                <hr className="booking-page__hr hr"/>
+                <hr className="booking-page__hr hr"/>
                 <Amenities 
                 amenities = {this.props.booking.amenities}
                 />
@@ -66,16 +69,19 @@ class BookingPage extends React.Component{
                 <hr className="booking-page__hr hr"/>
                 <Accessibility/>
                 <hr className="booking-page__hr hr"/>
+                <hr className="booking-page__hr hr"/>
                 <AvailabilitySection
                 availability = {this.props.booking.availability}
                 />
                 <hr className="booking-page__hr hr"/>
+
                 <ReviewSection
                 reviews = {this.props.booking.reviews}
                 />
                 <hr className="booking-page__hr hr"/>
                 <AboutHost
                 host_info = {this.props.booking.host_info}
+                reviews = {this.props.booking.reviews}
                 />
                 <hr className="booking-page__hr hr"/>
                 <Neighborhood/>
