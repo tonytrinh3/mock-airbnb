@@ -12,16 +12,22 @@ class TripsPage extends React.Component{
         this.props.fetchBookings();
     }
 
+    // renderDate(){
+
+    // }
+
     renderReservation(){
         return this.props.trips.map((trip,i) =>{
             if (trip.userId === this.props.userId){
+               
                 return (
                     <div className="trips-page__card" key = {i}>
                         <h2 className="header-medium">{trip.reservation.title}</h2>
                         <h2 className="header-medium">{trip.reservation.description}</h2>
                         <h2 className="header-medium">{trip.reservation.location}</h2>
                         <img src={require(`../../img/booking-page/listing-1/${trip.reservation.imgs.img_1}.jpg`)} alt= {`img_${i}`} key ={`img_${i}`}/>
-                        <p>{moment(trip.reservation.startDate).format("MMMM Do")} - {moment(trip.reservation.endDate).format("Do")} </p>
+                        {/* <p>{moment(trip.reservation.startDate).format("MMMM Do")} - {moment(trip.reservation.endDate).format("Do")} </p> */}
+                        <p>{`${trip.reservation.startDate.split(" ")[0]} ${trip.reservation.startDate.split(" ")[1]} - ${trip.reservation.endDate.split(" ")[1]}` }</p>                    
                     </div>
                    
                 )
@@ -31,7 +37,7 @@ class TripsPage extends React.Component{
 
 
     render(){
-        console.log(this.props.trips);
+        //console.log(this.props.trips);
         return(
             <div className="trips-page">
             <Navigation />
