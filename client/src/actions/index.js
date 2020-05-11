@@ -8,7 +8,8 @@ import {
     FETCH_BOOKING,
     DELETE_BOOKING,
     EDIT_BOOKING,
-    CREATE_USER_RESERVATION
+    CREATE_USER_RESERVATION,
+    FETCH_USER_RESERVATIONS
 } from './types';
 
 
@@ -29,7 +30,7 @@ export const createBooking = (formValues)=>{
     return async (dispatch, getState) =>{
         //getState is another function from redux to reach other to other reducers and get the state and use it in other reducers
         //this will be helpful when creating a reservation for the user
-        const {userId} = getState().authy;
+        const {userId} = getState().auth;
 
         //have it saved to a variable so you can use it 
         // /bookings , the bookings part is actually the name of the object that you are dumping and calling info from
@@ -79,7 +80,7 @@ export const createUserReservation = (reservation)=>{
     return async (dispatch, getState) =>{
         //getState is another function from redux to reach other to other reducers and get the state and use it in other reducers
         //this will be helpful when creating a reservation for the user
-        const {userId} = getState().authy;
+        const {userId} = getState().auth;
 
         //this user variable ends up in the db.json
         // const bookingInfo = getState().bookings[bookingId];
@@ -101,3 +102,9 @@ export const createUserReservation = (reservation)=>{
         //  console.log(test);
     }
 };
+
+export const fetchUserReservations = () => async dispatch =>{
+    const response = await bookings.get('/user');
+
+    dispatch({type: FETCH_USER_RESERVATIONS, payload: response.data});
+}

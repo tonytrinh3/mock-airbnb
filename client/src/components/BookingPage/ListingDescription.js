@@ -57,7 +57,7 @@ const renderSuperhost = (host_info) =>{
 
 const renderSparklingClean = (reviews) =>{
 //this could be in a separate function file
-    console.log(reviews);
+    //console.log(reviews);
 
     let sumCleanliness = 0;
     reviews.map((review)=>{
@@ -65,7 +65,7 @@ const renderSparklingClean = (reviews) =>{
     })
 
    const avgCleanliness = sumCleanliness/reviews.length;
-   console.log(avgCleanliness);
+   //console.log(avgCleanliness);
 
    
 

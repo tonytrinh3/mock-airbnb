@@ -52,7 +52,7 @@ class RoomListingPage extends React.Component{
 
 
     render(){
-        //console.log(this.props.bookings)
+        console.log(this.props.bookings)
         return(
             <div className="awef">
                 RoomListingPage
@@ -66,7 +66,8 @@ class RoomListingPage extends React.Component{
 
 const mapStateToProps = (state) =>{
      //Object.values is a javascript function - that takes the values of each object awef: 2, and just lay them out in an array
-    return{
+    console.log(state);
+     return{
         bookings: Object.values(state.bookings)
         //this is handy to see if currentUserId exist or not to render certain things if the user has logged in or not or if the user own the content of the object or not  
         // currentUserId: state.authy.userId,

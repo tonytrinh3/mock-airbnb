@@ -40,7 +40,9 @@ class BookingPage extends React.Component{
         return(
             <div className="booking-page">
                 <Navigation/>
-                <PictureHeader/>
+                <PictureHeader
+                imgs = {this.props.booking.imgs}
+                />
                 <ListingDescription
                 title = {this.props.booking.title}
                 location = {this.props.booking.location}
@@ -55,6 +57,11 @@ class BookingPage extends React.Component{
                 <hr className="booking-page__hr hr"/>
                 <BookingCard 
                 bookingId = {this.props.booking.id}
+                title = {this.props.booking.title}
+                location = {this.props.booking.location}
+                description = {this.props.booking.description}
+                imgs = {this.props.booking.imgs}
+
                 />
                 
                 <hr className="booking-page__hr hr"/>

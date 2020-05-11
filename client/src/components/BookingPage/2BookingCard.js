@@ -30,7 +30,12 @@ class BookingCard extends React.Component{
                 endDate: moment(this.state.endDate).format('MMMM Do YYYY'),
                 numAdults: this.state.numAdults,
                 numChildren: this.state.numChildren,
-                numInfants: this.state.numInfants
+                numInfants: this.state.numInfants,
+                title: this.props.title,
+                description: this.props.description,
+                location: this.props.location,
+                imgs: this.props.imgs
+            
             }
 
         }

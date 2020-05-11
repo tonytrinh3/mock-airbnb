@@ -5,7 +5,7 @@ import bookingReducer from './bookingReducer';
 import userReducer from './userReducer'
 
 export default combineReducers({
-    authy: authReducer,
+    auth: authReducer,
     form: formReducer,
     bookings: bookingReducer,
     userReservations: userReducer
