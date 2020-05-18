@@ -159,7 +159,7 @@
         "numInfants": 1,
         "title": "Private, modern Central Sunset suite",
         "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
-        "location": "Outer Sunset, San Francisco, California",
+        "location": "San Francisco, California",
         "imgs": {
           "img_1": "home-1",
           "img_2": "home-2",
@@ -170,6 +170,50 @@
       },
       "userId": "115914775505299872385",
       "id": 22
+    },
+    {
+      "reservation": {
+        "bookingId": 9,
+        "startDate": "May 20th 2020",
+        "endDate": "May 28th 2020",
+        "numAdults": 2,
+        "numChildren": 1,
+        "numInfants": 1,
+        "title": "Private, modern Central Sunset suite",
+        "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+        "location": "San Francisco, California",
+        "imgs": {
+          "img_1": "home-1",
+          "img_2": "home-2",
+          "img_3": "home-3",
+          "img_4": "home-4",
+          "img_5": "home-5"
+        }
+      },
+      "userId": "115914775505299872385",
+      "id": 23
+    },
+    {
+      "reservation": {
+        "bookingId": 9,
+        "startDate": "May 20th 2020",
+        "endDate": "May 28th 2020",
+        "numAdults": 2,
+        "numChildren": 1,
+        "numInfants": 1,
+        "title": "Private, modern Central Sunset suite",
+        "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+        "location": "San Francisco, California",
+        "imgs": {
+          "img_1": "home-1",
+          "img_2": "home-2",
+          "img_3": "home-3",
+          "img_4": "home-4",
+          "img_5": "home-5"
+        }
+      },
+      "userId": "115914775505299872385",
+      "id": 24
     }
   ]
 }

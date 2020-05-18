@@ -1,0 +1,28 @@
+.trips-page{
+
+   
+    display:grid;
+    // grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns: [full-start] minmax(10rem, 1fr) 
+    [center-start] repeat(8, [col-start] minmax(min-content,25rem) [col-end]) [center-end] 
+    minmax(10rem, 1fr) [full-end];
+
+    grid-template-rows: min-content;
+
+
+
+    &__header{
+        grid-column: center-start / center-end;
+       
+    }
+
+    &__cards{
+        grid-column: center-start/ center-end;
+        // background-color: red;
+        grid-gap: 5rem;
+
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
