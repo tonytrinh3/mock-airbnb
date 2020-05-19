@@ -5,13 +5,13 @@ import React from 'react';
 // import pic_4 from "../../img/booking-page/listing-1/home-4.jpg"
 // import pic_5 from "../../img/booking-page/listing-1/home-5.jpg"
 
-const PictureHeader = ({imgs}) =>{
+const PictureHeader = ({imgs,id}) =>{
     //console.log(Object.values(imgs));
     return (
         <div className="picture-header margin-bottom-large">
         {Object.values(imgs).map((img,i) =>{
             //console.log(img);
-            return <img src={require(`../../img/booking-page/listing-1/${img}.jpg`)} alt= {`img_${i}`} className={`picture-header__img picture-header__img--${i}`} key ={`img_${i}`}/>
+            return <img src={require(`../../img/booking-page/listing-${id}/${img}.jpg`)} alt= {`img_${i}`} className={`picture-header__img picture-header__img--${i}`} key ={`img_${i}`}/>
         })}
 
             {/* <img src={require("../../img/booking-page/listing-1/home-1.jpg")} alt="pic 1" className="picture-header__img picture-header__img--1"/>

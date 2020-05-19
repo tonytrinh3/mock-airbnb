@@ -1,41 +1,382 @@
 {
   "bookings": [
     {
-      "title": "awef",
-      "description": "awef",
-      "id": 1
+      "id": 1,
+      "title": "Civic Center Views from a Contemporary City Pad",
+      "location": "San Francisco, California",
+      "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+      "imgs": {
+        "img_1": "img-1",
+        "img_2": "img-2",
+        "img_3": "img-3",
+        "img_4": "img-4",
+        "img_5": "img-5"
+      },
+      "home_type": {
+        "house": false,
+        "apartment": true,
+        "guest_suite": false,
+        "townhouse": false
+      },
+      "space_type": {
+        "private_room": false,
+        "entire_space": true
+      },
+      "home_specs": {
+        "numGuests": 4,
+        "numBedrooms": 1,
+        "numBeds": 2,
+        "numBaths": {
+          "private": 1,
+          "shared": false
+        }
+      },
+      "self_check_in": true,
+      "check_in": "15:00:00",
+      "check_out": "11:00:00",
+      "sleeping_arrangements": {
+        "bedroom_1": {
+          "queen_bed": 1,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed": 0
+        },
+        "common-spaces": {
+          "queen_bed": 0,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed": 1
+        }
+      },
+      "house_rules": {
+        "smoking": false,
+        "pets": false,
+        "parties": false
+      },
+      "cancellations": {
+        "refundable": true,
+        "type": "flexible"
+      },
+      "amenities": {
+        "kitchen": true,
+        "dryer": true,
+        "wifi": true,
+        "washer": true
+      },
+      "availability": {
+        "reservations": {
+          "reservation_1": {
+            "date_start": "2020-07-01",
+            "date_end": "2020-07-06"
+          },
+          "reservation_2": {
+            "date_start": "2020-08-01",
+            "date_end": "2020-08-06"
+          }
+        },
+        "not_avail": [
+          "2020-07-01",
+          "2020-05-30"
+        ]
+      },
+      "reviews": [
+        {
+          "name": "Jasmine",
+          "date": "2020-01-01",
+          "img": "something",
+          "description": "Loved Lance’s place! Great views of the city, amazing garden and really comfy bed that we didn’t want to leave. You’ll definitely want a car or get a car back because the hill is quite steep but totally worth it. Can’t wait to stay again!",
+          "cleanliness": 5,
+          "check_in": 5,
+          "value": 5,
+          "accuracy": 5,
+          "communication": 5,
+          "location": 5,
+          "overall": 5
+        },
+        {
+          "name": "Natasha",
+          "date": "2020-02-01",
+          "img": "something",
+          "description": "HIS PLACE IS AMAZING !",
+          "cleanliness": 4.5,
+          "check_in": 4,
+          "value": 4,
+          "accuracy": 4,
+          "communication": 4,
+          "location": 4,
+          "overall": 4
+        }
+      ],
+      "host_info": {
+        "name": "Todd Smith",
+        "img": "something",
+        "date_joined": "2012-01-20",
+        "location": "San Francisco, California",
+        "identity_verified": true,
+        "superhost": true,
+        "description": "We live in San Francisco and love to spend time outdoors—hiking, running, gardening, playing in the park. I am an Associate Professor at UCSF and my wife, Supryia, is an attorney with the U.S. Courts. We have two young children—an 9-year-old son and a 5-year-old daughter. As guests, we will treat your place with care and strive to \"leave no trace\". As hosts, we will do our best to make you feel welcome.",
+        "interaction_guests": "My wife, Supryia, and I love meeting new people and have hosted people from all over the world. We have separate space upstairs, so you will be free to keep to yourself, but if you have any questions or want to chat for a while, do let us know! Supryia loves languages–she speaks French and some Spanish. She can also understand some Italian.",
+        "languages": "English, 한국어, Español",
+        "living_wage_pledge": true,
+        "response_rate": 100,
+        "response_time": "an hour"
+      }
     },
     {
-      "title": "ergesrgesrg",
-      "description": "awefawef",
-      "id": 5
+      "id": 2,
+      "title": "Downtown SF Studio Apartment Near Civic Center",
+      "location": "San Francisco, California",
+      "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+      "imgs": {
+        "img_1": "img-1",
+        "img_2": "img-2",
+        "img_3": "img-3",
+        "img_4": "img-4",
+        "img_5": "img-5"
+      },
+      "home_type": {
+        "house": false,
+        "apartment": true,
+        "guest_suite": false,
+        "townhouse": false
+      },
+      "space_type": {
+        "private_room": false,
+        "entire_space": true
+      },
+      "home_specs": {
+        "numGuests": 4,
+        "numBedrooms": 1,
+        "numBeds": 2,
+        "numBaths": {
+          "private": 1,
+          "shared": false
+        }
+      },
+      "self_check_in": true,
+      "check_in": "15:00:00",
+      "check_out": "11:00:00",
+      "sleeping_arrangements": {
+        "bedroom_1": {
+          "queen_bed": 1,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed": 0
+        },
+        "common-spaces": {
+          "queen_bed": 0,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed": 1
+        }
+      },
+      "house_rules": {
+        "smoking": false,
+        "pets": false,
+        "parties": false
+      },
+      "cancellations": {
+        "refundable": true,
+        "type": "flexible"
+      },
+      "amenities": {
+        "kitchen": true,
+        "dryer": true,
+        "wifi": true,
+        "washer": true
+      },
+      "availability": {
+        "reservations": {
+          "reservation_1": {
+            "date_start": "2020-07-01",
+            "date_end": "2020-07-06"
+          },
+          "reservation_2": {
+            "date_start": "2020-08-01",
+            "date_end": "2020-08-06"
+          }
+        },
+        "not_avail": [
+          "2020-07-01",
+          "2020-05-30"
+        ]
+      },
+      "reviews": [
+        {
+          "name": "Jasmine",
+          "date": "2020-01-01",
+          "img": "something",
+          "description": "Loved Lance’s place! Great views of the city, amazing garden and really comfy bed that we didn’t want to leave. You’ll definitely want a car or get a car back because the hill is quite steep but totally worth it. Can’t wait to stay again!",
+          "cleanliness": 5,
+          "check_in": 5,
+          "value": 5,
+          "accuracy": 5,
+          "communication": 5,
+          "location": 5,
+          "overall": 5
+        },
+        {
+          "name": "Natasha",
+          "date": "2020-02-01",
+          "img": "something",
+          "description": "HIS PLACE IS AMAZING !",
+          "cleanliness": 4.5,
+          "check_in": 4,
+          "value": 4,
+          "accuracy": 4,
+          "communication": 4,
+          "location": 4,
+          "overall": 4
+        }
+      ],
+      "host_info": {
+        "name": "Todd Smith",
+        "img": "something",
+        "date_joined": "2012-01-20",
+        "location": "San Francisco, California",
+        "identity_verified": true,
+        "superhost": true,
+        "description": "We live in San Francisco and love to spend time outdoors—hiking, running, gardening, playing in the park. I am an Associate Professor at UCSF and my wife, Supryia, is an attorney with the U.S. Courts. We have two young children—an 9-year-old son and a 5-year-old daughter. As guests, we will treat your place with care and strive to \"leave no trace\". As hosts, we will do our best to make you feel welcome.",
+        "interaction_guests": "My wife, Supryia, and I love meeting new people and have hosted people from all over the world. We have separate space upstairs, so you will be free to keep to yourself, but if you have any questions or want to chat for a while, do let us know! Supryia loves languages–she speaks French and some Spanish. She can also understand some Italian.",
+        "languages": "English, 한국어, Español",
+        "living_wage_pledge": true,
+        "response_rate": 100,
+        "response_time": "an hour"
+      }
     },
     {
-      "title": "ergesrgesrg",
-      "description": "awefawef",
-      "id": 6
-    },
-    {
-      "title": "ergesrgesrg",
-      "description": "awefawef",
-      "id": 7
-    },
-    {
-      "title": "awefawef",
-      "description": "aaafafaf",
-      "id": 8
+      "id": 3,
+      "title": "Private, Remodeled Home Close to Golden Gate Park",
+      "location": "San Francisco, California",
+      "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+      "imgs": {
+        "img_1": "img-1",
+        "img_2": "img-2",
+        "img_3": "img-3",
+        "img_4": "img-4",
+        "img_5": "img-5"
+      },
+      "home_type": {
+        "house": false,
+        "apartment": true,
+        "guest_suite": false,
+        "townhouse": false
+      },
+      "space_type": {
+        "private_room": false,
+        "entire_space": true
+      },
+      "home_specs": {
+        "numGuests": 4,
+        "numBedrooms": 1,
+        "numBeds": 2,
+        "numBaths": {
+          "private": 1,
+          "shared": false
+        }
+      },
+      "self_check_in": true,
+      "check_in": "15:00:00",
+      "check_out": "11:00:00",
+      "sleeping_arrangements": {
+        "bedroom_1": {
+          "queen_bed": 1,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed": 0
+        },
+        "common-spaces": {
+          "queen_bed": 0,
+          "king_bed": 0,
+          "double_bed": 0,
+          "sofa_bed": 1
+        }
+      },
+      "house_rules": {
+        "smoking": false,
+        "pets": false,
+        "parties": false
+      },
+      "cancellations": {
+        "refundable": true,
+        "type": "flexible"
+      },
+      "amenities": {
+        "kitchen": true,
+        "dryer": true,
+        "wifi": true,
+        "washer": true
+      },
+      "availability": {
+        "reservations": {
+          "reservation_1": {
+            "date_start": "2020-07-01",
+            "date_end": "2020-07-06"
+          },
+          "reservation_2": {
+            "date_start": "2020-08-01",
+            "date_end": "2020-08-06"
+          }
+        },
+        "not_avail": [
+          "2020-07-01",
+          "2020-05-30"
+        ]
+      },
+      "reviews": [
+        {
+          "name": "Jasmine",
+          "date": "2020-01-01",
+          "img": "something",
+          "description": "Loved Lance’s place! Great views of the city, amazing garden and really comfy bed that we didn’t want to leave. You’ll definitely want a car or get a car back because the hill is quite steep but totally worth it. Can’t wait to stay again!",
+          "cleanliness": 5,
+          "check_in": 5,
+          "value": 5,
+          "accuracy": 5,
+          "communication": 5,
+          "location": 5,
+          "overall": 5
+        },
+        {
+          "name": "Natasha",
+          "date": "2020-02-01",
+          "img": "something",
+          "description": "HIS PLACE IS AMAZING !",
+          "cleanliness": 4.5,
+          "check_in": 4,
+          "value": 4,
+          "accuracy": 4,
+          "communication": 4,
+          "location": 4,
+          "overall": 4
+        }
+      ],
+      "host_info": {
+        "name": "Todd Smith",
+        "img": "something",
+        "date_joined": "2012-01-20",
+        "location": "San Francisco, California",
+        "identity_verified": true,
+        "superhost": true,
+        "description": "We live in San Francisco and love to spend time outdoors—hiking, running, gardening, playing in the park. I am an Associate Professor at UCSF and my wife, Supryia, is an attorney with the U.S. Courts. We have two young children—an 9-year-old son and a 5-year-old daughter. As guests, we will treat your place with care and strive to \"leave no trace\". As hosts, we will do our best to make you feel welcome.",
+        "interaction_guests": "My wife, Supryia, and I love meeting new people and have hosted people from all over the world. We have separate space upstairs, so you will be free to keep to yourself, but if you have any questions or want to chat for a while, do let us know! Supryia loves languages–she speaks French and some Spanish. She can also understand some Italian.",
+        "languages": "English, 한국어, Español",
+        "living_wage_pledge": true,
+        "response_rate": 100,
+        "response_time": "an hour"
+      }
     },
     {
       "id": 9,
       "title": "Private, modern Central Sunset suite",
-      "location": "Outer Sunset, San Francisco, California",
+      "location": "San Francisco, California",
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
-        "img_1": "home-1",
-        "img_2": "home-2",
-        "img_3": "home-3",
-        "img_4": "home-4",
-        "img_5": "home-5"
+        "img_1": "img-1",
+        "img_2": "img-2",
+        "img_3": "img-3",
+        "img_4": "img-4",
+        "img_5": "img-5"
       },
       "home_type": {
         "house": false,
@@ -161,11 +502,11 @@
         "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
         "location": "San Francisco, California",
         "imgs": {
-          "img_1": "home-1",
-          "img_2": "home-2",
-          "img_3": "home-3",
-          "img_4": "home-4",
-          "img_5": "home-5"
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
         }
       },
       "userId": "115914775505299872385",

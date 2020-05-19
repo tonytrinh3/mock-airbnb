@@ -2,6 +2,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import {fetchBookings} from '../../actions/index';
+import Navigation from '../Navigation';
+import Footer from '../Footer';
+import GoogleMap from './GoogleMap';
 
 class RoomListingPage extends React.Component{
 
@@ -11,40 +14,15 @@ class RoomListingPage extends React.Component{
     }
 
     
-    // renderAdmin(booking){
-    
-    //     if (booking.userId === this.props.currentUserId){
-    //         return (
-    //         <div className="aewf">
-               
-    //             <Link to = {`/booking/edit/${booking.id}`}style ={{color: "red"}}> EDIT!!!</Link>
-    //             DELETE!!!
-    //             </div>
-    //         )
-    //     }
-    // }
-
-    // renderCreate(){
-    //     console.log(this.props.isSignedIn);
-    //     if(this.props.isSignedIn){
-    //         return(
-    //             <div className="aewf" style ={{backgroundColor: "red",  }}>
-    //                 <Link to = "/">
-    //                 Create Booking
-    //                 </Link>
-    //             </div>
-    //         )
-    //     }
-    // }
-
 
     renderList(){
         return this.props.bookings.map(booking=>{
             return (
-                <div className="booking" key = {booking.id}>
+                <div className="listings__listing" key = {booking.id}>
                     <Link to={`/booking/${booking.id}`}> {booking.title}</Link>
+                    <img src="" alt="" className="listings__listing__img"/>
                   
-                    {/* {this.renderAdmin(booking)} */}
+               
                 </div>
             )
         })
@@ -54,11 +32,26 @@ class RoomListingPage extends React.Component{
     render(){
         console.log(this.props.bookings)
         return(
-            <div className="awef">
-                RoomListingPage
-                {this.renderList()}
-                  {/* {this.renderCreate()} */}
+            <div className="wef">
+                <Navigation />
+
+                <div className="listing-page">
+            
+
+                    <h1 className="listing-page__header header-big margin-bottom-large">
+                    RoomListingPage
+                    </h1>
+                
+                    <div className="listings">
+                        {this.renderList()}
+                    </div>
+
+                    <GoogleMap/>
+
+                </div>
+                <Footer/>
             </div>
+
         )
     }
 };

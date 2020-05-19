@@ -2,7 +2,7 @@
     // height: 60vh;
     grid-column: full-start/ full-end;
     display:grid;
-    background-color: blue;
+    // background-color: blue;
 
     grid-template-columns: 50vw repeat(2,1fr);
     grid-template-rows: repeat(2, 30vh);

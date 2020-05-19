@@ -23,6 +23,7 @@ class BookingPage extends React.Component{
 
     componentDidMount(){
         this.props.fetchBooking(this.props.match.params.id);
+        //console.log(this.props.match.params.id);
     }
 
     // renderStuff(){
@@ -42,6 +43,7 @@ class BookingPage extends React.Component{
                 <Navigation/>
                 <PictureHeader
                 imgs = {this.props.booking.imgs}
+                id = {this.props.match.params.id}
                 />
                 <ListingDescription
                 title = {this.props.booking.title}
