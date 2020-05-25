@@ -1,9 +1,9 @@
 .google-map{
 
-    grid-column: center-start/center-end;
+    grid-column: col-start 5/full-end;
     background-color: blue;
-    position: fixed;
-    right: 0rem;
+    // position: fixed;
+    // right: 0rem;
    
     height: 50vh;
     width: 50vw;

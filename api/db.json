@@ -12,12 +12,8 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "home_type": {
-        "house": false,
-        "apartment": true,
-        "guest_suite": false,
-        "townhouse": false
-      },
+      "price":50,
+      "home_type": "apartment",
       "space_type": {
         "private_room": false,
         "entire_space": true
@@ -57,12 +53,7 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": {
-        "kitchen": true,
-        "dryer": true,
-        "wifi": true,
-        "washer": true
-      },
+      "amenities": ["kitchen","dryer","wifi","washer"],
       "availability": {
         "reservations": {
           "reservation_1": {
@@ -134,12 +125,8 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "home_type": {
-        "house": false,
-        "apartment": true,
-        "guest_suite": false,
-        "townhouse": false
-      },
+      "price": 50,
+      "home_type": "apartment",
       "space_type": {
         "private_room": false,
         "entire_space": true
@@ -179,12 +166,7 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": {
-        "kitchen": true,
-        "dryer": true,
-        "wifi": true,
-        "washer": true
-      },
+      "amenities": ["kitchen","dryer","wifi","washer"],
       "availability": {
         "reservations": {
           "reservation_1": {
@@ -256,12 +238,8 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "home_type": {
-        "house": false,
-        "apartment": true,
-        "guest_suite": false,
-        "townhouse": false
-      },
+      "price":50,
+      "home_type": "apartment",
       "space_type": {
         "private_room": false,
         "entire_space": true
@@ -301,12 +279,7 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": {
-        "kitchen": true,
-        "dryer": true,
-        "wifi": true,
-        "washer": true
-      },
+      "amenities": ["kitchen","dryer","wifi","washer"],
       "availability": {
         "reservations": {
           "reservation_1": {
@@ -378,12 +351,8 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "home_type": {
-        "house": false,
-        "apartment": true,
-        "guest_suite": false,
-        "townhouse": false
-      },
+      "price":50,
+      "home_type": "apartment",
       "space_type": {
         "private_room": false,
         "entire_space": true
@@ -423,12 +392,7 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": {
-        "kitchen": true,
-        "dryer": true,
-        "wifi": true,
-        "washer": true
-      },
+      "amenities": ["kitchen","dryer","wifi","washer"],
       "availability": {
         "reservations": {
           "reservation_1": {

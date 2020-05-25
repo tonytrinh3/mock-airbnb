@@ -11,10 +11,20 @@
 }
 
 .listings{
+    grid-column: full-start/col-end 4;
 
     &__listing{
-        &__img{
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: min-content;
 
+        &__description{
+            grid-column: 2 / 3;
+        }
+        &__img{
+            grid-column: 1 / 2;
+            height: 100%;
+            width: 100%;
         }
 
     }
