@@ -13,14 +13,10 @@ class RoomListingPage extends React.Component{
     componentDidMount(){
         this.props.fetchBookings();
     }
-
-
-
-    
-    //space-type
   
     renderSpaceType(space_type, home_type){
-        return <p className = "listings__listing__space-type">{(space_type === "entire_space") ? `Entire ${home_type}`: `Private Room` }</p>
+        console.log(space_type);
+        return <p className = "listings__listing__space-type">{(space_type = "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
     }
 
     renderAmenities(amenities){
@@ -38,30 +34,24 @@ class RoomListingPage extends React.Component{
                 <li className="listings__listing__home-specs__spec">{home_specs.numBeds} beds</li> 
                 <li className="listings__listing__home-specs__spec">{home_specs.numBaths.private ? `${home_specs.numBaths.private} baths`:`${home_specs.numBaths.shared} shared baths`}</li> 
             </ul>
-
         )
-     
     }
 
     renderList(){
         return this.props.bookings.map(booking=>{
             return (
                 <div className="listings__listing" key = {booking.id}>
-
                     <div className="listings__listing__description">
                         <Link to={`/booking/${booking.id}`} className="listings__listing__title"> {booking.title}</Link>
                         <div className="superhost-tag">superhost</div>
+                        {this.renderSpaceType(booking.space_type, booking.home_type)}
                         <p className="listings__listing__home-type">{booking.home_type}</p>
                         <p className="listings__listing__price">${booking.price} / night</p>
                         <p className="wef">{avgReview(booking.reviews,"overall")}</p>
                         {this.renderHomeSpecs(booking.home_specs)}
                         <ul className="listings__listing__amenities">{this.renderAmenities(booking.amenities)}</ul>  
-                        
                     </div>
-
                     <img src={require(`../../img/booking-page/listing-${booking.id}/img-1.jpg`)} alt="" className="listings__listing__img"/>
-                  
-               
                 </div>
             )
         })
@@ -71,22 +61,16 @@ class RoomListingPage extends React.Component{
     render(){
         console.log(this.props.bookings)
         return(
-            <div className="wef">
+            <div>
                 <Navigation />
-
                 <div className="listing-page">
-            
-
                     <h1 className="listing-page__header header-big margin-bottom-large">
                     Room Listing Page
                     </h1>
-                
                     <div className="listings">
                         {this.renderList()}
                     </div>
-
                     <GoogleMap/>
-
                 </div>
                 <Footer/>
             </div>

@@ -50,7 +50,6 @@ class TripsPage extends React.Component{
                 <h1 className="trips-page__header header-big margin-bottom-large">Trips</h1>
                 <div className="trips-page__cards">
                     {this.renderReservation()} 
-
                 </div>
             </div>
 

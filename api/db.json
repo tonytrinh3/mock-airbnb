@@ -127,10 +127,7 @@
       },
       "price": 50,
       "home_type": "apartment",
-      "space_type": {
-        "private_room": false,
-        "entire_space": true
-      },
+      "space_type": "entire_space",
       "home_specs": {
         "numGuests": 4,
         "numBedrooms": 1,
@@ -240,10 +237,7 @@
       },
       "price":50,
       "home_type": "apartment",
-      "space_type": {
-        "private_room": false,
-        "entire_space": true
-      },
+      "space_type": "entire_space",
       "home_specs": {
         "numGuests": 4,
         "numBedrooms": 1,
@@ -353,10 +347,7 @@
       },
       "price":50,
       "home_type": "apartment",
-      "space_type": {
-        "private_room": false,
-        "entire_space": true
-      },
+      "space_type": "entire_space",
       "home_specs": {
         "numGuests": 4,
         "numBedrooms": 1,

@@ -1,31 +1,14 @@
 .listing-page{
     display: grid;
 
-    grid-template-columns: [full-start] minmax(6rem, 1fr) 
+    grid-template-columns: [full-start] minmax(1rem, 1fr) 
     [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 
-    minmax(6rem, 1fr) [full-end];
+    minmax(1rem, 1fr) [full-end];
+
+    grid-template-rows: 10rem;
 
     &__header{
         grid-column: full-start / full-end;
     }
 }
 
-.listings{
-    grid-column: full-start/col-end 4;
-
-    &__listing{
-        display: grid;
-        grid-template-columns: 3fr 7fr;
-        grid-template-rows: min-content;
-
-        &__description{
-            grid-column: 2 / 3;
-        }
-        &__img{
-            grid-column: 1 / 2;
-            height: 100%;
-            width: 100%;
-        }
-
-    }
-}

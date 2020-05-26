@@ -1,3 +1,21 @@
 .listings{
-    
+    grid-column: full-start/col-end 4;
+    background-color: red;
+
+    &__listing{
+        
+        display: grid;
+        grid-template-columns: 3fr 7fr;
+        grid-template-rows: min-content;
+
+        &__description{
+            grid-column: 2 / 3;
+        }
+        &__img{
+            grid-column: 1 / 2;
+            height: 5rem;
+            width: 5rem;
+        }
+
+    }
 }
