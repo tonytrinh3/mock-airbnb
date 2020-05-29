@@ -32,20 +32,23 @@
     &--3{
         grid-column:3;
     }
-}
 
-.explore-airbnb__card__picture{
-    grid-column: 1;
+    &__picture{
+        grid-column: 1;
   
-    border-radius: 2rem 0 0 2rem;
-    height: 100%;
-    width: 100%;
-    object-fit:cover;
+        border-radius: 2rem 0 0 2rem;
+        height: 100%;
+        width: 100%;
+        object-fit:cover;
+    
+    }
 
+    &__caption{
+        grid-column: 2;
+        align-self:center;
+        margin: 3rem
+    }
 }
 
-.explore-airbnb__card__caption{
-    grid-column: 2;
-    align-self:center;
-    margin: 3rem
-}
+
+

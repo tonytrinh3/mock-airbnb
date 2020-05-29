@@ -1,21 +1,81 @@
 .listings{
     grid-column: full-start/col-end 4;
-    background-color: red;
+    // background-color: red;
+
+    display:grid;
+    // grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(8, min-content);
 
     &__listing{
-        
+        list-style:none;
         display: grid;
-        grid-template-columns: 3fr 7fr;
-        grid-template-rows: min-content;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(5,min-content);
+        height: 20vh;
+        padding: 2rem;
+       
+        &__img{
+            grid-column: 1;
+            height: 50rem;
+            width: 100%;
+            background-color: orange;
+            object-fit:cover;
+        }
 
         &__description{
-            grid-column: 2 / 3;
+            grid-column: 2;
+        
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+  
+
+       
+            &__superhost-tag{
+                grid-column: 1;
+            }
+
+            &__space-type{
+
+            }
+
+            &__reviews{
+                grid-column: 4;
+                justify-self: end;
+            }
+
+
+            &__title{
+                grid-column: 1/-1;
+                text-decoration: none;
+                // color: $default-font-color;
+            }
+
+
+
+            &__home-specs{
+                list-style:none;
+                grid-column: 1/-1;
+                // display: inline-block;
+            }
+
+            &__amenities{
+                list-style:none;
+                grid-column: 1/-1;
+            }
+
+            &__price {
+                grid-column: 1/-1;
+                justify-self: end;
+
+                span{
+                    // background-color: orange;
+                    font-weight: 700;
+                }
+             
+            }
         }
-        &__img{
-            grid-column: 1 / 2;
-            height: 5rem;
-            width: 5rem;
-        }
+
+
 
     }
 }
