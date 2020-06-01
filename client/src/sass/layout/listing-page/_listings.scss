@@ -55,12 +55,30 @@
             &__home-specs{
                 list-style:none;
                 grid-column: 1/-1;
-                // display: inline-block;
+                
+
+                &__spec{
+                  
+                    display: inline-block;
+                }
+
+                &__spec:not(:last-child):after{
+                    content:" · "
+                }
             }
 
             &__amenities{
                 list-style:none;
                 grid-column: 1/-1;
+
+                &__amenity{
+                 
+                    display: inline-block;
+                }
+
+                &__amenity:not(:last-child):after{
+                    content:" · "
+                }
             }
 
             &__price {

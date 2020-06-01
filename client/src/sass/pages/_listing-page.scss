@@ -5,7 +5,7 @@
     [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 
     minmax(1rem, 1fr) [full-end];
 
-    grid-template-rows: 10rem;
+    // grid-template-rows: 10rem;
 
     &__header{
         grid-column: full-start / full-end;

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {fetchBookings} from '../../actions/index';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
-import GoogleMap from './GoogleMap';
+import GoogleMaps from './GoogleMaps';
 import avgReview from '../avgReview';
 
 class RoomListingPage extends React.Component{
@@ -18,19 +18,19 @@ class RoomListingPage extends React.Component{
   
     renderSpaceType(space_type, home_type){
         console.log(space_type);
-        return <p className = "listings__listing__description__space-type">{(space_type = "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
+        return <p className = "listings__listing__description__space-type margin-bottom-medium">{(space_type = "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
     }
 
     renderAmenities(amenities){
         console.log(amenities);
-        return amenities.map(amenity=>{
-            return <li className="listings__listing__description__amenities__amenity">{amenity}</li>
+        return amenities.map((amenity,i)=>{
+            return <li className="listings__listing__description__amenities__amenity" key = {i}>{amenity}</li>
         })
     }
 
     renderHomeSpecs(home_specs){
         return(
-            <ul className="listings__listing__description__home-specs">
+            <ul className="listings__listing__description__home-specs margin-bottom-medium">
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numGuests} guests</li>  
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numBedrooms} bedrooms</li> 
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numBeds} beds</li> 
@@ -38,17 +38,17 @@ class RoomListingPage extends React.Component{
             </ul>
         )
     }
-    //· 14 days
+    
     renderList(){
         return this.props.bookings.map(booking=>{
             return (
-                <div className="listings__listing" key = {booking.id}>
+                <div className="listings__listing " key = {booking.id}>
                     <div className="listings__listing__description">
                         
-                        <div className="listings__listing__description__superhost-tag superhost-tag">superhost</div>
+                        <div className="listings__listing__description__superhost-tag superhost-tag margin-bottom-medium">superhost</div>
                         {this.renderSpaceType(booking.space_type, booking.home_type)}
                         <p className="listings__listing__description__reviews">{avgReview(booking.reviews,"overall")}</p>
-                        <Link className="listings__listing__description__title header-medium" to={`/booking/${booking.id}`} > {booking.title}</Link>
+                        <Link className="listings__listing__description__title header-medium margin-bottom-medium" to={`/booking/${booking.id}`} > {booking.title}</Link>
                         
                         
                         {this.renderHomeSpecs(booking.home_specs)}
@@ -61,7 +61,7 @@ class RoomListingPage extends React.Component{
         })
     }
 
-
+    //need to do a mouseover as well
     render(){
         console.log(this.props.bookings)
         return(
@@ -74,7 +74,7 @@ class RoomListingPage extends React.Component{
                     <div className="listings">
                         {this.renderList()}
                     </div>
-                    <GoogleMap/>
+                    <GoogleMaps/>
                 </div>
                 <Footer/>
             </div>

@@ -6,7 +6,6 @@ import userReducer from './userReducer'
 
 export default combineReducers({
     auth: authReducer,
-    form: formReducer,
     bookings: bookingReducer,
     userReservations: userReducer
 });
