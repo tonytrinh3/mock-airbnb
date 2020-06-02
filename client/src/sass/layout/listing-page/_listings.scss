@@ -6,6 +6,10 @@
     // grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(8, min-content);
 
+    // &__header{
+    //     grid-column: full-start/col-end 4;
+    // }
+
     &__listing{
         list-style:none;
         display: grid;

@@ -17,12 +17,12 @@ class RoomListingPage extends React.Component{
     }
   
     renderSpaceType(space_type, home_type){
-        console.log(space_type);
+        //console.log(space_type);
         return <p className = "listings__listing__description__space-type margin-bottom-medium">{(space_type = "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
     }
 
     renderAmenities(amenities){
-        console.log(amenities);
+        //console.log(amenities);
         return amenities.map((amenity,i)=>{
             return <li className="listings__listing__description__amenities__amenity" key = {i}>{amenity}</li>
         })
@@ -62,19 +62,23 @@ class RoomListingPage extends React.Component{
     }
 
     //need to do a mouseover as well
+    //pass down picture, superhost, title, space type , price, rating to google map
     render(){
         console.log(this.props.bookings)
         return(
             <div>
                 <Navigation />
                 <div className="listing-page">
-                    <h1 className="listing-page__header header-big margin-bottom-large">
-                    Room Listing Page
-                    </h1>
+                    
                     <div className="listings">
+                        <h1 className="listings__header header-big margin-bottom-large">
+                        Room Listing Page
+                        </h1>
                         {this.renderList()}
                     </div>
-                    <GoogleMaps/>
+                    <GoogleMaps
+                       bookings = {this.props.bookings}
+                    />
                 </div>
                 <Footer/>
             </div>

@@ -4,6 +4,8 @@
       "id": 1,
       "title": "Civic Center Views from a Contemporary City Pad",
       "location": "San Francisco, California",
+      "lat":37.780963,
+      "lng":-122.420412,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
@@ -117,6 +119,8 @@
       "id": 2,
       "title": "Downtown SF Studio Apartment Near Civic Center",
       "location": "San Francisco, California",
+      "lat":37.781362,
+      "lng":-122.417644,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
@@ -227,6 +231,8 @@
       "id": 3,
       "title": "Private, Remodeled Home Close to Golden Gate Park",
       "location": "San Francisco, California",
+      "lat":37.762404,
+      "lng":-122.505071,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
@@ -337,6 +343,8 @@
       "id": 9,
       "title": "Private, modern Central Sunset suite",
       "location": "San Francisco, California",
+      "lat": 37.748355,
+      "lng":-122.476957,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
