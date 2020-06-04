@@ -1,10 +1,26 @@
 .google-map{
 
-    grid-column: col-start 5/full-end;
-    background-color: blue;
-    // position: fixed;
+    grid-column: col-start 4/full-end;
+    position: fixed;
     // right: 0rem;
    
     // height: 50vh;
     // width: 50vw;
+    background-color: red;
+
+    &__marker{
+        color: blue;
+    }
+
+    &__info-window{
+        height: 20vh;
+        width: 10vw;
+        display: grid;
+
+        &__header{
+            // text-overflow: ellipsis;
+            // white-space: nowrap;
+            // overflow: hidden;
+        }
+    }
 }

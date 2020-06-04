@@ -1,15 +1,15 @@
 import React from 'react';
 import PlacesCards from '../PlacesCard';
-import montenegro from '../../img/landing-page/places-stay/Montenegro.jpg';
-import belarus from '../../img/landing-page/places-stay/Belarus.jpg';
-import portugal from '../../img/landing-page/places-stay/Portugal.jpg';
+// import montenegro from '../../img/landing-page/places-stay/Montenegro.jpg';
+// import belarus from '../../img/landing-page/places-stay/Belarus.jpg';
+// import portugal from '../../img/landing-page/places-stay/Portugal.jpg';
 
 
 const countries = [
     {
         country: "Montenegro",
         description: "Waterfront with extraordinary view",
-        picture: montenegro,
+        picture: 'landing-page/places-stay/Montenegro.jpg',
         pricing: "$67",
         rating:"4.81",
         superhost: "superhost"
@@ -17,7 +17,7 @@ const countries = [
     {
         country: "Belarus",
         description: "Minsk Belarus Studio in historical center",
-        picture: belarus,
+        picture: 'landing-page/places-stay/Belarus.jpg',
         pricing: "$32",
         rating:"4.80",
         superhost: "superhost"
@@ -25,7 +25,7 @@ const countries = [
     {
         country: "Portugal",
         description: "Clérigos Room | Historic Centre",
-        picture: portugal,
+        picture: 'landing-page/places-stay/Portugal.jpg',
         pricing: "$39",
         rating:"4.67",
         superhost: "superhost"

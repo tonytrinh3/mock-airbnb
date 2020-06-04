@@ -1,21 +1,21 @@
 import React from 'react';
 
 import PlacesCards from '../PlacesCard';
-import mexico from '../../img/landing-page/superhost/mexico.PNG';
-import indonesia from '../../img/landing-page/superhost/indonesia.PNG';
-import colombia from '../../img/landing-page/superhost/colombia.PNG';
-import united_states from '../../img/landing-page/superhost/united_states.PNG';
-import united_states2 from '../../img/landing-page/superhost/united_states2.PNG';
-import united_states3 from '../../img/landing-page/superhost/united_states3.PNG';
-import united_kingdom from '../../img/landing-page/superhost/united_kingdom.PNG';
-import iceland from '../../img/landing-page/superhost/iceland.PNG';
+// import mexico from '../../img/landing-page/superhost/mexico.PNG';
+// import indonesia from '../../img/landing-page/superhost/indonesia.PNG';
+// import colombia from '../../img/landing-page/superhost/colombia.PNG';
+// import united_states from '../../img/landing-page/superhost/united_states.PNG';
+// import united_states2 from '../../img/landing-page/superhost/united_states2.PNG';
+// import united_states3 from '../../img/landing-page/superhost/united_states3.PNG';
+// import united_kingdom from '../../img/landing-page/superhost/united_kingdom.PNG';
+// import iceland from '../../img/landing-page/superhost/iceland.PNG';
 
 
 const countries = [
     {
         country: "Mexico",
         description: "The World Famous Seashell House ~ Casa Caracol",
-        picture: mexico,
+        picture: 'landing-page/superhost/mexico.PNG',
         pricing: "$299",
         rating:"4.75",
         superhost: "superhost"
@@ -23,7 +23,7 @@ const countries = [
     {
         country: "Indonesia",
         description: "HIDEOUT BALI - Eco Bamboo Home",
-        picture: indonesia,
+        picture: 'landing-page/superhost/indonesia.PNG',
         pricing: "$75",
         rating:"4.82",
         superhost: "superhost"
@@ -31,7 +31,7 @@ const countries = [
     {
         country: "Colombia",
         description: "Romantic Cabana with view",
-        picture: colombia,
+        picture: 'landing-page/superhost/colombia.PNG',
         pricing: "$40",
         rating:"4.93",
         superhost: "superhost"
@@ -39,7 +39,7 @@ const countries = [
     {
         country: "United States",
         description: "The Joshua Tree House",
-        picture: united_states,
+        picture: 'landing-page/superhost/united_states.PNG',
         pricing: "$300",
         rating:"4.88",
         superhost: "superhost"
@@ -47,7 +47,7 @@ const countries = [
     {
         country: "United States",
         description: "The Mushroom Dome Retreat & LAND of Paradise Suite",
-        picture: united_states2,
+        picture: 'landing-page/superhost/united_states2.PNG',
         pricing: "$130",
         rating:"4.86",
         superhost: "superhost"
@@ -55,7 +55,7 @@ const countries = [
     {
         country: "United States",
         description: "Underground Hygge",
-        picture: united_states3,
+        picture: 'landing-page/superhost/united_states3.PNG',
         pricing: "$400",
         rating:"4.85",
         superhost: "superhost"
@@ -63,7 +63,7 @@ const countries = [
     {
         country: "United Kingdom",
         description: "Live in an historic English Castle!",
-        picture: united_kingdom,
+        picture: 'landing-page/superhost/united_kingdom.PNG',
         pricing: "$256",
         rating:"4.96",
         superhost: "superhost"
@@ -71,7 +71,7 @@ const countries = [
     {
         country: "Iceland",
         description: "Amazing view - Moderne apartment",
-        picture: iceland,
+        picture: 'landing-page/superhost/iceland.PNG',
         pricing: "$151",
         rating:"4.76",
         superhost: "superhost"

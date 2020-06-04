@@ -14,7 +14,7 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "price":50,
+      "price":150,
       "home_type": "apartment",
       "space_type": {
         "private_room": false,
@@ -129,7 +129,7 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "price": 50,
+      "price": 74,
       "home_type": "apartment",
       "space_type": "entire_space",
       "home_specs": {
@@ -209,7 +209,7 @@
           "accuracy": 4,
           "communication": 4,
           "location": 4,
-          "overall": 4
+          "overall": 4.2
         }
       ],
       "host_info": {
@@ -241,7 +241,7 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "price":50,
+      "price":90,
       "home_type": "apartment",
       "space_type": "entire_space",
       "home_specs": {
@@ -308,7 +308,7 @@
           "accuracy": 5,
           "communication": 5,
           "location": 5,
-          "overall": 5
+          "overall": 4.1
         },
         {
           "name": "Natasha",
@@ -321,7 +321,7 @@
           "accuracy": 4,
           "communication": 4,
           "location": 4,
-          "overall": 4
+          "overall": 4.3
         }
       ],
       "host_info": {
@@ -353,7 +353,7 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "price":50,
+      "price":70,
       "home_type": "apartment",
       "space_type": "entire_space",
       "home_specs": {
@@ -420,7 +420,7 @@
           "accuracy": 5,
           "communication": 5,
           "location": 5,
-          "overall": 5
+          "overall": 4.85
         },
         {
           "name": "Natasha",
@@ -433,7 +433,7 @@
           "accuracy": 4,
           "communication": 4,
           "location": 4,
-          "overall": 4
+          "overall": 4.7
         }
       ],
       "host_info": {

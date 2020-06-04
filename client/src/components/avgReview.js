@@ -5,7 +5,7 @@ const avgReview = (reviews,type) =>{
         reviews.map((review)=>{
             return sum += eval("review." + type)
         });
-      return sum/reviews.length;  
+      return Math.round((sum/reviews.length)*10)/10;  
 };
 
 export default avgReview;

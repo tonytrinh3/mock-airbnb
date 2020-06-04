@@ -16,6 +16,31 @@ class RoomListingPage extends React.Component{
         this.props.fetchBookings();
     }
   
+ 
+    
+    renderList(){
+        return this.props.bookings.map(booking=>{
+            return (
+                <div className="listings__listing " key = {booking.id}>
+                      <img className="listings__listing__img" src={require(`../../img/booking-page/listing-${booking.id}/img-1.jpg`)} alt="" />
+                    <div className="listings__listing__description">
+                        <div className="listings__listing__description__superhost-tag superhost-tag margin-bottom-medium">superhost</div>
+                        {this.renderSpaceType(booking.space_type, booking.home_type)}
+                        <p className="listings__listing__description__reviews">{avgReview(booking.reviews,"overall")}</p>
+                        <Link className="listings__listing__description__title header-medium margin-bottom-medium" to={`/booking/${booking.id}`} > {booking.title}</Link>
+                        
+                        
+                        {this.renderHomeSpecs(booking.home_specs)}
+                        <ul className="listings__listing__description__amenities">{this.renderAmenities(booking.amenities)}</ul>  
+                        <p className="listings__listing__description__price"><span >${booking.price}</span> / night</p>
+                    </div>
+                  
+                    <hr className="listings__listing__hr hr"/>
+                </div>
+            )
+        })
+    }
+
     renderSpaceType(space_type, home_type){
         //console.log(space_type);
         return <p className = "listings__listing__description__space-type margin-bottom-medium">{(space_type = "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
@@ -37,28 +62,6 @@ class RoomListingPage extends React.Component{
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numBaths.private ? `${home_specs.numBaths.private} baths`:`${home_specs.numBaths.shared} shared baths`}</li> 
             </ul>
         )
-    }
-    
-    renderList(){
-        return this.props.bookings.map(booking=>{
-            return (
-                <div className="listings__listing " key = {booking.id}>
-                    <div className="listings__listing__description">
-                        
-                        <div className="listings__listing__description__superhost-tag superhost-tag margin-bottom-medium">superhost</div>
-                        {this.renderSpaceType(booking.space_type, booking.home_type)}
-                        <p className="listings__listing__description__reviews">{avgReview(booking.reviews,"overall")}</p>
-                        <Link className="listings__listing__description__title header-medium margin-bottom-medium" to={`/booking/${booking.id}`} > {booking.title}</Link>
-                        
-                        
-                        {this.renderHomeSpecs(booking.home_specs)}
-                        <ul className="listings__listing__description__amenities">{this.renderAmenities(booking.amenities)}</ul>  
-                        <p className="listings__listing__description__price"><span >${booking.price}</span> / night</p>
-                    </div>
-                    <img className="listings__listing__img" src={require(`../../img/booking-page/listing-${booking.id}/img-1.jpg`)} alt="" />
-                </div>
-            )
-        })
     }
 
     //need to do a mouseover as well

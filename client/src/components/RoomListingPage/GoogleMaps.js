@@ -1,6 +1,8 @@
 import React from 'react';
-
+import { Link} from 'react-router-dom';
 import { Map, GoogleApiWrapper, Marker,InfoWindow } from 'google-maps-react';
+import history from '../../history';
+import PlacesCards from '../PlacesCard';
 
 
 class GoogleMaps extends React.Component{
@@ -8,6 +10,7 @@ class GoogleMaps extends React.Component{
         showingInfoWindow: false,
         activeMarker: {},
         selectedPlace: {},
+        selectedPlaceId:{}
       };
    
     onMarkerClick = (props, marker) =>{
@@ -42,30 +45,40 @@ class GoogleMaps extends React.Component{
     };
  
     containerStyle = {
-        width: '50vw',
+        width: '55vw',
         height: '80vh'
     }
 
     renderMarker(){
        return this.props.bookings.map((booking,i)=>{
-            console.log(booking.lng);
+            // console.log(booking.lng);
+            
           
             return <Marker 
                     onClick={this.onMarkerClick} 
                     name={booking.title} 
                     position={{ lat: booking.lat, lng: booking.lng}}
                     key = {i} 
+                    className = {"google-map__marker"}
+                    icon={{
+                        url: require("../../img/airbnb-logo.png"),
+                        anchor: new this.props.google.maps.Point(32,32),
+                        scaledSize: new this.props.google.maps.Size(34,34)
+                      }}
                 />
-
-            
         })
+    }
+
+    onClickLink = () =>{
+        return console.log("aefw");
     }
 
     render(){
         // console.log(this.props.google)
-        console.log(this.props.bookings);
+        //console.log(this.props.bookings);
     
         return (
+            
             <Map
                className = {"google-map"}
                 google={this.props.google}
@@ -83,15 +96,26 @@ class GoogleMaps extends React.Component{
                 /> */}
                 
                 {this.renderMarker()}
- 
+        
                 <InfoWindow
               
                     marker={this.state.activeMarker}
                     visible={this.state.showingInfoWindow}
                 >
-                    <div>
-                    <h1>{this.state.selectedPlace.name}</h1>
+                    <div className="google-map__info-window">
+                        <h1 className="google-map__info-window__header header-small margin-bottom-medium">{this.state.selectedPlace.name}</h1>
+                        {/* <PlacesCards
+                             country = "Cuba"
+                             description = "La Rosa de Ortega / Standard Room"
+                             picture = 'landing-page/places-stay/Cuba.jpg'
+                             pricing = "$70"
+                             rating = "4.94"
+                             superhost = "superhost"
+                             key = "1"
+                        /> */}
                     </div>
+                    
+               
                 </InfoWindow>
             </Map>
         )
