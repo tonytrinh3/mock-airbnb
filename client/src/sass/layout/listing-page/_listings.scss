@@ -16,7 +16,7 @@
         display: grid;
         grid-template-columns: minmax(15rem,4fr) minmax(30rem,6fr);
         // grid-template-rows: repeat(5,min-content);
-        // height: minmax(25rem,1fr);
+        //height: minmax(25rem,1fr);
         padding: 2rem 2rem 1rem 2rem;
         // background-color: orange;
         // border: solid 5px black;
@@ -28,7 +28,7 @@
        
         &__img{
            
-            // height: minmax(25rem,1fr);
+            //height: minmax(25rem,30rem);
             // height: 100%;
             width: 100%;
             // background-color: orange;
@@ -101,7 +101,6 @@
              
     
                 &__amenity{
-                 
                     display: inline-block;
                 }
     

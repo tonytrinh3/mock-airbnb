@@ -1,72 +1,85 @@
-.navigation{
-    //@extend: 1px solid grey;
-    // background-color:red;
-    // opacity: 20%;
-    
+.nav{
+
     grid-column:full-start/full-end;
 
     display: grid;
-    grid-template-columns: 1fr 2fr repeat(7,min-content);
-    grid-auto-rows: auto;
+    grid-template-columns: 20rem 2fr ;
+    //grid-template-rows: 30rem;
     grid-gap: 1rem;
-    // align-items: center;
-    // justify-items: end;
-
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-
-}
-
-.nav__item{
-    // background-color:green;
-    color: black;
-    font-weight: 600;
-    font-size: 1.6rem;
-    padding: 0 2rem 5rem 2rem;
-    white-space: nowrap; //https://stackoverflow.com/questions/7546389/css-overflow-only-1-line-of-text
 
 
-    &--1{
-        grid-column: 1;
-        margin-left: 5rem;
+    // margin-top: 3rem;
+    // margin-bottom: 3rem;
+    height: 15rem;
+    // background-color: red;
 
-        &__img{
-            height: 10vh;
+
+    &__img{
+        height: 15rem;
+        width: 100%;
+        object-fit: contain;
+        align-self: center;
+        padding: 2rem;
+        // background-color: green;
+        text-decoration: none;
+    }
+
+    &__text{
+        grid-column: 3;
+        color: black;
+        font-weight: 600;
+        align-self: center;
+        
+      
+        white-space: nowrap; //https://stackoverflow.com/questions/7546389/css-overflow-only-1-line-of-text
+        margin-right:2rem;
+        &__item{
+            display: inline;
+            padding: 4rem;
+            //background-color: green;
+        }
+        &__item:hover{
+            border-bottom: solid 0.3rem black;
         }
 
-    };
 
-    &--2{
-        grid-column: 3;
-      
-    };
-    &--3{
-        grid-column: 4;
-    };
+    }
 
-    &--4{
-        grid-column: 5;
-       
-    };
-
-    &--5{//host an experience
-        grid-column: 6;
-
-    };
-    &--6{
-        grid-column: 7;
-    };
-    &--7{
-        grid-column: 8;
-    };
-    &--8{
-        grid-column: 9;
-    };
+ 
 
 }
 
-.nav__item:hover{
-    // border-bottom: solid 0.3rem $nav-font-color;
-    border-bottom: solid 0.3rem black;
-};
 
+
+// .nav__item:hover{
+
+// };
+
+
+
+// &--2{
+//     grid-column: 3;
+  
+// };
+// &--3{
+//     grid-column: 4;
+// };
+
+// &--4{
+//     grid-column: 5;
+   
+// };
+
+// &--5{//host an experience
+//     grid-column: 6;
+
+// };
+// &--6{
+//     grid-column: 7;
+// };
+// &--7{
+//     grid-column: 8;
+// };
+// &--8{
+//     grid-column: 9;
+// };

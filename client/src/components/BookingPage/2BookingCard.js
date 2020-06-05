@@ -127,18 +127,18 @@ class BookingCard extends React.Component{
             <div className="booking-card">
                 bookingcard <br/>
           
-               {this.renderNumPeople()}
+               {this.renderNumPeople()}     
 
 
                 <DateRangePicker
-                startDateId="startDate"
-                endDateId="endDate"
-                startDate={this.state.startDate}
-                endDate={this.state.endDate}
-                onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
-                focusedInput={this.state.focusedInput}
-                onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
-            />
+                    startDateId="startDate"
+                    endDateId="endDate"
+                    startDate={this.state.startDate}
+                    endDate={this.state.endDate}
+                    onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
+                    focusedInput={this.state.focusedInput}
+                    onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
+                />
             <button className="awef" onClick = {this.onSubmit}>Reserve</button>
 
             </div>
