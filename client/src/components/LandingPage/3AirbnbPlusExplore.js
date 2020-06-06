@@ -1,5 +1,6 @@
 import React from 'react';
 // import airbnb_plus from '../../img/landing-page/airbnb-plus2.jpg';
+import { Link} from 'react-router-dom';
 
 const AirbnbPlusExplore=()=>{
     return (
@@ -8,7 +9,7 @@ const AirbnbPlusExplore=()=>{
             <div className="airbnb-plus-explore__subheader margin-bottom-large"> A selection of places to stay verified for quality and design.</div>
             <div className="airbnb-plus-explore__picture">
                 <h1 className = "airbnb-plus-explore__picture__header"> airbnb plus</h1>
-                <button className = "airbnb-plus-explore__picture__button button"> Explore Stays</button>
+                <Link className = "airbnb-plus-explore__picture__button button" to={`/roomListing`}> Explore Stays</Link>
             </div>
         </div>
     )

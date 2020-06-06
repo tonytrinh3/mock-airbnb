@@ -13,11 +13,14 @@ import {
 } from './types';
 
 
-export const signIn = (userId) =>{
+export const signIn = (userProfile) =>{
+   
     return {
         type: SIGN_IN,
-        payload: userId
+        payload: userProfile
     };
+
+
 };
 
 export const signOut = () =>{
@@ -26,27 +29,7 @@ export const signOut = () =>{
     };
 };
 
-export const createBooking = (formValues)=>{
-    return async (dispatch, getState) =>{
-        //getState is another function from redux to reach other to other reducers and get the state and use it in other reducers
-        //this will be helpful when creating a reservation for the user
-        const {userId} = getState().auth;
 
-        //have it saved to a variable so you can use it 
-        // /bookings , the bookings part is actually the name of the object that you are dumping and calling info from
-        const response = await bookings.post('/bookings', {...formValues, userId});
-        console.log(response);
-        //await bookings.post('/bookings', formValues);
-
-        //dispatch is from redux, payload property from axios has response
-        //  const test = dispatch({type: CREATE_BOOKING, payload: response.data});
-
-        dispatch({type: CREATE_BOOKING, payload: response.data});
-        //programmatically navigator user - push is how to nav user around
-        history.push('/');
-        //  console.log(test);
-    }
-};
 
 export const fetchBookings = () => async dispatch =>{
     const response = await bookings.get('/bookings');
@@ -60,15 +43,7 @@ export const fetchBooking = (id) => async dispatch =>{
     dispatch({type: FETCH_BOOKING, payload: response.data});
 };
 
-export const editBooking = (id, formValues) => async dispatch =>{
-    const response = await bookings.patch(`/bookings/${id}`,formValues );
-    //put request - update all properties of a record
-    //patch - update some of the properties of a record
 
-    dispatch({type: EDIT_BOOKING, payload: response.data});
-
-    history.push('/booking');
-};
 
 export const deleteBooking = (id) => async dispatch =>{
     await bookings.delete(`/bookings/${id}`);
@@ -80,7 +55,12 @@ export const createUserReservation = (reservation)=>{
     return async (dispatch, getState) =>{
         //getState is another function from redux to reach other to other reducers and get the state and use it in other reducers
         //this will be helpful when creating a reservation for the user
-        const {userId} = getState().auth;
+
+        //auth is the name of the auth state in redux store
+        console.log(getState().auth);
+        const {userId} = getState().auth.userProfile;
+
+        
 
         //this user variable ends up in the db.json
         // const bookingInfo = getState().bookings[bookingId];
@@ -98,7 +78,7 @@ export const createUserReservation = (reservation)=>{
 
         dispatch({type: CREATE_USER_RESERVATION, payload: response.data});
         //programmatically navigator user - push is how to nav user around
-        history.push('/roomlisting');
+        history.push('/trips/');
         //  console.log(test);
     }
 };
@@ -108,3 +88,35 @@ export const fetchUserReservations = () => async dispatch =>{
 
     dispatch({type: FETCH_USER_RESERVATIONS, payload: response.data});
 }
+
+// export const createBooking = (formValues)=>{
+//     return async (dispatch, getState) =>{
+//         //getState is another function from redux to reach other to other reducers and get the state and use it in other reducers
+//         //this will be helpful when creating a reservation for the user
+//         const {userId} = getState().auth;
+
+//         //have it saved to a variable so you can use it 
+//         // /bookings , the bookings part is actually the name of the object that you are dumping and calling info from
+//         const response = await bookings.post('/bookings', {...formValues, userId});
+//         console.log(response);
+//         //await bookings.post('/bookings', formValues);
+
+//         //dispatch is from redux, payload property from axios has response
+//         //  const test = dispatch({type: CREATE_BOOKING, payload: response.data});
+
+//         dispatch({type: CREATE_BOOKING, payload: response.data});
+//         //programmatically navigator user - push is how to nav user around
+//         history.push('/');
+//         //  console.log(test);
+//     }
+// };
+
+// export const editBooking = (id, formValues) => async dispatch =>{
+//     const response = await bookings.patch(`/bookings/${id}`,formValues );
+//     //put request - update all properties of a record
+//     //patch - update some of the properties of a record
+
+//     dispatch({type: EDIT_BOOKING, payload: response.data});
+
+//     history.push('/booking');
+// };

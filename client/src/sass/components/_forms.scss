@@ -2,10 +2,12 @@
     background-color: white;
     //z-index: -1;
 
-    grid-column: 2/3;
+    // grid-column: 2/3;
+    width: 60rem;
 
-    height: 65vh;
+    height: 70rem;
 
+    margin-left: 5rem;
     margin-top: 5rem;
 
     border-radius: 0.5rem;
@@ -58,35 +60,6 @@
 
 
 
-
-.forms__guests{
-    // grid-column:1/-1;
- 
-
-   background-color: lightgreen;
-   display:grid;
-   grid-template-columns: repeat(2,1fr);
-
-   &__counter{
-       display: grid;
-       grid-template-columns: min-content 5rem min-content;
-    // display: inline;
-
-       &__btn{
-           padding: 2rem;
-       }
-
-       &__num{
-           align-self:center;
-           justify-self: center;
-           padding: 2rem;
-       }
-
-   }
-
-
-
-}
     
 
 .search__button{
@@ -98,7 +71,7 @@
     height: 7rem;
     justify-self: end;
     margin-top: 2rem;
-    z-index: 1111;
+    
 }
 
 .search__button:active{

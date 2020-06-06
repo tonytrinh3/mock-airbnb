@@ -20,7 +20,14 @@ body {
 
 a{
   color: $default-font-color;
+  text-decoration: none;
 }
+
+button{
+  border:none;
+  
+}
+
 .container{
 
 

@@ -1,0 +1,37 @@
+.forms__guests{
+ 
+   
+    &__dropdown{
+    
+        background-color: lightgreen;
+        display:grid;
+        grid-column: 1/-1;
+        //position absolute is the key for the drop down to over from the white box form
+        position: absolute; //https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text
+        grid-template-columns: repeat(2,1fr);
+
+       width: 52rem;
+       z-index: 1000;
+
+
+        &__counter{
+            display: grid;
+            grid-template-columns: min-content 5rem min-content;
+
+            &__btn{
+                padding: 2rem;
+            }
+
+            &__num{
+                align-self:center;
+                justify-self: center;
+                padding: 2rem;
+            }
+
+        }
+
+    }
+
+  
+}
+

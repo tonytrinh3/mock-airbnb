@@ -4,8 +4,8 @@
       "id": 1,
       "title": "Civic Center Views from a Contemporary City Pad",
       "location": "San Francisco, California",
-      "lat":37.780963,
-      "lng":-122.420412,
+      "lat": 37.780963,
+      "lng": -122.420412,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
@@ -14,7 +14,7 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "price":150,
+      "price": 150,
       "home_type": "apartment",
       "space_type": {
         "private_room": false,
@@ -55,7 +55,12 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": ["kitchen","dryer","wifi","washer"],
+      "amenities": [
+        "kitchen",
+        "dryer",
+        "wifi",
+        "washer"
+      ],
       "availability": {
         "reservations": {
           "reservation_1": {
@@ -119,8 +124,8 @@
       "id": 2,
       "title": "Downtown SF Studio Apartment Near Civic Center",
       "location": "San Francisco, California",
-      "lat":37.781362,
-      "lng":-122.417644,
+      "lat": 37.781362,
+      "lng": -122.417644,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
@@ -167,7 +172,12 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": ["kitchen","dryer","wifi","washer"],
+      "amenities": [
+        "kitchen",
+        "dryer",
+        "wifi",
+        "washer"
+      ],
       "availability": {
         "reservations": {
           "reservation_1": {
@@ -231,8 +241,8 @@
       "id": 3,
       "title": "Private, Remodeled Home Close to Golden Gate Park",
       "location": "San Francisco, California",
-      "lat":37.762404,
-      "lng":-122.505071,
+      "lat": 37.762404,
+      "lng": -122.505071,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
@@ -241,7 +251,7 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "price":90,
+      "price": 90,
       "home_type": "apartment",
       "space_type": "entire_space",
       "home_specs": {
@@ -279,7 +289,12 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": ["kitchen","dryer","wifi","washer"],
+      "amenities": [
+        "kitchen",
+        "dryer",
+        "wifi",
+        "washer"
+      ],
       "availability": {
         "reservations": {
           "reservation_1": {
@@ -344,7 +359,7 @@
       "title": "Private, modern Central Sunset suite",
       "location": "San Francisco, California",
       "lat": 37.748355,
-      "lng":-122.476957,
+      "lng": -122.476957,
       "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
       "imgs": {
         "img_1": "img-1",
@@ -353,7 +368,7 @@
         "img_4": "img-4",
         "img_5": "img-5"
       },
-      "price":70,
+      "price": 70,
       "home_type": "apartment",
       "space_type": "entire_space",
       "home_specs": {
@@ -391,7 +406,12 @@
         "refundable": true,
         "type": "flexible"
       },
-      "amenities": ["kitchen","dryer","wifi","washer"],
+      "amenities": [
+        "kitchen",
+        "dryer",
+        "wifi",
+        "washer"
+      ],
       "availability": {
         "reservations": {
           "reservation_1": {
@@ -487,11 +507,11 @@
         "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
         "location": "San Francisco, California",
         "imgs": {
-          "img_1": "home-1",
-          "img_2": "home-2",
-          "img_3": "home-3",
-          "img_4": "home-4",
-          "img_5": "home-5"
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
         }
       },
       "userId": "115914775505299872385",
@@ -509,15 +529,103 @@
         "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
         "location": "San Francisco, California",
         "imgs": {
-          "img_1": "home-1",
-          "img_2": "home-2",
-          "img_3": "home-3",
-          "img_4": "home-4",
-          "img_5": "home-5"
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
         }
       },
       "userId": "115914775505299872385",
       "id": 24
+    },
+    {
+      "reservation": {
+        "bookingId": 2,
+        "startDate": "June 16th 2020",
+        "endDate": "July 19th 2020",
+        "numAdults": 2,
+        "numChildren": 0,
+        "numInfants": 0,
+        "title": "Downtown SF Studio Apartment Near Civic Center",
+        "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+        "location": "San Francisco, California",
+        "imgs": {
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
+        }
+      },
+      "userId": "115914775505299872385",
+      "id": 25
+    },
+    {
+      "reservation": {
+        "bookingId": 3,
+        "startDate": "June 17th 2020",
+        "endDate": "June 27th 2020",
+        "numAdults": 4,
+        "numChildren": 0,
+        "numInfants": 0,
+        "title": "Private, Remodeled Home Close to Golden Gate Park",
+        "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+        "location": "San Francisco, California",
+        "imgs": {
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
+        }
+      },
+      "userId": "115914775505299872385",
+      "id": 26
+    },
+    {
+      "reservation": {
+        "bookingId": 1,
+        "startDate": "June 12th 2020",
+        "endDate": "June 16th 2020",
+        "numAdults": 0,
+        "numChildren": 3,
+        "numInfants": 0,
+        "title": "Civic Center Views from a Contemporary City Pad",
+        "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+        "location": "San Francisco, California",
+        "imgs": {
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
+        }
+      },
+      "userId": "115914775505299872385",
+      "id": 27
+    },
+    {
+      "reservation": {
+        "bookingId": 9,
+        "startDate": "June 15th 2020",
+        "endDate": "June 20th 2020",
+        "numAdults": 2,
+        "numChildren": 0,
+        "numInfants": 0,
+        "title": "Private, modern Central Sunset suite",
+        "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+        "location": "San Francisco, California",
+        "imgs": {
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
+        }
+      },
+      "userId": "115914775505299872385",
+      "id": 29
     }
   ]
 }

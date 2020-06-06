@@ -4,7 +4,9 @@ import React from 'react';
 // import {fetchBookings} from '../../actions/index';
 
 class Amenities extends React.Component{
-
+    constructor(props){
+        super(props);
+    }
     
 
 
@@ -13,7 +15,7 @@ class Amenities extends React.Component{
 
     render(){
 
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div className="amenities">
                 <h3 className="amenities__header header-small margin-bottom-medium">Amenities</h3>
