@@ -70,7 +70,7 @@ class RoomListingPage extends React.Component{
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numGuests} guests</li>  
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numBedrooms} bedrooms</li> 
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numBeds} beds</li> 
-                <li className="listings__listing__description__home-specs__spec">{home_specs.numBaths.private ? `${home_specs.numBaths.private} baths`:`${home_specs.numBaths.shared} shared baths`}</li> 
+                <li className="listings__listing__description__home-specs__spec">{home_specs.numBaths.privates ? `${home_specs.numBaths.privates} baths`:`${home_specs.numBaths.shared} shared baths`}</li> 
             </ul>
         )
     }

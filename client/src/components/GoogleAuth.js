@@ -1,12 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {signIn, signOut} from '../actions';
+import {Link} from 'react-router-dom';
 
 
 
 class GoogleAuth extends React.Component{
 
-    // state = {isSignedIn: null};
+    state = { toggleDropdown: false};
 
     //maybe this happens every time the page refreshes...
     componentDidMount(){
@@ -61,39 +62,104 @@ class GoogleAuth extends React.Component{
       
     }
 
-
     onSignInClick = () =>{
         this.auth.signIn();
-
     };
 
     onSignOutClick = () =>{
         this.auth.signOut();
     };
 
+
+    
+    toggleDropdown =()=>{
+        (!this.state.toggleDropdown)
+        ? this.setState({
+            toggleDropdown: true
+        })
+        : this.setState({
+            toggleDropdown: false
+        });
+
+    }
+
+
+
     //this is just rendering logic
     renderAuthButton(){
         if(this.props.isSignedIn === null){
             return null;
         } else if (this.props.isSignedIn){
-            return <button onClick = {this.onSignOutClick} className="google-auth-button">Sign Out</button>;
+            return this.renderSignOut();
         } else {
-            return <button onClick = {this.onSignInClick} className="google-auth-button">Sign In with Google</button>;
+            return <button onClick = {this.onSignInClick} className="google-btn">Sign In with Google</button>;
         }
     }
 
-    render(){
+    renderSignOut=()=>{
+
+        console.log(this.props.userProfile);
+
+        if(this.props.userProfile){
+            return(
+                <button className="google-btn" onClick ={this.toggleDropdown}>
+                    <img className="google-btn__img" src={this.props.userProfile.userImage} alt=""/>
+              
+                    {this.props.userProfile.userFirstName}
+                    {this.state.toggleDropdown ? this.renderDropdown() : null }
+                 </button>
+
+            )
+
+        }
+        
+
+
+    }
+
+    renderDropdown=()=>{
         return(
-        <div className="google-auth">{this.renderAuthButton()}</div>
+            <div className="google-btn__dropdown">
+                 <Link className="google-btn__dropdown__item"  to={`/trips`} >Your Trips</Link>
+                <button onClick = {this.onSignOutClick} className="google-btn__dropdown__item">Sign Out</button>
+            </div>
         )
+
+    }
+
+
+
+
+
+
+
+    render(){
+        console.log(this.props.userProfile);
+
+    
+        return(
+            <div  className = "nav__text__item">
+                {this.renderAuthButton()}
+            </div>
+        )
+      
+       
+        //some dropdown item
+
+    
+
+        
     }
 }
 
 //this state is the state that you have in authReducer.js
 //you call mapstatetoprops when you want to access the state through the redux store 
 const mapStateToProps = (state) =>{
-    // console.log(state);
-    return {isSignedIn: state.auth.isSignedIn};
+     console.log(state);
+    return {
+        isSignedIn: state.auth.isSignedIn,
+        userProfile: state.auth.userProfile
+    };
 }
 
 export default connect(

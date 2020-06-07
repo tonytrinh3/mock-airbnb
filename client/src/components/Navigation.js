@@ -30,14 +30,14 @@ class Navigation extends React.Component{
                
             
                 <div className="nav__text">
-                <GoogleAuth />
+                
                     <div className = "nav__text__item">English (US)</div>
                     <div className = "nav__text__item">USD</div>
                     <div className = "nav__text__item">Host a home</div>
                     <div className = "nav__text__item">Host an experience</div>
                     <div className = "nav__text__item">Help</div>
-                   
-                    <button onClick = {this.onClick} className = "nav__text__item">Login</button>
+                    <GoogleAuth/>                  
+                    {/* <button onClick = {this.onClick} className = "nav__text__item">Login</button> */}
     
                 </div>
                 

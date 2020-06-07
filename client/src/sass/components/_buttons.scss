@@ -23,3 +23,42 @@
     border: solid .3rem $airbnb-default-blue;
 }
 
+
+.search__button{
+    // grid-column:4/5;
+    font-weight: 600;
+    font-size: 2rem;
+    // padding: 2rem;
+    width: 15rem;
+    height: 7rem;
+    justify-self: end;
+    margin-top: 2rem;
+    
+}
+
+.search__button:active{
+    
+}
+
+.google-btn{
+    background-color: Transparent;
+    color: black;
+    font-weight: 600;
+
+    &__img{
+        border-radius: 100%;
+        object-fit: cover;
+
+    }
+
+    &__dropdown{
+        position: absolute;
+        background-color: red;
+
+        &__item{
+            display: block;
+            background-color: green;
+        }
+    }
+}
+

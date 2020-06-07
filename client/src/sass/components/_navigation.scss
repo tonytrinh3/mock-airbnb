@@ -26,6 +26,8 @@
 
     &__text{
         grid-column: 3;
+
+        
         color: black;
         font-weight: 600;
         align-self: center;
@@ -33,6 +35,7 @@
       
         white-space: nowrap; //https://stackoverflow.com/questions/7546389/css-overflow-only-1-line-of-text
         margin-right:2rem;
+
         &__item{
             display: inline;
             padding: 4rem;
