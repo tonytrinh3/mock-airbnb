@@ -20,19 +20,30 @@ class RoomListingPage extends React.Component{
     
     renderList(){
         return this.props.bookings.map(booking=>{
+
+            const {
+                amenities,
+                home_specs,
+                home_type,
+                id,
+                price,
+                space_type,
+                title
+            } = booking;
+
+            //same as booking.price, booking.amenities
+
             return (
-                <Link className="listings__listing " key = {booking.id} to={`/booking/${booking.id}`}>
-                      <img className="listings__listing__img" src={require(`../../img/booking-page/listing-${booking.id}/img-1.jpg`)} alt="" />
+                <Link className="listings__listing " key = {id} to={`/booking/${id}`}>
+                      <img className="listings__listing__img" src={require(`../../img/booking-page/listing-${id}/img-1.jpg`)} alt="" />
                     <div className="listings__listing__description">
                         <div className="listings__listing__description__superhost-tag superhost-tag margin-bottom-medium">superhost</div>
-                        {this.renderSpaceType(booking.space_type, booking.home_type)}
+                        {this.renderSpaceType(space_type, home_type)}
                         <p className="listings__listing__description__reviews">{avgReview(booking.reviews,"overall")}</p>
-                        <div className="listings__listing__description__title header-medium margin-bottom-medium"  > {booking.title}</div>
-                        
-                        
-                        {this.renderHomeSpecs(booking.home_specs)}
-                        <ul className="listings__listing__description__amenities">{this.renderAmenities(booking.amenities)}</ul>  
-                        <p className="listings__listing__description__price"><span >${booking.price}</span> / night</p>
+                        <div className="listings__listing__description__title header-medium margin-bottom-medium"  > {title}</div>
+                        {this.renderHomeSpecs(home_specs)}
+                        <ul className="listings__listing__description__amenities">{this.renderAmenities(amenities)}</ul>  
+                        <p className="listings__listing__description__price"><span >${price}</span> / night</p>
                     </div>
                   
                     <hr className="listings__listing__hr hr"/>
@@ -68,9 +79,9 @@ class RoomListingPage extends React.Component{
     //pass down picture, superhost, title, space type , price, rating to google map
     render(){
 
-        if(this.props.bookings[0]){
-            console.log(this.props.bookings[0].id)
-        }
+      
+            // console.log(this.props.bokings[1].amenities)
+        
         
         return(
             <div>
@@ -79,7 +90,7 @@ class RoomListingPage extends React.Component{
                     
                     <div className="listings">
                         <h1 className="listings__header header-big margin-bottom-large">
-                        Room Listing Page
+                        Room Listing Page 
                         </h1>
                         {this.renderList()}
                     </div>
@@ -97,9 +108,10 @@ class RoomListingPage extends React.Component{
 
 const mapStateToProps = (state) =>{
      //Object.values is a javascript function - that takes the values of each object awef: 2, and just lay them out in an array
-    // console.log(state);
+    console.log(state);
      return{
-        bookings: Object.values(state.bookings)
+        bookings: Object.values(state.bookings),
+        bokings: state.bookings
 
         //this is handy to see if currentUserId exist or not to render certain things if the user has logged in or not or if the user own the content of the object or not  
         // currentUserId: state.authy.userId,

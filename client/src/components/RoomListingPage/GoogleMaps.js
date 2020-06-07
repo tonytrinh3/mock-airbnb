@@ -52,12 +52,20 @@ class GoogleMaps extends React.Component{
     renderMarker(){
        return this.props.bookings.map((booking,i)=>{
             // console.log(booking.lng);
+
+            const {
+                lat,
+                lng,
+                title
+            } = booking;
             
           
             return <Marker 
                     onClick={this.onMarkerClick} 
-                    name={booking.title} 
-                    position={{ lat: booking.lat, lng: booking.lng}}
+                    name={title} 
+                     //position={{lat: booking.lat, lng: booking.lng}}
+                    //position={{lat:lat, lng: lng}}
+                    position={{ lat, lng}}
                     key = {i} 
                     className = {"google-map__marker"}
                     icon={{

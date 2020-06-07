@@ -80,14 +80,24 @@ const countries = [
 
 
 const renderPlacesCard = countries.map(xcountry =>{
+
+    const {
+        country,
+        description,
+        picture,
+        pricing,
+        rating,
+        superhost
+    } = xcountry;
+
     return <PlacesCards 
-    country = {xcountry.country}
-    description = {xcountry.description}
-    picture = {xcountry.picture} 
-    pricing = {xcountry.pricing} 
-    rating = {xcountry.rating}
-    superhost = {xcountry.superhost}
-    key = {xcountry.description} 
+        country = {country}
+        description = {description}
+        picture = {picture} 
+        pricing = {pricing} 
+        rating = {rating}
+        superhost = {superhost}
+        key = {description} 
     />
 })
 

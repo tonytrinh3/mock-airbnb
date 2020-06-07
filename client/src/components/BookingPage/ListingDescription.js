@@ -2,9 +2,9 @@ import React from 'react';
 
 const renderNumBaths = (baths)=>{
     if (baths.shared === false){
-        return <li>{baths.private} baths </li>
+        return <li>{baths.privates} baths </li>
     } else {
-        return <li>{baths.private} shared baths </li>
+        return <li>{baths.privates} shared baths </li>
     }
 };
 

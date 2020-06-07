@@ -16,11 +16,18 @@ import avgReview from '../avgReview';
 const renderReviewDescription =(reviews) =>{
 
     return reviews.map(review =>{
+        const {
+            date,
+            description,
+            name
+        } = review;
+
+
         return (
-            <div className="review-section__reviews" key = {review.description}>
-                <h3 className="header-small">{review.name}</h3>
-                <h3 className="header-small">{moment(review.date).format('MMMM YYYY')}</h3>
-                <p className="">{review.description}</p>
+            <div className="review-section__reviews" key = {description}>
+                <h3 className="header-small">{name}</h3>
+                <h3 className="header-small">{moment(date).format('MMMM YYYY')}</h3>
+                <p className="">{description}</p>
                 <hr className="review-section__hr hr"/>
             </div>
         )

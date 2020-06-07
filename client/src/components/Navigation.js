@@ -20,7 +20,7 @@ class Navigation extends React.Component{
         //     isSignedIn
         // } = this.props;
  
-    
+        // {this.props.userProfile ? this.props.userProfile.userFirstName:"aef" }
     
         return (
 
@@ -36,7 +36,7 @@ class Navigation extends React.Component{
                     <div className = "nav__text__item">Host a home</div>
                     <div className = "nav__text__item">Host an experience</div>
                     <div className = "nav__text__item">Help</div>
-                    {this.props.userProfile ? this.props.userProfile.userFirstName:"aef" }
+                   
                     <button onClick = {this.onClick} className = "nav__text__item">Login</button>
     
                 </div>
@@ -53,7 +53,7 @@ class Navigation extends React.Component{
 };
 
 const mapStateToProps = (state)=>{
-    console.log(state);
+    // console.log(state);
     return {
         isSignedIn: state.auth.isSignedIn,
         userProfile: state.auth.userProfile

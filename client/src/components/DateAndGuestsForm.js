@@ -29,8 +29,6 @@ class DateAndGuestsForm extends React.Component{
     }
 
 
-   
-
     onSubmit = () =>{
         const reservation = {
             "reservation": {
@@ -165,15 +163,8 @@ class DateAndGuestsForm extends React.Component{
            
     }
 
-   
 
     render(){
-
-        const {
-            pageType,
-            btnType,
-        } = this.props;
-    
         return (
             <div>
                 <DateRangePicker
@@ -185,20 +176,15 @@ class DateAndGuestsForm extends React.Component{
                     focusedInput={this.state.focusedInput}
                     onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
                 />
-                
-    
-                <section className="forms__guests">
+               <section className="forms__guests">
                     <h3 className ="header-small margin-bottom-medium">GUESTS</h3>
                     <button className = "input-default" onClick={this.toggleDropdown}>
                         {this.state.numTotal ===0? <p className="awef">Add guests</p> : <p className="awef">{this.state.numTotal} guests</p> }
                     </button>
                     {this.state.toggleDropdown? this.renderNumPeople(): null}
-
                 </section>
+               {this.props.btnType === "Reserve"? <button className="awef" onClick = {this.onSubmit}>Reserve</button> : null}
                 
-                {btnType === "Reserve"? <button className="awef" onClick = {this.onSubmit}>Reserve</button> : null}
-                
-            
             </div>
         )
     }

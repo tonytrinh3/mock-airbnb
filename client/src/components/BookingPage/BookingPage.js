@@ -33,74 +33,99 @@ class BookingPage extends React.Component{
     // }
 
     render(){
+
         if (!this.props.booking){
-            return (<div className="awef">Loading!</div>);
+            return (<div className="header-big">Loading!</div>);
         }
+        
         //console.log(this.props.booking);
+
+        const {
+            amenities,
+            availability,
+            cancellations,
+            check_in,
+            check_out,
+            description,
+            home_specs,
+            home_type,
+            host_info,
+            house_rules,
+            id,
+            imgs,
+            location,
+            reviews,
+            self_check_in,
+            sleeping_arrangements,
+            space_type,
+            title
+        } = this.props.booking
+
  
         return(
             <div className="booking-page">
                 <Navigation/>
                 <PictureHeader
-                imgs = {this.props.booking.imgs}
+                imgs = {imgs}
                 id = {this.props.match.params.id}
                 />
                 <ListingDescription
-                title = {this.props.booking.title}
-                location = {this.props.booking.location}
-                description = {this.props.booking.description}
-                home_type = {this.props.booking.home_type}
-                space_type = {this.props.booking.space_type}
-                home_specs = {this.props.booking.home_specs}
-                host_info = {this.props.booking.host_info}
-                self_check_in = {this.props.booking.self_check_in}
-                reviews = {this.props.booking.reviews}
+                title = {title}
+                location = {location}
+                description = {description}
+                home_type = {home_type}
+                space_type = {space_type}
+                home_specs = {home_specs}
+                host_info = {host_info}
+                self_check_in = {self_check_in}
+                reviews = {reviews}
                 />
                 <hr className="booking-page__hr hr"/>
                 <BookingCard 
-                bookingId = {this.props.booking.id}
-                title = {this.props.booking.title}
-                location = {this.props.booking.location}
-                description = {this.props.booking.description}
-                imgs = {this.props.booking.imgs}
+                bookingId = {id}
+                title = {title}
+                location = {location}
+                description = {description}
+                imgs = {imgs}
 
                 />
                 
                 <hr className="booking-page__hr hr"/>
                 <hr className="booking-page__hr hr"/>
                 <Amenities 
-                amenities = {this.props.booking.amenities}
+                amenities = {amenities}
                 />
                 <hr className="booking-page__hr hr"/>
                 <SleepingArrangement
-                sleeping_arrangement = {this.props.sleeping_arrangement}
+                sleeping_arrangements = {sleeping_arrangements}
                 />
                 <hr className="booking-page__hr hr"/>
                 <Accessibility/>
                 <hr className="booking-page__hr hr"/>
                 <hr className="booking-page__hr hr"/>
                 <AvailabilitySection
-                availability = {this.props.booking.availability}
+                availability = {availability}
+                bookingId = {id}
                 />
                 <hr className="booking-page__hr hr"/>
 
                 <ReviewSection
-                reviews = {this.props.booking.reviews}
+                reviews = {reviews}
                 />
                 <hr className="booking-page__hr hr"/>
                 <AboutHost
-                host_info = {this.props.booking.host_info}
-                reviews = {this.props.booking.reviews}
+                host_info = {host_info}
+                reviews = {reviews}
                 />
                 <hr className="booking-page__hr hr"/>
                 <Neighborhood/>
                 <hr className="booking-page__hr hr"/>
                 <Cancellations 
-                cancellations = {this.props.booking.cancellations}
-                house_rules = {this.props.booking.house_rules}
-                check_in = {this.props.booking.check_in}
-                check_out = {this.props.booking.check_out}
-                self_check_in = {this.props.booking.self_check_in}
+                cancellations = {cancellations}
+                house_rules = {house_rules}
+                check_in = {check_in}
+                check_out = {check_out}
+                self_check_in = {self_check_in}
                 />
                 <hr className="booking-page__hr hr"/>
                 <ExploreOptions/>

@@ -4,13 +4,14 @@ import {Link} from 'react-router-dom';
 
 
 class LandingForm extends React.Component{
+    constructor(props){
+        super(props);
+        this.state ={
+            searchLocation: null
+        }
+    }
 
-    state = {
-  
-        searchLocation: null,
-
-    };
-
+   
 
    
 
@@ -30,7 +31,6 @@ class LandingForm extends React.Component{
                 <DateAndGuestsForm
                     pageType = {"Landing Page"}
                     btnType = {"Search"}
-                
                 />
     
                 <Link  to={`/roomListing`} ><button className="search__button button">Search</button></Link>

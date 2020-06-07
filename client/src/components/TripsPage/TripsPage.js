@@ -24,37 +24,47 @@ class TripsPage extends React.Component{
             userProfile
         } = this.props;
 
+    
         return trips.map((trip,i) =>{
-            if (userProfile){
-                if (trip.userId === this.props.userProfile.userId){
-                    return (
-                        <div className="trip-card" key = {i}>
-                            <img className = "trip-card__img" src={require(`../../img/booking-page/listing-${trip.reservation.bookingId}/${trip.reservation.imgs.img_1}.jpg`)} alt= {`img_${i}`} key ={`img_${i}`}/>    
-                            <div className="trip-card__description ">
-                                <p className = "trip-card__date ">{`${trip.reservation.startDate.split(" ")[0]} ${trip.reservation.startDate.split(" ")[1]} - ${trip.reservation.endDate.split(" ")[1]}` }</p>                    
-                                {/* <h2 className="header-medium">{trip.reservation.description}</h2> */}
-                                <h3 className="trip-card__location ">{trip.reservation.location.split(",")[0]}</h3>
-                                <p className="trip-card__title ">{trip.reservation.title}</p>
-                            </div>
-                            <a href="" className="trip-card__more-info">Show more trip plans</a>
-                            {/* <p>{moment(trip.reservation.startDate).format("MMMM Do")} - {moment(trip.reservation.endDate).format("Do")} </p> */}
-                           
-                        </div>
-                       
-                    )
-                }
 
+            const {
+                bookingId,
+                imgs,
+                endDate,
+                location,
+                startDate,
+                title
+            } = trip.reservation;
+
+
+            //you do this to wait until userProfile is fetch and loading
+            if (!userProfile){
+                return <h1 className=""></h1>
             }
-         
+            
+            if (trip.userId === userProfile.userId){
+                return (
+                    <div className="trip-card" key = {i}>
+                        <img className = "trip-card__img" src={require(`../../img/booking-page/listing-${bookingId}/${imgs.img_1}.jpg`)} alt= {`img_${i}`} key ={`img_${i}`}/>    
+                        <div className="trip-card__description ">
+                            <p className = "trip-card__date ">{`${startDate.split(" ")[0]} ${startDate.split(" ")[1]} - ${endDate.split(" ")[1]}` }</p>                    
+                            {/* <h2 className="header-medium">{trip.reservation.description}</h2> */}
+                            <h3 className="trip-card__location ">{location.split(",")[0]}</h3>
+                            <p className="trip-card__title ">{title}</p>
+                        </div>
+                        <a href="" className="trip-card__more-info">Show more trip plans</a>
+                        {/* <p>{moment(trip.reservation.startDate).format("MMMM Do")} - {moment(trip.reservation.endDate).format("Do")} </p> */}
+                        
+                    </div>
+                    
+                )
+            }
         })
     }
 
 
     render(){
         //console.log(this.props.trips);
-
-       
-
 
         return(
 
