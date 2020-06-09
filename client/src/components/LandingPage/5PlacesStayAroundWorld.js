@@ -105,7 +105,7 @@ const PlacesStayAroundWorld=()=>{
     return (
         <div className="places-stay-around-world section-margin">
            <h2 className="header-big margin-bottom-large">Places to stay around the world</h2>
-           <div className="places-stay-around-world__cards margin-bottom-large">
+           <div className="place-cards-section margin-bottom-large">
              {renderPlacesCard}
            </div>
            <div className="continue-link ">Show (2000+) -></div>

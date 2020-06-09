@@ -76,7 +76,7 @@ const IntroAirbnbAdventures=()=>{
         <div className="intro-airbnb-adventures section-margin">
             <h2 className="header-big margin-bottom-medium">Introducing Airbnb Adventures</h2>
             <div className=" margin-bottom-large">Multi-day trips led by local experts — activities, meals, and stays included.</div>
-            <div className="adventure-cards margin-bottom-large">
+            <div className="adventure-card-section margin-bottom-large">
                 {renderAdventureCard}
             </div>
             <div className="continue-link ">Show all adventures -></div>

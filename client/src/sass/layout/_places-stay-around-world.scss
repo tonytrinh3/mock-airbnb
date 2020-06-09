@@ -2,10 +2,10 @@
     grid-column:full-start/full-end;
 
 
-    &__cards{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, min-content);
-        grid-column-gap:$default-grid-column-gap;
-    }
+    // &__cards{
+    //     display: grid;
+    //     grid-template-columns: repeat(auto-fill, minmax(40rem,1fr));
+    //     grid-template-rows: repeat(2, min-content);
+    //     grid-column-gap: $default-grid-column-gap;
+    // }
 }

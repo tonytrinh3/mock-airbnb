@@ -7,9 +7,9 @@
 
     &__cards{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, min-content);
-        grid-column-gap:$default-grid-column-gap;
+        grid-template-columns: repeat(auto-fill, minmax(30rem,1fr));
+        // grid-template-rows: repeat(2, min-content);
+        grid-column-gap: $default-grid-column-gap;
     }
 
 }

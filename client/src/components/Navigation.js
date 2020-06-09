@@ -6,42 +6,81 @@ import {connect} from 'react-redux';
 
 
 class Navigation extends React.Component{
-    // constructor(props){
-    //     super(props);
-    // }
+    constructor(props){
+        super(props);
 
-    onClick(){
-        
+        this.state = {
+            toggleDropdown: false
+        }
     }
+
+     
+    toggleDropdown =()=>{
+        (!this.state.toggleDropdown)
+        ? this.setState({
+            toggleDropdown: true
+        })
+        : this.setState({
+            toggleDropdown: false
+        });
+
+    }
+
+ 
 
     render(){
 
-        // const {
-        //     isSignedIn
-        // } = this.props;
- 
-        // {this.props.userProfile ? this.props.userProfile.userFirstName:"aef" }
     
         return (
 
             
-            <nav className="nav">
-                <Link  to={`/`} ><img className = "nav__img" src={require("../img/airbnb-logo.png")} alt="airbnb_logo"/></Link>
-               
-            
-                <div className="nav__text">
-                
-                    <div className = "nav__text__item">English (US)</div>
-                    <div className = "nav__text__item">USD</div>
-                    <div className = "nav__text__item">Host a home</div>
-                    <div className = "nav__text__item">Host an experience</div>
-                    <div className = "nav__text__item">Help</div>
-                    <GoogleAuth/>                  
-                    {/* <button onClick = {this.onClick} className = "nav__text__item">Login</button> */}
-    
+            // <nav className="nav">
+            //     <Link  to={`/`} ><img className = "nav__img" src={require("../img/airbnb-logo.png")} alt="airbnb_logo"/></Link>
+            //     <div className="nav__text">
+            //         <a className = "nav__text__item">English (US)</a>
+            //         <a className = "nav__text__item">USD</a>
+            //         <a className = "nav__text__item">Host a home</a>
+            //         <a className = "nav__text__item">Host an experience</a>
+            //         <a className = "nav__text__item">Help</a>
+            //         <GoogleAuth/>                  
+            //         {/* <button onClick = {this.onClick} className = "nav__text__item">Login</button> */}
+            //     </div>
+            // </nav>
+        
+             
+        <nav className="nav">
+            <div className="nav__content">
+                <Link  to={`/`} ><img className = "nav__content__img" src={require("../img/airbnb-logo.png")} alt="airbnb_logo"/></Link>
+                <div className="nav__content__links">
+                    <p className = "nav__content__links__link">English (US)</p>
+                    <p className = "nav__content__links__link">USD</p>
+                    <p className = "nav__content__links__link">Host a home</p>
+                    <p className = "nav__content__links__link">Host an experience</p>
+                    <p className = "nav__content__links__link">Help</p>
+                    <p className = "nav__content__links__link nav__content__links__google  " onClick={this.toggleDropdown}>                 
+                        Tony
+                        {!this.state.toggleDropdown ? null:
+                            (<div className="nav__dropdown">
+                            <p className = "nav__dropdown__link">Your Trips</p>
+                            <p className = "nav__dropdown__link">Sign Out</p>
+                            </div>)
+                        }
+                        
+                        </p>
+                    {/* <GoogleAuth/>                   */}
                 </div>
-                
-            </nav>
+                {/* <div className="nav__content__menu-btn">MENU </div> */}
+            </div>
+          
+      
+         
+         
+         </nav>
+
+        
+        
+        
+        
         )
     }
    

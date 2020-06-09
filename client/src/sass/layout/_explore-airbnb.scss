@@ -1,13 +1,45 @@
 .explore-airbnb{
     grid-column:full-start/full-end;
 
+    // margin-bottom: -.1rem;
+
+ 
+
     &__cards{
         display:grid;
 
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(auto-fit,minmax(50rem,1fr));
         grid-column-gap: $default-grid-column-gap;
         
         margin-top: 2rem;
+      
+
+        &__card{
+            border-radius: $picture-border-radius-large;
+            box-shadow: $default-box-shadow;
+            height: 14rem;
+        
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            margin-bottom: 2rem;
+         
+        
+            &__picture{
+                grid-column: 1;
+          
+                border-radius: 2rem 0 0 2rem;
+                height: 100%;
+                width: 100%;
+                object-fit:cover;
+            
+            }
+        
+            &__caption{
+                grid-column: 2;
+                align-self:center;
+                margin-left: 3rem
+            }
+        }
 
     }
 
@@ -16,32 +48,7 @@
 
 
 
-.explore-airbnb__card{
-    border-radius: $picture-border-radius-large;
-    box-shadow: $default-box-shadow;
-    height: 14rem;
 
-    display:grid;
-    grid-template-columns: 1fr 2fr;
-
-
-
-    &__picture{
-        grid-column: 1;
-  
-        border-radius: 2rem 0 0 2rem;
-        height: 100%;
-        width: 100%;
-        object-fit:cover;
-    
-    }
-
-    &__caption{
-        grid-column: 2;
-        align-self:center;
-        margin: 3rem
-    }
-}
 
 
 
