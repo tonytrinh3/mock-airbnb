@@ -1,4 +1,26 @@
 .booking-card{
 
-    grid-column: center-start/center-end;
+    grid-column: col-start 6/center-end;
+    // grid-column: center-start / col-end 5;
+
+    display: grid;
+    // grid-template-columns: minmax(40rem,60rem);
+    grid-template-rows: repeat(4,min-content);
+
+    padding: 2rem;
+
+    border: 0.1rem solid $airbnb-default-color-light-grey;
+    height: max-content;
+
+
+
+    &__reviews{
+        font-size: 1.5rem;
+
+        &__amount{
+            color: $airbnb-default-color-light-grey;
+        }
+    }
+
+
 }

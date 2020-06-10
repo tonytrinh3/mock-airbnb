@@ -1,4 +1,4 @@
-const avgReview = (reviews,type) =>{
+export const avgReview = (reviews,type) =>{
     //this could be in a separate function file
         //console.log(reviews);
         let sum = 0;
@@ -8,4 +8,3 @@ const avgReview = (reviews,type) =>{
       return Math.round((sum/reviews.length)*10)/10;  
 };
 
-export default avgReview;

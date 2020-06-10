@@ -55,6 +55,7 @@ class BookingPage extends React.Component{
             imgs,
             location,
             reviews,
+            price,
             self_check_in,
             sleeping_arrangements,
             space_type,
@@ -69,6 +70,7 @@ class BookingPage extends React.Component{
                 imgs = {imgs}
                 id = {this.props.match.params.id}
                 />
+                
                 <ListingDescription
                 title = {title}
                 location = {location}
@@ -80,17 +82,17 @@ class BookingPage extends React.Component{
                 self_check_in = {self_check_in}
                 reviews = {reviews}
                 />
-                <hr className="booking-page__hr hr"/>
+                
                 <BookingCard 
                 bookingId = {id}
                 title = {title}
                 location = {location}
                 description = {description}
                 imgs = {imgs}
-
+                price = {price}
+                reviews = {reviews}
                 />
-                
-                <hr className="booking-page__hr hr"/>
+          
                 <hr className="booking-page__hr hr"/>
                 <Amenities 
                 amenities = {amenities}
@@ -101,7 +103,7 @@ class BookingPage extends React.Component{
                 />
                 <hr className="booking-page__hr hr"/>
                 <Accessibility/>
-                <hr className="booking-page__hr hr"/>
+                
                 <hr className="booking-page__hr hr"/>
                 <AvailabilitySection
                 availability = {availability}

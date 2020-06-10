@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from "moment";
-import avgReview from '../avgReview';
+import {avgReview} from '../avgReview';
 
 
 // const avgReview = (reviews,type) =>{

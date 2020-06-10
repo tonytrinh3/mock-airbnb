@@ -81,13 +81,13 @@ class GoogleAuth extends React.Component{
     }
 
     renderSignOut=()=>{
-        console.log(this.props.userProfile);
+        // console.log(this.props.userProfile);
         if(this.props.userProfile){
             return(
                 <div className="google-btn" onClick ={this.toggleDropdown}>
                     <img className="google-btn__img" src={this.props.userProfile.userImage} alt="profile_pic"/>
               
-                    <p className="google-btn__name">{this.props.userProfile.userFirstName}sssssssssssssssssss</p>
+                    <p className="google-btn__name">{this.props.userProfile.userFirstName}</p>
                     {this.state.toggleDropdown ? this.renderDropdown() : null }
                  </div>
             )
@@ -110,14 +110,15 @@ class GoogleAuth extends React.Component{
         } else if (this.props.isSignedIn){
             return this.renderSignOut();
         } else {
-            return <div onClick = {this.onSignInClick} className="google-btn">Sign In with Google</div>;
+            return (<div onClick = {this.onSignInClick} className="google-btn">
+                <p className="google-btn__sign-in">Sign In with Google</p>
+                </div>);
         }
     }
 
 
 
     render(){
-        console.log(this.props.userProfile);
 
     
         return this.renderAuthButton()
@@ -132,7 +133,7 @@ class GoogleAuth extends React.Component{
 //this state is the state that you have in authReducer.js
 //you call mapstatetoprops when you want to access the state through the redux store 
 const mapStateToProps = (state) =>{
-     console.log(state);
+    //  console.log(state);
     return {
         isSignedIn: state.auth.isSignedIn,
         userProfile: state.auth.userProfile

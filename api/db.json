@@ -16,10 +16,7 @@
       },
       "price": 150,
       "home_type": "apartment",
-      "space_type": {
-        "private_room": false,
-        "entire_space": true
-      },
+      "space_type": "entire_space",
       "home_specs": {
         "numGuests": 4,
         "numBedrooms": 1,
@@ -626,6 +623,28 @@
       },
       "userId": "115914775505299872385",
       "id": 29
+    },
+    {
+      "reservation": {
+        "bookingId": 1,
+        "startDate": "June 20th 2020",
+        "endDate": "June 26th 2020",
+        "numAdults": 2,
+        "numChildren": 0,
+        "numInfants": 0,
+        "title": "Civic Center Views from a Contemporary City Pad",
+        "description": "Come stay on the first floor of our beautiful three-story house, complete with a separate entrance and private space including a bedroom, bathroom, living room, and kitchenette. You will also have access to our laundry room and backyard garden, and you can use our kitchen upon request.People from all backgrounds are welcome!",
+        "location": "San Francisco, California",
+        "imgs": {
+          "img_1": "img-1",
+          "img_2": "img-2",
+          "img_3": "img-3",
+          "img_4": "img-4",
+          "img_5": "img-5"
+        }
+      },
+      "userId": "115914775505299872385",
+      "id": 30
     }
   ]
 }

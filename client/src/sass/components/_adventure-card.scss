@@ -3,6 +3,8 @@
 
     grid-template-rows: repeat(5,min-content);
 
+    margin-bottom: 2rem;
+
     &__picture{
         border-radius:$picture-border-radius-medium;
         object-fit: cover;

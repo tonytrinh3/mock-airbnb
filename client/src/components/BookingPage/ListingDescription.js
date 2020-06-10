@@ -8,20 +8,20 @@ const renderNumBaths = (baths)=>{
     }
 };
 
-const renderSpace_Type = (space_type) =>{
-    //console.log(space_type.entire_space === true)
-    if(space_type.entire_space === true){
+const renderSpace_Type = (space_type, home_type) =>{
+    console.log(space_type)
+    if(space_type === "entire_space"){
         return(
             <div>
-                <h3 className="header-small">Entire home</h3>
-                <p className = "margin-bottom-medium">You’ll have the apartment to yourself.</p>
+                <h3 className="listing-description__subheader header-small">{home_type}</h3>
+                <p className ="margin-bottom-medium">You’ll have the {home_type} to yourself.</p>
             </div>
         )
     } else {
         return(
             <div>
-                <h3 className="header-small">Private room in house</h3>
-                <p className = "margin-bottom-medium">You’ll have a private room in a house</p>
+                <h3 className="header-small">Private room in {home_type}</h3>
+                <p className = "margin-bottom-medium">You’ll have a private room in a {home_type}</p>
             </div>
         )
     }
@@ -83,10 +83,8 @@ const renderSparklingClean = (reviews) =>{
 };
 
 
-const ListingDescription = ({title, location, description, home_type, space_type, home_specs, host_info, self_check_in, reviews}) =>{
-
-
-
+const ListingDescription = ({title, location, description, home_type, 
+    space_type, home_specs, host_info, self_check_in, reviews}) =>{
 
     return (
         //all of this needs to come from backend and all dynamic per person
@@ -99,7 +97,7 @@ const ListingDescription = ({title, location, description, home_type, space_type
                 <li>{home_specs.numBeds} beds</li>
                 {renderNumBaths(home_specs.numBaths)}
             </ul>
-            {renderSpace_Type(space_type)}
+            {renderSpace_Type(space_type,home_type)}
             {renderSelf_check_in(self_check_in)}
             {renderSparklingClean(reviews)}
             {renderSuperhost(host_info)}

@@ -1,10 +1,18 @@
 .listing-description{
     // background-color:green;
-    grid-column: center-start / center-end;
+    grid-column: center-start / col-end 5;
+
+    padding:2rem;
+
+    &__subheader{
+        text-transform: capitalize;
+    }
 
     &__capacity{
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(4, max-content);
+        grid-column-gap: 2rem;
+        
         list-style-type: none;
     }
 }

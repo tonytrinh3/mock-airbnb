@@ -30,25 +30,49 @@ class DateAndGuestsForm extends React.Component{
 
 
     onSubmit = () =>{
+
+        const {
+            bookingId,
+            description,
+            imgs,
+            location,
+            title
+
+        } = this.props;
+
+        const{
+            numAdults,
+            numChildren,
+            numInfants,
+            numTotal,
+            startDate,
+            endDate
+
+        } = this.state;
+
+       
         const reservation = {
             "reservation": {
-                bookingId: this.props.bookingId,
-                startDate: moment(this.state.startDate).format('MMMM Do YYYY'),
-                endDate: moment(this.state.endDate).format('MMMM Do YYYY'),
-                numAdults: this.state.numAdults,
-                numChildren: this.state.numChildren,
-                numInfants: this.state.numInfants,
-
-                title: this.props.title,
-                description: this.props.description,
-                location: this.props.location,
-                imgs: this.props.imgs
+                bookingId,
+                startDate: moment(startDate).format('MMMM Do YYYY'),
+                endDate: moment(endDate).format('MMMM Do YYYY'),
+                numAdults,
+                numChildren,
+                numInfants,
+                title,
+                description,
+                location,
+                imgs
             
             }
 
         }
+        
+        if(!(startDate === null) && !(endDate === null) && numTotal > 0 ){
+            this.props.createUserReservation(reservation);
+        }
 
-        this.props.createUserReservation(reservation);
+        
     }
 
 
@@ -192,7 +216,13 @@ class DateAndGuestsForm extends React.Component{
 
 
 
-
+    // renderError(){
+    //     if(!(startDate === null) && !(endDate === null) && numTotal > 0 ){
+    //         return <p className="awef">
+    //             Please enter 
+    //         </p>
+    //     }
+    // }
 
 
   
@@ -214,14 +244,14 @@ class DateAndGuestsForm extends React.Component{
                 </section>
              
                <section className="date-guest-forms__section">
-                    <h3 className ="header-small margin-bottom-medium">GUESTS</h3>
+                    <h3 className ="header-small margin-bottom-medium">Guests</h3>
                     <div className = "input-default" onClick={this.toggleDropdown}>
                         {this.state.numTotal ===0? "Add guests" : `${this.state.numTotal} guests` }
                     </div>
                     {this.state.toggleDropdown? this.renderNumPeople(): null}
                 </section>
 
-               {this.props.btnType === "Reserve"? <button className="awef" onClick = {this.onSubmit}>Reserve</button> : null}
+               {this.props.btnType === "Reserve"? <button className="reserve-button button" onClick = {this.onSubmit}>Reserve</button> : null}
                 
             </div>
         )

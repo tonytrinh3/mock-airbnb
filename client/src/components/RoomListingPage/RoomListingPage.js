@@ -5,7 +5,7 @@ import {fetchBookings} from '../../actions/index';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 import GoogleMaps from './GoogleMaps';
-import avgReview from '../avgReview';
+import {avgReview} from '../avgReview';
 
 class RoomListingPage extends React.Component{
 

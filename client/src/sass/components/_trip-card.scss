@@ -2,12 +2,21 @@
 
     // background-color: blue;
     display:grid;
-    grid-template-rows: 5.5fr 3fr 1.5fr;
+    grid-template-rows: repeat(2,min-content);
     // border: solid .5rem black;
     border-radius: $picture-border-radius-medium;
     box-shadow: $default-box-shadow;
-    height: 55vh;
-
+    
+ 
+  
+    &__img{
+        grid-row: 1/2;
+        height: 30rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: $picture-border-radius-medium $picture-border-radius-medium 0rem 0rem;
+    }
 
     &__header{
 
@@ -17,20 +26,31 @@
 
     }
 
-    &__date{
-        color: $airbnb-default-color-light-grey;
-    }
+
 
     &__description{
-        grid-row: 2/3;
+
+        // display: grid;
+
+      
+        // row-gap: 2rem;
+        height: 25rem;
+        padding: 2rem;
+
+        &__date{
+            color: $airbnb-default-color-light-grey;
+        }
+
+        &__more-info{
+            margin-top: 8rem;
+            cursor: pointer;
+        }
+    
+        
     }
 
-    &__img{
-        grid-row: 1/2;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: $picture-border-radius-medium $picture-border-radius-medium 0rem 0rem;
-    }
+ 
+
+  
+    
 }

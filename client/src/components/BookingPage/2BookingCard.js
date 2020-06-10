@@ -3,24 +3,28 @@ import React from 'react';
 
 import DateAndGuestsForm from '../DateAndGuestsForm';
 
-const BookingCard = ({bookingId, title, location, description, imgs}) =>{
+import {avgReview} from '../avgReview';
+
+const BookingCard = ({bookingId, title, location, description, imgs, price, reviews}) =>{
+
+    console.log(reviews);
     return( 
         <div className="booking-card">
-            bookingcard <br/>
-
-        <DateAndGuestsForm 
-            pageType = {"Booking Page"}
-            btnType = {"Reserve"}
-            bookingId = {bookingId}
-            title = {title}
-            location = {location}
-            description = {description}
-            imgs = {imgs}
-        />
-
-
- 
-
+         
+            <p className="booking-card__price"><span className="header-medium">${price}</span> per night</p>
+            <p className="booking-card__reviews margin-bottom-medium">{avgReview(reviews,"overall")} <span className="booking-card__reviews__amount">({reviews.length} reviews)</span></p>
+            
+            <hr className="hr margin-bottom-medium"/>
+            <h3 className ="header-small margin-bottom-medium">Dates</h3>
+            <DateAndGuestsForm 
+                pageType = {"Booking Page"}
+                btnType = {"Reserve"}
+                bookingId = {bookingId}
+                title = {title}
+                location = {location}
+                description = {description}
+                imgs = {imgs}
+            />
         </div>
 
     )
