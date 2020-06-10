@@ -70,8 +70,6 @@ class GoogleAuth extends React.Component{
         this.auth.signOut();
     };
 
-
-    
     toggleDropdown =()=>{
         (!this.state.toggleDropdown)
         ? this.setState({
@@ -80,10 +78,30 @@ class GoogleAuth extends React.Component{
         : this.setState({
             toggleDropdown: false
         });
-
     }
 
+    renderSignOut=()=>{
+        console.log(this.props.userProfile);
+        if(this.props.userProfile){
+            return(
+                <div className="google-btn" onClick ={this.toggleDropdown}>
+                    <img className="google-btn__img" src={this.props.userProfile.userImage} alt="profile_pic"/>
+              
+                    <p className="google-btn__name">{this.props.userProfile.userFirstName}sssssssssssssssssss</p>
+                    {this.state.toggleDropdown ? this.renderDropdown() : null }
+                 </div>
+            )
+        }
+    }
 
+    renderDropdown=()=>{
+        return(
+            <div className="nav__dropdown">
+                 <Link className="nav__dropdown__link"  to={`/trips`} >Your Trips</Link>
+                <div onClick = {this.onSignOutClick} className="nav__dropdown__link nav__dropdown__button ">Sign Out</div>
+            </div>
+        )
+    }
 
     //this is just rendering logic
     renderAuthButton(){
@@ -92,44 +110,9 @@ class GoogleAuth extends React.Component{
         } else if (this.props.isSignedIn){
             return this.renderSignOut();
         } else {
-            return <button onClick = {this.onSignInClick} className="google-btn">Sign In with Google</button>;
+            return <div onClick = {this.onSignInClick} className="google-btn">Sign In with Google</div>;
         }
     }
-
-    renderSignOut=()=>{
-
-        console.log(this.props.userProfile);
-
-        if(this.props.userProfile){
-            return(
-                <button className="google-btn" onClick ={this.toggleDropdown}>
-                    <img className="google-btn__img" src={this.props.userProfile.userImage} alt=""/>
-              
-                    {this.props.userProfile.userFirstName}
-                    {this.state.toggleDropdown ? this.renderDropdown() : null }
-                 </button>
-
-            )
-
-        }
-        
-
-
-    }
-
-    renderDropdown=()=>{
-        return(
-            <div className="google-btn__dropdown">
-                 <Link className="google-btn__dropdown__item"  to={`/trips`} >Your Trips</Link>
-                <button onClick = {this.onSignOutClick} className="google-btn__dropdown__item">Sign Out</button>
-            </div>
-        )
-
-    }
-
-
-
-
 
 
 
@@ -137,16 +120,10 @@ class GoogleAuth extends React.Component{
         console.log(this.props.userProfile);
 
     
-        return(
-            <div  className = "nav__text__item">
-                {this.renderAuthButton()}
-            </div>
-        )
-      
+        return this.renderAuthButton()
+            
        
         //some dropdown item
-
-    
 
         
     }

@@ -26,11 +26,12 @@ a{
 }
 
 button{
-  border:none;
+  border: none;
   font-size: $default-font-size ;
   color: $default-font-color;
   outline:none; //https://stackoverflow.com/questions/19886843/how-to-remove-outline-border-from-input-button
   cursor: pointer;
+
 }
 
 .container{

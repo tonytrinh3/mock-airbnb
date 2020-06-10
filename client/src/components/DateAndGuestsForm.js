@@ -63,68 +63,23 @@ class DateAndGuestsForm extends React.Component{
 
     }
 
-    renderNumPeople = ()=>{
-        return(
-            <div className="forms__guests__dropdown">
-
-                <div className="forms__guests__dropdown__type">
-                    <p className="forms__guests__dropdown__type__person form__guests__dropdown__type__person--adult">Adults</p>
-                </div>
-        
-                <div className="forms__guests__dropdown__counter">
-                    <button className="forms__guests__dropdown__counter__btn" onClick= {()=>{this.subtractionButton("adults")}} >-</button>
-                    <p className="forms__guests__dropdown__counter__num">{this.state.numAdults}</p>
-                    <button className="forms__guests__dropdown__counter__btn " onClick= {()=>{this.additionButton("adults")}}>+</button>
-                </div>
-            
-
-            
-                <div className="forms__guests__dropdown__type">
-                    <p className="forms__guests__dropdown__type__person">Children</p>
-                    <p className="forms__guests__dropdown__type__person__description">Ages 2–12</p>
-                </div>
-
-                <div className="forms__guests__dropdown__counter">
-                    <button className="forms__guests__dropdown__counter__btn" onClick= {()=>{this.subtractionButton("children")}} >-</button>
-                    <p className="forms__guests__dropdown__counter__num">{this.state.numChildren}</p>
-                    <button className="forms__guests__dropdown__counter__btn" onClick= {()=>{this.additionButton("children")}}>+</button>
-                </div>
-
-        
-                <div className="forms__guests__dropdown__type">
-                    <p className="forms__guests__dropdown__type__person">Infant</p>
-                    <p className="forms__guests__dropdown__type__person__description">Under 2</p>
-                </div>
-                <div className="forms__guests__dropdown__counter">
-                    <button className="forms__guests__dropdown__counter__btn" onClick= {()=>{this.subtractionButton("infants")}} >-</button>
-                    <p className="forms__guests__dropdown__counter__num">{this.state.numInfants}</p>
-                    <button className="forms__guests__dropdown__counter__btn" onClick= {()=>{this.additionButton("infants")}}>+</button>
-                </div>
-            </div>
-            
-         
-        )
-    }
-
-
-
     additionButton (type) {
         //have this work for whatever type of people passed in
         //have if statement to stop button when the number of guest from booking exceeds it
         switch(type){
-            case "adults":
+            case "Adults":
                 this.setState({
                     numAdults: this.state.numAdults + 1,
                     numTotal: this.state.numTotal + 1
                 });
                 break;
-            case "children":
+            case "Children":
                 this.setState({
                     numChildren: this.state.numChildren + 1,
                     numTotal: this.state.numTotal + 1
                 });
                 break;
-            case "infants":
+            case "Infants":
                 this.setState({
                     numInfants: this.state.numInfants + 1,
                     numTotal: this.state.numTotal + 1
@@ -133,17 +88,19 @@ class DateAndGuestsForm extends React.Component{
         }
     }
 
+    
     subtractionButton(type){
         switch(type){
-            case "adults":
+            case "Adults":
                 if(this.state.numAdults > 0){ 
                     this.setState({
                         numAdults: this.state.numAdults - 1,
                         numTotal: this.state.numTotal - 1
                     });
                 }
+                console.log(this.state.numAdults);
                 break;
-            case "children":
+            case "Children":
                 if(this.state.numChildren > 0){ 
                     this.setState({
                         numChildren: this.state.numChildren - 1,
@@ -151,7 +108,7 @@ class DateAndGuestsForm extends React.Component{
                     });
                 }
                 break;
-            case "infants":
+            case "Infants":
                 if(this.state.numInfants > 0){ 
                     this.setState({
                         numInfants: this.state.numInfants - 1,
@@ -163,10 +120,88 @@ class DateAndGuestsForm extends React.Component{
            
     }
 
+ 
+
+    renderNumPeople = ()=>{
+
+        // const types = ["Adults","Children","Infants"];
+        // const typeState = [this.state.numAdults,this.state.numChildren,this.state.numInfants]
+
+  
+
+        // return types.map((type,i)=>{
+        //     return(
+        //     <div key ={i}>
+        //         <div className="date-guest-forms__guests__dropdown__type">
+        //             <p className="date-guest-forms__guests__dropdown__type__person">{type}</p>
+        //             <p className="date-guest-forms__guests__dropdown__type__person__description">Ages 2–12</p>
+        //         </div>
+        
+        //         <div className="date-guest-forms__guests__dropdown__counter">
+        //             <button className="date-guest-forms__guests__dropdown__counter__btn" onClick= {()=>{this.subtractionButton("Adults")}} >-</button>
+        //             <p className="date-guest-forms__guests__dropdown__counter__num">{typeState[i]}</p>
+        //             <button className="date-guest-forms__guests__dropdown__counter__btn " onClick= {()=>{this.additionButton({type})}}>+</button>
+        //         </div>
+        //     </div>
+        //     )
+        // })
+
+        return(
+            <div className="date-guest-forms__guests__dropdown">
+        
+                <div className="date-guest-forms__guests__dropdown__type">
+                    <p className="date-guest-forms__guests__dropdown__type__person form__guests__dropdown__type__person--adult">Adults</p>
+                </div>
+        
+                <div className="date-guest-forms__guests__dropdown__counter">
+                    <div className="counter-button" onClick= {()=>{this.subtractionButton("Adults")}} >-</div>
+                    <p className="date-guest-forms__guests__dropdown__counter__num">{this.state.numAdults}</p>
+                    <div className="counter-button" onClick= {()=>{this.additionButton("Adults")}}>+</div>
+                </div>
+            
+                <div className="date-guest-forms__guests__dropdown__type">
+                    <p className="date-guest-forms__guests__dropdown__type__person">Children</p>
+                    <p className="date-guest-forms__guests__dropdown__type__person__description">Ages 2–12</p>
+                </div>
+        
+                <div className="date-guest-forms__guests__dropdown__counter">
+                    <div className="counter-button" onClick= {()=>{this.subtractionButton("Children")}} >-</div>
+                    <p className="date-guest-forms__guests__dropdown__counter__num">{this.state.numChildren}</p>
+                    <div className="counter-button" onClick= {()=>{this.additionButton("Children")}}>+</div>
+                </div>
+        
+        
+                <div className="date-guest-forms__guests__dropdown__type">
+                    <p className="date-guest-forms__guests__dropdown__type__person">Infant</p>
+                    <p className="date-guest-forms__guests__dropdown__type__person__description">Under 2</p>
+                </div>
+        
+                <div className="date-guest-forms__guests__dropdown__counter">
+                    <div className="counter-button" onClick= {()=>{this.subtractionButton("Infants")}} >-</div>
+                    <p className="date-guest-forms__guests__dropdown__counter__num">{this.state.numInfants}</p>
+                    <div className=" counter-button" onClick= {()=>{this.additionButton("Infants")}}>+</div>
+                </div>
+
+                <p className="date-guest-forms__guests__dropdown__close" onClick={this.toggleDropdown}>Close</p>
+            </div>
+        )
+
+
+
+    }
+
+
+
+
+
+
+  
+
 
     render(){
         return (
-            <div>
+            <div className = "date-guest-forms">
+                <section className="date-guest-forms__section">
                 <DateRangePicker
                     startDateId="startDate"
                     endDateId="endDate"
@@ -176,13 +211,16 @@ class DateAndGuestsForm extends React.Component{
                     focusedInput={this.state.focusedInput}
                     onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
                 />
-               <section className="forms__guests">
+                </section>
+             
+               <section className="date-guest-forms__section">
                     <h3 className ="header-small margin-bottom-medium">GUESTS</h3>
-                    <button className = "input-default" onClick={this.toggleDropdown}>
-                        {this.state.numTotal ===0? <p className="awef">Add guests</p> : <p className="awef">{this.state.numTotal} guests</p> }
-                    </button>
+                    <div className = "input-default" onClick={this.toggleDropdown}>
+                        {this.state.numTotal ===0? "Add guests" : `${this.state.numTotal} guests` }
+                    </div>
                     {this.state.toggleDropdown? this.renderNumPeople(): null}
                 </section>
+
                {this.props.btnType === "Reserve"? <button className="awef" onClick = {this.onSubmit}>Reserve</button> : null}
                 
             </div>
@@ -199,3 +237,5 @@ export default connect(null,{createUserReservation})(DateAndGuestsForm);
 
 
 // export default DateAndGuestsForm;
+
+

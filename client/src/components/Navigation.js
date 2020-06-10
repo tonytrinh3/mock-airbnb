@@ -57,19 +57,9 @@ class Navigation extends React.Component{
                     <p className = "nav__content__links__link">Host a home</p>
                     <p className = "nav__content__links__link">Host an experience</p>
                     <p className = "nav__content__links__link">Help</p>
-                    <p className = "nav__content__links__link nav__content__links__google  " onClick={this.toggleDropdown}>                 
-                        Tony
-                        {!this.state.toggleDropdown ? null:
-                            (<div className="nav__dropdown">
-                            <p className = "nav__dropdown__link">Your Trips</p>
-                            <p className = "nav__dropdown__link">Sign Out</p>
-                            </div>)
-                        }
-                        
-                        </p>
-                    {/* <GoogleAuth/>                   */}
+                    <GoogleAuth/>
                 </div>
-                {/* <div className="nav__content__menu-btn">MENU </div> */}
+          
             </div>
           
       
@@ -100,3 +90,17 @@ const mapStateToProps = (state)=>{
 }
 
 export default connect (mapStateToProps,null)(Navigation);
+
+
+     {/* <p className = "nav__content__links__link nav__content__links__google  " onClick={this.toggleDropdown}>                 
+                        <GoogleAuth/> 
+                        {!this.state.toggleDropdown ? null:
+                            (<div className="nav__dropdown">
+                            <p className = "nav__dropdown__link">Your Trips</p>
+                            <p className = "nav__dropdown__link">Sign Out</p>
+                            </div>)
+                        }
+                        
+                        </p> */}
+
+{/* <div className="nav__content__menu-btn">MENU </div> */}

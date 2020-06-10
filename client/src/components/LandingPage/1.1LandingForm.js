@@ -11,29 +11,31 @@ class LandingForm extends React.Component{
         }
     }
 
-   
-
-   
 
     render(){
         return (
-            <div className="forms">
-                <h2 className="forms__header">
+            <div className="landing-page-form">
+                <h2 className="landing-page-form__header">
                     Book unique places to 
                     <br/> stay and things to do.
                 </h2>
     
-                <div className="forms__location">
+                <div className="landing-page-form__section">
                     <h3 className ="header-small margin-bottom-medium">WHERE</h3>
-                    <input className = "forms__input input-default" type="text" id="location" name="location" placeholder="San Francisco" />
+                    <input className = "landing-page-form__input input-default" type="text" id="location" name="location" placeholder="San Francisco" />
                 </div>
+            
+
+                <div className="landing-page-form__section">
+                    <h3 className ="header-small margin-bottom-medium">DATE</h3>
+                    <DateAndGuestsForm
+                        pageType = {"Landing Page"}
+                        btnType = {"Search"}
+                    />
+                </div>
+         
     
-                <DateAndGuestsForm
-                    pageType = {"Landing Page"}
-                    btnType = {"Search"}
-                />
-    
-                <Link  to={`/roomListing`} ><button className="search__button button">Search</button></Link>
+                <Link  to={`/roomListing`} ><button className="landing-page-form__button search__button button">Search</button></Link>
 
                 
                 

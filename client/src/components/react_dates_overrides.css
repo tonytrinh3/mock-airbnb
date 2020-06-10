@@ -9,6 +9,7 @@
   border: 1px solid lightpink; 
   /* //default styles include a border */
 }
+
  
 /* // Will edit selected date or the endpoints of a range of dates */
 .CalendarDay__selected {

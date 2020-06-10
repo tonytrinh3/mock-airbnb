@@ -3,6 +3,7 @@
     color: white;
     border-radius: 0.5rem;
     border: none;
+    cursor: pointer;
 }
 
 .button:active{
@@ -41,29 +42,71 @@
 }
 
 .google-btn{
-    background-color: Transparent;
+    background-color: transparent;
     color: black;
     font-weight: 600;
+    place-items: center;
+
+    border-radius: 30rem;
+    border: solid .3rem $default-font-color;
+    box-shadow:$default-box-shadow ;
+
+    display: grid;
+    grid-template-columns: min-content minmax(10rem,max-content);
+    
+    cursor: pointer;
+
+
+    &__name{
+        margin: 0 2rem;
+
+    }
 
     &__img{
         border-radius: 100%;
         object-fit: cover;
         height: 5rem;
-
     }
 
-    &__dropdown{
-        position: absolute;
-        background-color: red;
-
-        &__item{
-            display: block;
-            background-color: green;
-        }
-
-        &__item:hover{
-            background-color: darken(green,10%);
-        }
-    }
 }
 
+
+
+   // &__dropdown{
+    //     position: absolute;
+    //     background-color: red;
+
+    //     &__item{
+    //         display: block;
+    //         background-color: green;
+    //     }
+
+    //     &__item:hover{
+    //         background-color: darken(green,10%);
+    //     }
+    // }
+
+
+.counter-button{
+    border: 0.2rem solid $form-input-color;
+    border-radius: 50%;
+    align-self: center;
+    justify-self: center;
+    padding: 0 1.2rem;
+    font-weight: 700;
+    font-size: 3rem;
+    color: $form-input-color;
+
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;
+
+    cursor: pointer;
+
+}
+
+.counter-button:hover{
+    color: darken($form-input-color, 40%);
+    border: 0.2rem solid darken($form-input-color, 40%);
+}
