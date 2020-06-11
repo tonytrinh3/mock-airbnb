@@ -7,7 +7,7 @@ import {avgReview} from '../avgReview';
 
 const BookingCard = ({bookingId, title, location, description, imgs, price, reviews}) =>{
 
-    console.log(reviews);
+
     return( 
         <div className="booking-card">
          

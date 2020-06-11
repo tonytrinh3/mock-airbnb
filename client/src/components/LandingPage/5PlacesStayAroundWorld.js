@@ -115,6 +115,3 @@ const PlacesStayAroundWorld=()=>{
 
 export default PlacesStayAroundWorld;
 
-{/* <div className="places-stay-around-world__cards--row-1">
-<PlacesCards picture = {montenegro}/>
-</div> */}

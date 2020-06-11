@@ -9,7 +9,7 @@ const renderNumBaths = (baths)=>{
 };
 
 const renderSpace_Type = (space_type, home_type) =>{
-    console.log(space_type)
+ 
     if(space_type === "entire_space"){
         return(
             <div>
@@ -28,7 +28,7 @@ const renderSpace_Type = (space_type, home_type) =>{
 };
 
 const renderSelf_check_in = (self_check_in) =>{
-    if (self_check_in = true){
+    if (self_check_in === true){
         return(
             <div>
                 <h3 className="header-small">Self check-in</h3>
@@ -102,9 +102,9 @@ const ListingDescription = ({title, location, description, home_type,
             {renderSparklingClean(reviews)}
             {renderSuperhost(host_info)}
             <p className = "margin-bottom-medium">{description}</p>
-            <a className = "booking-page__link margin-bottom-medium">Read more about the space</a>
+            <a href = "#" className = "booking-page__link margin-bottom-medium">Read more about the space</a>
             <br/>
-            <a className = "booking-page__link margin-bottom-medium">Contact Page</a>
+            <a href = "#" className = "booking-page__link margin-bottom-medium">Contact Page</a>
         </div>
     )
 }

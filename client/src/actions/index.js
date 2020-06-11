@@ -3,11 +3,11 @@ import history from '../history';
 import {
     SIGN_IN, 
     SIGN_OUT, 
-    CREATE_BOOKING,
+    // CREATE_BOOKING,
     FETCH_BOOKINGS,
     FETCH_BOOKING,
     DELETE_BOOKING,
-    EDIT_BOOKING,
+    // EDIT_BOOKING,
     CREATE_USER_RESERVATION,
     FETCH_USER_RESERVATIONS
 } from './types';

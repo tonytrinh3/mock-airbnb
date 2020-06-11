@@ -23,6 +23,7 @@ class DateAndGuestsForm extends React.Component{
             numInfants: 0,
             numTotal: 0,
             toggleDropdown: false,
+            showError: false
     
         }
         
@@ -30,7 +31,6 @@ class DateAndGuestsForm extends React.Component{
 
 
     onSubmit = () =>{
-
         const {
             bookingId,
             description,
@@ -39,7 +39,7 @@ class DateAndGuestsForm extends React.Component{
             title
 
         } = this.props;
-
+        
         const{
             numAdults,
             numChildren,
@@ -50,7 +50,6 @@ class DateAndGuestsForm extends React.Component{
 
         } = this.state;
 
-       
         const reservation = {
             "reservation": {
                 bookingId,
@@ -67,12 +66,47 @@ class DateAndGuestsForm extends React.Component{
             }
 
         }
-        
-        if(!(startDate === null) && !(endDate === null) && numTotal > 0 ){
+
+        if(startDate === null || endDate === null || numTotal ===0){
+            this.setState({
+                showError: true
+            })
+        } else {
+
+            this.setState({
+                showError: false
+            })
+
             this.props.createUserReservation(reservation);
         }
-
         
+        // if(!(startDate === null) && !(endDate === null) && numTotal > 0 ){
+        //     this.props.createUserReservation(reservation);
+           
+        // }
+
+    }
+
+    
+
+    renderError(){
+        const {
+            startDate,
+            numTotal
+        } = this.state;
+
+
+        //this is always going to change when the state changes due to other functions running to change the state
+        if (startDate === null & numTotal === 0){
+            return <p className="error-statement">Please enter a start date, end date, and amount of people for the reservation</p>
+        } else if (startDate === null && numTotal > 0 ){
+            return <p className="error-statement">Please enter a start date and end date for the reservation</p>
+        } else if(!(startDate === null) && numTotal === 0  ){
+            return <p className="error-statement">Please enter an amount of people for the reservation</p>
+        } else{
+            return null;
+        }
+     
     }
 
 
@@ -122,7 +156,6 @@ class DateAndGuestsForm extends React.Component{
                         numTotal: this.state.numTotal - 1
                     });
                 }
-                console.log(this.state.numAdults);
                 break;
             case "Children":
                 if(this.state.numChildren > 0){ 
@@ -150,9 +183,6 @@ class DateAndGuestsForm extends React.Component{
 
         // const types = ["Adults","Children","Infants"];
         // const typeState = [this.state.numAdults,this.state.numChildren,this.state.numInfants]
-
-  
-
         // return types.map((type,i)=>{
         //     return(
         //     <div key ={i}>
@@ -216,40 +246,48 @@ class DateAndGuestsForm extends React.Component{
 
 
 
-    // renderError(){
-    //     if(!(startDate === null) && !(endDate === null) && numTotal > 0 ){
-    //         return <p className="awef">
-    //             Please enter 
-    //         </p>
-    //     }
-    // }
-
 
   
 
 
     render(){
+
+        const {
+            startDate,
+            endDate,
+            focusedInput,
+            numTotal,
+            toggleDropdown,
+            showError
+
+        } = this.state;
+
+
+
+
         return (
             <div className = "date-guest-forms">
                 <section className="date-guest-forms__section">
                 <DateRangePicker
                     startDateId="startDate"
                     endDateId="endDate"
-                    startDate={this.state.startDate}
-                    endDate={this.state.endDate}
+                    startDate={startDate}
+                    endDate={endDate}
                     onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
-                    focusedInput={this.state.focusedInput}
+                    focusedInput={focusedInput}
                     onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
                 />
                 </section>
              
                <section className="date-guest-forms__section">
                     <h3 className ="header-small margin-bottom-medium">Guests</h3>
-                    <div className = "input-default" onClick={this.toggleDropdown}>
-                        {this.state.numTotal ===0? "Add guests" : `${this.state.numTotal} guests` }
+                    <div className = "date-guest-forms__guests input-default" onClick={this.toggleDropdown}>
+                        {numTotal ===0? "Add guests" : `${numTotal} guests` }
                     </div>
-                    {this.state.toggleDropdown? this.renderNumPeople(): null}
+                    {toggleDropdown? this.renderNumPeople(): null}
                 </section>
+                {showError ? this.renderError(): null}
+
 
                {this.props.btnType === "Reserve"? <button className="reserve-button button" onClick = {this.onSubmit}>Reserve</button> : null}
                 

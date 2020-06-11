@@ -54,7 +54,7 @@ class RoomListingPage extends React.Component{
 
     renderSpaceType(space_type, home_type){
         //console.log(space_type);
-        return <p className = "listings__listing__description__space-type margin-bottom-medium">{(space_type = "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
+        return <p className = "listings__listing__description__space-type margin-bottom-medium">{(space_type === "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
     }
 
     renderAmenities(amenities){

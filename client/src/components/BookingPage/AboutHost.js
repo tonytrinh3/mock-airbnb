@@ -31,7 +31,7 @@ const AboutHost = ({host_info,reviews}) =>{
 
             <hr className="about-host__hr hr"/>
 
-            <p className=""><span className="header-small">Always communicate through Airbnb</span> · To protect your payment, never transfer money or communicate outside of the Airbnb website or app. <a href="" className="booking-page__link">Learn more</a></p>
+            <p className=""><span className="header-small">Always communicate through Airbnb</span> · To protect your payment, never transfer money or communicate outside of the Airbnb website or app. <a href="#" className="booking-page__link">Learn more</a></p>
             
             <hr className="about-host__hr hr"/>
             

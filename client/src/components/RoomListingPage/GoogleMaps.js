@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link} from 'react-router-dom';
+// import { Link} from 'react-router-dom';
 import { Map, GoogleApiWrapper, Marker,InfoWindow } from 'google-maps-react';
-import history from '../../history';
-import PlacesCards from '../PlacesCard';
+// import history from '../../history';
+// import PlacesCards from '../PlacesCard';
 
 
 class GoogleMaps extends React.Component{
