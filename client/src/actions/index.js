@@ -30,9 +30,17 @@ export const signOut = () =>{
 };
 
 
+//this is just a function
+//this function says as soon as fetchBookings is being used, 
+//this function will pull out the data from our data base api, 
+//and put all of the data in the payload
+//the reducer, based on what the type is, will use that payload data to show in our state
+//https://redux.js.org/api/store#dispatchaction
 
+//Dispatches an action. This is the only way to trigger a state change.
 export const fetchBookings = () => async dispatch =>{
     const response = await bookings.get('/bookings');
+
 
     dispatch({type: FETCH_BOOKINGS, payload: response.data});
 };
@@ -57,7 +65,7 @@ export const createUserReservation = (reservation)=>{
         //this will be helpful when creating a reservation for the user
 
         //auth is the name of the auth state in redux store
-        console.log(getState().auth);
+        // console.log(getState().auth);
         const {userId} = getState().auth.userProfile;
 
         
@@ -68,6 +76,7 @@ export const createUserReservation = (reservation)=>{
         //have it saved to a variable so you can use it 
         // /bookings , the bookings part is actually the name of the object that you are dumping and calling info from
         
+        //(06/15/2020) this is where you are posting the new info you got from the front end to the back end
         const response = await bookings.post(`/user`,{...reservation,userId});
         
         //console.log(response);

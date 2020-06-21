@@ -245,11 +245,6 @@ class DateAndGuestsForm extends React.Component{
     }
 
 
-
-
-  
-
-
     render(){
 
         const {
@@ -261,9 +256,6 @@ class DateAndGuestsForm extends React.Component{
             showError
 
         } = this.state;
-
-
-
 
         return (
             <div className = "date-guest-forms">
@@ -287,8 +279,6 @@ class DateAndGuestsForm extends React.Component{
                     {toggleDropdown? this.renderNumPeople(): null}
                 </section>
                 {showError ? this.renderError(): null}
-
-
                {this.props.btnType === "Reserve"? <button className="reserve-button button" onClick = {this.onSubmit}>Reserve</button> : null}
                 
             </div>
@@ -302,8 +292,5 @@ class DateAndGuestsForm extends React.Component{
 
 
 export default connect(null,{createUserReservation})(DateAndGuestsForm);
-
-
-// export default DateAndGuestsForm;
 
 

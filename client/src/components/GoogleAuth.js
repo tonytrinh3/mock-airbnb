@@ -24,6 +24,7 @@ class GoogleAuth extends React.Component{
 
                 //window.gapi.auth2.getAuthInstance().isSignedIn.get() returns true or false from google
                 //window.gapi.auth2.getAuthInstance().isSignedIn.get() is from google
+                
                 //this.onAuthChange is our function
                 this.onAuthChange(this.auth.isSignedIn.get());
                 // this.setState({isSignedIn: this.auth.isSignedIn.get()});
@@ -106,7 +107,7 @@ class GoogleAuth extends React.Component{
     //this is just rendering logic
     renderAuthButton(){
         if(this.props.isSignedIn === null){
-            return null;
+            return <p>(Google Not working)</p>;
         } else if (this.props.isSignedIn){
             return this.renderSignOut();
         } else {
