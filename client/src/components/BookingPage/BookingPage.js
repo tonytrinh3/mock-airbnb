@@ -22,7 +22,7 @@ import {fetchBooking} from '../../actions/index';
 class BookingPage extends React.Component{
 
 
-    //disabled this in order express and mongodb to come into play
+    //disabled this UNTIL express and mongodb to come into play
     // componentDidMount(){
     //     //this.props.match.params.id is from react router. params is the parameters of the website that we can add and change 
     //     this.props.fetchBooking(this.props.match.params.id);
@@ -33,13 +33,16 @@ class BookingPage extends React.Component{
 
 
     render(){
+        // console.log(this.props);
+        // console.log(this.props.room)
 
-         //disabled this in order express and mongodb to come into play
+
+         //disabled this UNTIL express and mongodb to come into play
         // if (!this.props.booking){
         //     return (<div className="header-big">Loading!</div>);
         // }
         
-        //console.log(this.props.booking);
+        // console.log(this.props.booking);
 
         const {
             amenities,
@@ -146,7 +149,7 @@ class BookingPage extends React.Component{
 //so you can pull it one time and just pass it down as props...
 
 const mapStateToProps = (state,ownProps) =>{
-    // console.log(ownProps);
+    // console.log(ownProps.match.params.id);
     // console.log(state);
     return{
         booking: state.bookings[ownProps.match.params.id],

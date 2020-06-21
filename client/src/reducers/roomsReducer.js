@@ -1,5 +1,7 @@
+import _ from 'lodash';
+
 const roomsReducer = () =>{
-    return [
+    const INITIAL_STATE = [
         {
           "id": 1,
           "title": "Civic Center Views from a Contemporary City Pad",
@@ -469,6 +471,8 @@ const roomsReducer = () =>{
           }
         }
       ];
+
+      return {..._.mapKeys(INITIAL_STATE, "id")};
 };
 
 export default roomsReducer;

@@ -12,6 +12,7 @@ class RoomListingPage extends React.Component{
 
     
     //then you call the action to use in here
+
     // componentDidMount(){
     //     this.props.fetchBookings();
     // }
@@ -108,7 +109,7 @@ class RoomListingPage extends React.Component{
 
 const mapStateToProps = (state) =>{
      //Object.values is a javascript function - that takes the values of each object awef: 2, and just lay them out in an array
-    console.log(state);
+    // console.log(state);
      return{
         bookings: Object.values(state.bookings),
         rooms: Object.values(state.rooms)
