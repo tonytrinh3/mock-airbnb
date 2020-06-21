@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3a23f2ec083aee6a987fb65c4802628e",
+    "revision": "27d79a0c3ca1fcd3aa2ba8522bde4755",
     "url": "/mock-airbnb/index.html"
   },
   {
-    "revision": "a21e926d2611bd9ee3f4",
+    "revision": "976b4dedc54df7c707f2",
     "url": "/mock-airbnb/static/css/2.19b7558e.chunk.css"
   },
   {
-    "revision": "b36c33a18486b845f923",
+    "revision": "f67e49e17a99b8453292",
     "url": "/mock-airbnb/static/css/main.fb82d4ce.chunk.css"
   },
   {
-    "revision": "a21e926d2611bd9ee3f4",
-    "url": "/mock-airbnb/static/js/2.19663e74.chunk.js"
+    "revision": "976b4dedc54df7c707f2",
+    "url": "/mock-airbnb/static/js/2.0e83cdb1.chunk.js"
   },
   {
     "revision": "f3013826d74cc173121ee0f879eeb67a",
-    "url": "/mock-airbnb/static/js/2.19663e74.chunk.js.LICENSE.txt"
+    "url": "/mock-airbnb/static/js/2.0e83cdb1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b36c33a18486b845f923",
-    "url": "/mock-airbnb/static/js/main.74da4198.chunk.js"
+    "revision": "f67e49e17a99b8453292",
+    "url": "/mock-airbnb/static/js/main.175de03e.chunk.js"
   },
   {
     "revision": "9ca7ee566d6cc3406b19",
@@ -68,6 +68,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mock-airbnb/static/media/adventures-image.c77712c7.jpg"
   },
   {
+    "revision": "b0616a8aaf7fe08ebf056cd5de3d8ed4",
+    "url": "/mock-airbnb/static/media/airbnb-logo.b0616a8a.ico"
+  },
+  {
     "revision": "cc789d7362513e46fa07752244f5d037",
     "url": "/mock-airbnb/static/media/airbnb-logo.cc789d73.png"
   },
@@ -82,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6b5a49b7578c7efb4055c56a0e940190",
     "url": "/mock-airbnb/static/media/airbnb-plus2.6b5a49b7.jpg"
+  },
+  {
+    "revision": "faf1f9a0e0774f66b70b259801eec191",
+    "url": "/mock-airbnb/static/media/airbnb_logo_dfc_icon.faf1f9a0.ico"
   },
   {
     "revision": "7f55b72b7baa292e5d81b92a5f33ffb7",
