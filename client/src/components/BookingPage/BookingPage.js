@@ -21,22 +21,23 @@ import {fetchBooking} from '../../actions/index';
 
 class BookingPage extends React.Component{
 
-    componentDidMount(){
-        this.props.fetchBooking(this.props.match.params.id);
-        //console.log(this.props.match.params.id);
-    }
 
-    // renderStuff(){
-    //     return(
-    //         <div className="aewf" style={{color: "red"}}>{this.props.booking.title}</div>
-    //     )
+    //disabled this in order express and mongodb to come into play
+    // componentDidMount(){
+    //     //this.props.match.params.id is from react router. params is the parameters of the website that we can add and change 
+    //     this.props.fetchBooking(this.props.match.params.id);
+    //     // console.log(this.props);
+    //     console.log(this.props.room)
     // }
+
+
 
     render(){
 
-        if (!this.props.booking){
-            return (<div className="header-big">Loading!</div>);
-        }
+         //disabled this in order express and mongodb to come into play
+        // if (!this.props.booking){
+        //     return (<div className="header-big">Loading!</div>);
+        // }
         
         //console.log(this.props.booking);
 
@@ -60,8 +61,9 @@ class BookingPage extends React.Component{
             sleeping_arrangements,
             space_type,
             title
-        } = this.props.booking
-
+        //disabled this in order express and mongodb to come into play
+        // } = this.props.booking
+        } = this.props.room
  
         return(
             <div className="booking-page">
@@ -147,7 +149,8 @@ const mapStateToProps = (state,ownProps) =>{
     // console.log(ownProps);
     // console.log(state);
     return{
-        booking: state.bookings[ownProps.match.params.id]
+        booking: state.bookings[ownProps.match.params.id],
+        room: state.rooms[ownProps.match.params.id]
     }
 }
 

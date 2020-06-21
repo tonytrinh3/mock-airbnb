@@ -45,9 +45,9 @@ const states = [
 
 const tile = ({state,pricing}) => {
     return (
-    <div className="popular-destination-US__tile" key= {state}>
-        <div className="popular-destination-US__tile__state margin-bottom-small">{state}</div>
-        <div className="popular-destination-US__tile__pricing text-sub margin-bottom-large">{pricing}/night average</div>
+    <div className="popular-destination__tile" key= {state}>
+        <div className="popular-destination__tile__state margin-bottom-small">{state}</div>
+        <div className="popular-destination__tile__pricing text-sub margin-bottom-large">{pricing}/night average</div>
     </div>
     );
 };
@@ -62,9 +62,9 @@ const renderTile = states.map(state =>{
 
 const PopularDestinationUS=()=>{
     return (
-        <div className="popular-destination-US section-margin">
+        <div className="popular-destination section-margin">
             <h2 className="header-big margin-bottom-large">Popular destinations in the United States</h2>
-            <div className="popular-destination-US__tiles">
+            <div className="popular-destination__tiles">
                 {renderTile}
             </div>
         </div>
