@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-const roomsReducer = () =>{
+export default () =>{
     const INITIAL_STATE = [
         {
           "id": 1,
@@ -475,4 +475,3 @@ const roomsReducer = () =>{
       return {..._.mapKeys(INITIAL_STATE, "id")};
 };
 
-export default roomsReducer;

@@ -12,7 +12,7 @@ class RoomListingPage extends React.Component{
 
     
     //then you call the action to use in here
-
+    //disabled this UNTIL express and mongodb to come into play
     // componentDidMount(){
     //     this.props.fetchBookings();
     // }
@@ -20,6 +20,7 @@ class RoomListingPage extends React.Component{
  
     
     renderList(){
+         //disabled this UNTIL express and mongodb to come into play
         // return this.props.bookings.map(booking=>{
         return this.props.rooms.map(booking=>{
             const {
@@ -96,7 +97,9 @@ class RoomListingPage extends React.Component{
                         {this.renderList()}
                     </div>
                     <GoogleMaps
-                       bookings = {this.props.bookings}
+                     //disabled this UNTIL express and mongodb to come into play
+                    //    bookings = {this.props.bookings}
+                       bookings = {this.props.rooms}
                     />
                 </div>
                 <Footer/>
@@ -109,10 +112,10 @@ class RoomListingPage extends React.Component{
 
 const mapStateToProps = (state) =>{
      //Object.values is a javascript function - that takes the values of each object awef: 2, and just lay them out in an array
-    // console.log(state);
+    console.log(state);
      return{
         bookings: Object.values(state.bookings),
-        rooms: Object.values(state.rooms)
+        rooms: Object.values(state.roomsTEMP)
 
         //this is handy to see if currentUserId exist or not to render certain things if the user has logged in or not or if the user own the content of the object or not  
         // currentUserId: state.authy.userId,

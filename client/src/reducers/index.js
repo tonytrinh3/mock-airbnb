@@ -5,11 +5,17 @@ import bookingReducer from './bookingReducer';
 import userReducer from './userReducer'
 
 //as a substitute until express and mongodb comes
-import roomsReducer from './roomsReducer';
+import roomsReducerTEMP from './roomsReducerTEMP';
+import userReducerTEMP from './userReducerTEMP';
+import idReducerTEMP from './idReducerTEMP';
+
 
 export default combineReducers({
     auth: authReducer,
     bookings: bookingReducer,
     userReservations: userReducer,
-    rooms: roomsReducer
+    roomsTEMP: roomsReducerTEMP,
+    userResTEMP: userReducerTEMP,
+    idTEMP:idReducerTEMP
+    
 });

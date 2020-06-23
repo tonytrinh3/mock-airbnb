@@ -5,14 +5,16 @@ import {fetchUserReservations} from '../../actions';
 import Navigation from '../Navigation';
 import Footer from '../Footer';
 //import moment from 'moment';
-import TripCard from './TripCard';
+// import TripCard from './TripCard';
 
 class TripsPage extends React.Component{
 
-    componentDidMount(){
-        this.props.fetchUserReservations();
-        // this.props.fetchBookings();
-    }
+
+     //disabled this UNTIL express and mongodb to come into play
+    // componentDidMount(){
+    //     this.props.fetchUserReservations();
+    //     // this.props.fetchBookings();
+    // }
 
     // renderDate(){
 
@@ -22,11 +24,15 @@ class TripsPage extends React.Component{
 
         const {
             trips,
-            userProfile
-        } = this.props;
+            userProfile,
 
-    
-        return trips.map((trip,i) =>{
+            tripsTEMP
+
+        } = this.props;
+        
+        //disabled this UNTIL express and mongodb to come into play
+        return tripsTEMP.map((trip,i) =>{
+        // return trips.map((trip,i) =>{
 
             const {
                 bookingId,
@@ -48,7 +54,7 @@ class TripsPage extends React.Component{
                     <div className="trip-card" key = {i}>
                         <img className = "trip-card__img" src={require(`../../img/booking-page/listing-${bookingId}/${imgs.img_1}.jpg`)} alt= {`img_${i}`} key ={`img_${i}`}/>    
                         <div className="trip-card__description ">
-                            <p className = "trip-card__description__date ">{`${startDate.split(" ")[0]} ${startDate.split(" ")[1]} - ${endDate.split(" ")[1]}` }</p>                    
+                            <p className = "trip-card__description__date ">{`${startDate.split(" ")[0]} ${startDate.split(" ")[1]} - ${endDate.split(" ")[0]} ${endDate.split(" ")[1]}` }</p>                    
                             {/* <h2 className="header-medium">{trip.reservation.description}</h2> */}
                             <h3 className="trip-card__description__location ">{location.split(",")[0]}</h3>
                             <p className="trip-card__description__title ">{title}</p>
@@ -85,11 +91,11 @@ class TripsPage extends React.Component{
 };
 
 const mapStateToProps = (state) =>{
-    // console.log(state);
+    console.log(state);
     return {
         trips: Object.values(state.userReservations),
-        userProfile: state.auth.userProfile
-
+        userProfile: state.auth.userProfile,
+        tripsTEMP: Object.values(state.userResTEMP),
     }
 }
 

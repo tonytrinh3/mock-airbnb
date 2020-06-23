@@ -30,6 +30,43 @@ export const signOut = () =>{
 };
 
 
+
+
+
+
+
+export const createUserReservationTEMP = (reservation) => {
+
+
+
+    return (dispatch,getState)=>{
+
+        const {userId} = getState().auth.userProfile;
+
+        const {id} = getState().idTEMP;
+
+        dispatch({type: 'CREATE_USER_RESERVATION_TEMP', payload: {...reservation,userId,id}});
+   
+        history.push('/trips/');
+    }
+  
+};
+
+export const increaseIDTEMP = () =>{
+    return {
+        type: "INCREASE_ID_TEMP",
+        payload: 1
+    };
+};
+
+
+
+
+
+
+
+
+
 //this is just a function
 //this function says as soon as fetchBookings is being used, 
 //this function will pull out the data from our data base api, 

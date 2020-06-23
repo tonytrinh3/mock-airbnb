@@ -153,7 +153,7 @@ const mapStateToProps = (state,ownProps) =>{
     // console.log(state);
     return{
         booking: state.bookings[ownProps.match.params.id],
-        room: state.rooms[ownProps.match.params.id]
+        room: state.roomsTEMP[ownProps.match.params.id]
     }
 }
 
