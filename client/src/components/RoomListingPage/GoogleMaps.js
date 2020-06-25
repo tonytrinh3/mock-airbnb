@@ -45,8 +45,9 @@ class GoogleMaps extends React.Component{
     };
  
     containerStyle = {
-        width: '55vw',
-        height: '80vh'
+        width: '91vh',
+        height: '70%'
+      
     }
 
     renderMarker(){

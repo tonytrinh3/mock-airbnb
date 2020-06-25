@@ -9,7 +9,7 @@ const Header=()=>{
             <Navigation/>
             <LandingForm/>
 
-            <div className="header__caption">Over 300 unique places <br/> to stay in Hong Kong</div>
+            <div className="header__caption">Over 300 unique places <br/> to stay in San Francisco</div>
 
 
         </header>

@@ -39,10 +39,10 @@ class RoomListingPage extends React.Component{
                 <Link className="listings__listing " key = {id} to={`/booking/${id}`}>
                       <img className="listings__listing__img" src={require(`../../img/booking-page/listing-${id}/img-1.jpg`)} alt="" />
                     <div className="listings__listing__description">
-                        <div className="listings__listing__description__superhost-tag superhost-tag margin-bottom-medium">superhost</div>
+                        <div className="listings__listing__description__superhost-tag superhost-tag margin-bottom-small">superhost</div>
                         {this.renderSpaceType(space_type, home_type)}
-                        <p className="listings__listing__description__reviews">{avgReview(booking.reviews,"overall")}</p>
-                        <div className="listings__listing__description__title header-medium margin-bottom-medium"  > {title}</div>
+                        <p className="listings__listing__description__reviews">{avgReview(booking.reviews,"overall")} <span>({booking.reviews.length})</span></p>
+                        <div className="listings__listing__description__title header-medium margin-bottom-small" > {title}</div>
                         {this.renderHomeSpecs(home_specs)}
                         <ul className="listings__listing__description__amenities">{this.renderAmenities(amenities)}</ul>  
                         <p className="listings__listing__description__price"><span >${price}</span> / night</p>
@@ -56,7 +56,7 @@ class RoomListingPage extends React.Component{
 
     renderSpaceType(space_type, home_type){
         //console.log(space_type);
-        return <p className = "listings__listing__description__space-type margin-bottom-medium">{(space_type === "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
+        return <p className = "listings__listing__description__space-type margin-bottom-small">{(space_type === "entire_space") ? `Entire ${home_type}` : `Private Room` }</p>
     }
 
     renderAmenities(amenities){
@@ -68,7 +68,7 @@ class RoomListingPage extends React.Component{
 
     renderHomeSpecs(home_specs){
         return(
-            <ul className="listings__listing__description__home-specs margin-bottom-medium">
+            <ul className="listings__listing__description__home-specs margin-bottom-small">
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numGuests} guests</li>  
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numBedrooms} bedrooms</li> 
                 <li className="listings__listing__description__home-specs__spec">{home_specs.numBeds} beds</li> 
@@ -81,9 +81,7 @@ class RoomListingPage extends React.Component{
     //pass down picture, superhost, title, space type , price, rating to google map
     render(){
 
-      
             // console.log(this.props.bokings[1].amenities)
-        
         
         return(
             <div>
@@ -92,7 +90,7 @@ class RoomListingPage extends React.Component{
                     
                     <div className="listings">
                         <h1 className="listings__header header-big margin-bottom-large">
-                        Room Listing Page 
+                        Stays in San Francisco
                         </h1>
                         {this.renderList()}
                     </div>

@@ -2,7 +2,7 @@
     grid-column: full-start / full-end;
     display:grid;
 
-    grid-template-rows: repeat(2,min-content);
+
 
     margin: 5rem 10rem 10rem 10rem;
 
@@ -14,8 +14,10 @@
 
 .footer-nav{
     display:grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4,minmax(min-content,1fr));
     justify-items:center;
+    column-gap: 2rem;
+    
     
     &__header{
         font-weight: 600;

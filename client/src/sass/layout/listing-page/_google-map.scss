@@ -1,7 +1,7 @@
 .google-map{
 
-    grid-column: col-start 4/full-end;
-    position: fixed;
+    grid-column: 2;
+    // position: fixed;
     // right: 0rem;
    
     // height: 50vh;
@@ -13,9 +13,9 @@
     }
 
     &__info-window{
-        height: 20vh;
-        width: 10vw;
-        display: grid;
+        // height: 20vh;
+        // width: 10vw;
+        // display: grid;
 
         &__header{
             // text-overflow: ellipsis;
