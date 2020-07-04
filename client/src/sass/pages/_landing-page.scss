@@ -5,9 +5,23 @@
     // [pile-end-column play-area-start-column] minmax(50vw,2fr)
     // [play-area-end-column deck-start-column] minmax(22.6rem,1fr)  [deck-end-column];
 
-    grid-template-columns: [full-start] minmax(6rem, 1fr) 
-    [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 
-    minmax(6rem, 1fr) [full-end];
+    grid-template-columns: 
+    [full-start center-start] repeat(8, [col-start] minmax(min-content,1fr) [col-end])[center-end full-end];
+
+    @media only screen and (min-width:$bp-largest-2){
+        //for ultrawide screens
+     
+         //   grid-template-columns:[full-start body-start] repeat(8, [col-start] minmax(min-content, 1fr ) [col-end]) 
+         //   [body-end nav-start] minmax(min-content,$nav-width-ultrawide)  [nav-end full-end];
+     
+     
+           grid-template-columns:
+           [full-start] minmax(1rem, 1fr) [center-start] 
+           repeat(8, [col-start] minmax(min-content, 25rem ) [col-end]) 
+           [center-end] minmax(1rem, 1fr) [full-end];
+       
+     
+       }
 
 
     grid-template-rows: 

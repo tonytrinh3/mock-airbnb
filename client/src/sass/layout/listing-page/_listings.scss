@@ -77,6 +77,11 @@
                     color: $airbnb-default-color-light-grey;
                 }
             }
+
+            &__reviews:before{
+                content: "\2605";
+            }
+        
     
             &__title{
                 grid-column: 1/-1;

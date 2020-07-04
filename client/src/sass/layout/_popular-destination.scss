@@ -1,11 +1,11 @@
 .popular-destination {
-    grid-column:full-start/full-end;
+    grid-column:center-start/center-end;
 
     
     &__tiles{
         display:grid;
         // grid-template-rows: repeat(2,min-content);
-        grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        grid-template-columns: repeat(5,minmax(30rem,1fr));
         // justify-items: center;
     }
 

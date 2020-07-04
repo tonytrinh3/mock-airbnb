@@ -18,7 +18,7 @@ const AboutHost = ({host_info,reviews}) =>{
         <div className="about-host">
             <h2 className="about-host__header header-big margin-bottom-medium">Hosted by {host_info.name.split(" ")[0]}</h2>
             <p className="margin-bottom-medium">{host_info.location} · Joined in {moment(host_info.date_joined).format("MMMM YYYY")}</p>
-            <p className=""> {reviews.length} Reviews</p>
+            <p className="about-host__reviews"> {reviews.length} Reviews</p>
             
             <hr className="about-host__hr hr"/>
 
@@ -31,7 +31,7 @@ const AboutHost = ({host_info,reviews}) =>{
 
             <hr className="about-host__hr hr"/>
 
-            <p className=""><span className="header-small">Always communicate through Airbnb</span> · To protect your payment, never transfer money or communicate outside of the Airbnb website or app. <a href="#" className="booking-page__link">Learn more</a></p>
+            <p className=""><span className="header-small">Always communicate through Airbnb</span> · To protect your payment, never transfer money or communicate outside of the Airbnb website or app. <span className="booking-page__link">Learn more</span></p>
             
             <hr className="about-host__hr hr"/>
             

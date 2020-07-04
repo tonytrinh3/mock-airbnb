@@ -73,10 +73,6 @@ class Navigation extends React.Component{
         
         )
     }
-   
-    // const {
-    //     isSignedIn
-    // } = this.props;
 
    
 };
@@ -92,7 +88,7 @@ const mapStateToProps = (state)=>{
 export default connect (mapStateToProps,null)(Navigation);
 
 
-     {/* <p className = "nav__content__links__link nav__content__links__google  " onClick={this.toggleDropdown}>                 
+     /* <p className = "nav__content__links__link nav__content__links__google  " onClick={this.toggleDropdown}>                 
                         <GoogleAuth/> 
                         {!this.state.toggleDropdown ? null:
                             (<div className="nav__dropdown">
@@ -101,6 +97,6 @@ export default connect (mapStateToProps,null)(Navigation);
                             </div>)
                         }
                         
-                        </p> */}
+                        </p> */
 
-{/* <div className="nav__content__menu-btn">MENU </div> */}
+/* <div className="nav__content__menu-btn">MENU </div> */

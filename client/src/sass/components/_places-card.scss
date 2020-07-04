@@ -34,6 +34,12 @@
         align-self:center;
     }
 
+    &__rating:before{
+        content: "\2605";
+    }
+
+
+
 
 
     &__description{

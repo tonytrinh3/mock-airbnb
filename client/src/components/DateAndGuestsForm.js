@@ -154,6 +154,8 @@ class DateAndGuestsForm extends React.Component{
                     numTotal: this.state.numTotal + 1
                 });
                 break;
+            default: 
+                return;
         }
     }
 
@@ -184,6 +186,8 @@ class DateAndGuestsForm extends React.Component{
                     });
                 }
                 break;
+            default: 
+                return;
         }
            
     }

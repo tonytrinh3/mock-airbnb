@@ -3,17 +3,9 @@ import React from 'react';
 // import {Link} from 'react-router-dom'
 // import {fetchBookings} from '../../actions/index';
 
-class Amenities extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    
+const Amenities =()=>{
 
 
-
- 
-
-    render(){
 
         // console.log(this.props)
         return(
@@ -28,14 +20,14 @@ class Amenities extends React.Component{
                     <li className="amenities__item">Carbon monoxide alarm</li>
                 </ul>
                 <p className = "amenities__paragraph margin-bottom-medium">The host hasn't reported smoke or carbon monoxide detectors on the property</p>
-                <a className = "amenities__link booking-page__link">Show all 25 amenities</a> 
+                <p className = "amenities__link booking-page__link">Show all 25 amenities</p> 
                     {/* needs to be modal */}
 
 
             </div>
             
         )
-    }
+
 
 }
 

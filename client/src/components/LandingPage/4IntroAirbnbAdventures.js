@@ -79,7 +79,7 @@ const IntroAirbnbAdventures=()=>{
             <div className="adventure-card-section margin-bottom-large">
                 {renderAdventureCard}
             </div>
-            <div className="continue-link ">Show all adventures -></div>
+            <div className="continue-link ">Show all adventures</div>
         </div>
     )
 };

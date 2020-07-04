@@ -23,7 +23,6 @@ class TripsPage extends React.Component{
     renderReservation(){
 
         const {
-            trips,
             userProfile,
 
             tripsTEMP
@@ -46,7 +45,7 @@ class TripsPage extends React.Component{
 
             //you do this to wait until userProfile is fetch and loading
             if (!userProfile){
-                return <h1 className=""></h1>
+                return null
             }
             
             if (trip.userId === userProfile.userId){

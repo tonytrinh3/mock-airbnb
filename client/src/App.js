@@ -7,6 +7,7 @@ import { Router, Route } from 'react-router-dom';
 import './sass/main.scss';
 import history from './history';
 
+import ScrollToTop from './ScrollToTop'; //to auto scroll top when you click on new Link
 // import Test from './testing/Test';
 
 
@@ -15,7 +16,9 @@ class App extends React.Component{
   render(){
     return(
       //changed from BrowseRouter to Router so you can control the history object 
-      <Router history = {history} onUpdate={() => window.scrollTo(0, 0)}>
+      <Router history = {history} >
+        <ScrollToTop />
+ 
         <div className="container">
           <Route path = "/" exact component ={ LandingPage} />
           <Route path = "/booking/:id" exact component ={ BookingPage} />

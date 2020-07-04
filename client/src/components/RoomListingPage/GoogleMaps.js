@@ -1,8 +1,14 @@
+
 import React from 'react';
 // import { Link} from 'react-router-dom';
 import { Map, GoogleApiWrapper, Marker,InfoWindow } from 'google-maps-react';
 // import history from '../../history';
 // import PlacesCards from '../PlacesCard';
+
+// import dotenv from 'dotenv'
+// dotenv.config({ silent: true })
+
+
 
 
 class GoogleMaps extends React.Component{
@@ -136,5 +142,5 @@ class GoogleMaps extends React.Component{
 // export default GoogleMaps;
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyDkBI_xF0Tu2Guc_S05gho2ADcmSd_k7_E'
+    apiKey: process.env.REACT_APP_GOOGLE_MAP
   })(GoogleMaps);

@@ -4,8 +4,6 @@ import React from 'react';
 // import stays from '../../img/landing-page/stays-image.jpg';
 import { Link} from 'react-router-dom';
 
-{/* <Link className="header-medium margin-bottom-medium" to={`/roomListing`}> */}
-
 const ExploreAirbnb=()=>{
     return (
         <div className="explore-airbnb section-margin">

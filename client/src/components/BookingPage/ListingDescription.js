@@ -102,9 +102,8 @@ const ListingDescription = ({title, location, description, home_type,
             {renderSparklingClean(reviews)}
             {renderSuperhost(host_info)}
             <p className = "margin-bottom-medium">{description}</p>
-            <a href = "#" className = "booking-page__link margin-bottom-medium">Read more about the space</a>
-            <br/>
-            <a href = "#" className = "booking-page__link margin-bottom-medium">Contact Page</a>
+            <p className = "booking-page__link margin-bottom-medium">Read more about the space</p>
+            <p className = "booking-page__link margin-bottom-medium">Contact Page</p>
         </div>
     )
 }

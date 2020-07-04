@@ -42,23 +42,23 @@ const ReviewSection = ({reviews}) => {
     <div className="review-section">
         <h2 className="review-section__header header-big margin-bottom-medium">Reviews</h2>
         <div className="review-section__preview">
-            <p className="review-section__preview--rating margin-bottom-medium">{avgReview(reviews,"overall")}</p>
+            <p className="review-section__preview--review margin-bottom-medium">{avgReview(reviews,"overall")}</p>
             <p className="review-section__preview--count margin-bottom-medium">{reviews.length} reviews</p>
             <p className="review-section__preview--search margin-bottom-medium">Search Review</p>
         </div>
         <ul className="review-section__breakdown margin-bottom-large">
             <li className="review-section__breakdown--item">Communication</li>
-            <li className="review-section__breakdown--item">{avgReview(reviews,"communication")}</li>
+            <li className="review-section__breakdown--review">{avgReview(reviews,"communication")}</li>
             <li className="review-section__breakdown--item">Check-in</li>
-            <li className="review-section__breakdown--item">{avgReview(reviews,'check_in')}</li>
+            <li className="review-section__breakdown--review">{avgReview(reviews,'check_in')}</li>
             <li className="review-section__breakdown--item">Cleanliness</li>
-            <li className="review-section__breakdown--item">{avgReview(reviews,"cleanliness")}</li>
+            <li className="review-section__breakdown--review">{avgReview(reviews,"cleanliness")}</li>
             <li className="review-section__breakdown--item">Location</li>
-            <li className="review-section__breakdown--item">{avgReview(reviews,"location")}</li>
+            <li className="review-section__breakdown--review">{avgReview(reviews,"location")}</li>
             <li className="review-section__breakdown--item">Accuracy</li>
-            <li className="review-section__breakdown--item">{avgReview(reviews,"accuracy")}</li>
+            <li className="review-section__breakdown--review">{avgReview(reviews,"accuracy")}</li>
             <li className="review-section__breakdown--item">Value</li>
-            <li className="review-section__breakdown--item">{avgReview(reviews,"value")}</li>
+            <li className="review-section__breakdown--review">{avgReview(reviews,"value")}</li>
         </ul>
 
         {renderReviewDescription(reviews)}

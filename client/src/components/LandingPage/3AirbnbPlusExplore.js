@@ -9,7 +9,7 @@ const AirbnbPlusExplore=()=>{
             <div className="airbnb-plus-explore__subheader margin-bottom-large"> A selection of places to stay verified for quality and design.</div>
             <div className="airbnb-plus-explore__picture">
                 <h1 className = "airbnb-plus-explore__picture__header"> airbnb plus</h1>
-                <Link className = "airbnb-plus-explore__picture__button button" to={`/roomListing`}> Explore Stays</Link>
+                <Link className = "airbnb-plus-explore__picture__button" to={`/roomListing`}> Explore Stays</Link>
             </div>
         </div>
     )

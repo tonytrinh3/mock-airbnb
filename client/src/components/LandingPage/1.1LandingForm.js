@@ -22,7 +22,7 @@ class LandingForm extends React.Component{
     
                 <div className="landing-page-form__section">
                     <h3 className ="header-small margin-bottom-medium">WHERE</h3>
-                    <input className = "landing-page-form__input input-default" type="text" id="location" name="location" placeholder="San Francisco" />
+                    <input className = "landing-page-form__input input-default " type="text" id="location" name="location" placeholder="San Francisco" />
                 </div>
             
 

@@ -108,7 +108,7 @@ const PlacesStayAroundWorld=()=>{
            <div className="place-cards-section margin-bottom-large">
              {renderPlacesCard}
            </div>
-           <div className="continue-link ">Show (2000+) -></div>
+           <div className="continue-link ">Show (2000+)</div>
         </div>
     )
 };

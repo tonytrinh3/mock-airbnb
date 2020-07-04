@@ -52,6 +52,13 @@ body {
     text-decoration: underline;
 }
 
+.continue-link::after{
+    content: " \21C0";
+    font-size: 2rem;
+    align-self: center;
+}
+
+
 .booking-page__link{
     font-weight: 600;
     color: $airbnb-default-blue;

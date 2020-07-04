@@ -22,14 +22,15 @@
     }
 
     &__pricing{
-
         margin-bottom: .5rem;
         // white-space: nowrap;
     }
 
-    &__rating{
- 
+   
 
+    &__rating:before{
+        content: "\2605";
+  
     }
 
     &__continue_link{

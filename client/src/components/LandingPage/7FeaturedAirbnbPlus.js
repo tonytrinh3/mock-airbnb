@@ -49,7 +49,7 @@ const FeaturedAirbnbPlus=()=>{
             <div className="featured-airbnb-plus__cards margin-bottom-large">
                 {renderDestinations}
             </div>
-            <div className="continue-link ">Show more Airbnb Plus destinations -></div>
+            <div className="continue-link ">Show more Airbnb Plus destinations</div>
         </div>
     )
 };

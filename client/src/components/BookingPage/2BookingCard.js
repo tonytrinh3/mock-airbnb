@@ -63,7 +63,7 @@ export default BookingCard;
 //     {signIn, signOut}
 // )(GoogleAuth);
 
-{/* <div className="aewf">Booking Ccard</div> */}
+/* <div className="aewf">Booking Ccard</div> */
 
 
 // renderError(error,touched){

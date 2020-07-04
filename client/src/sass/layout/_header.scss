@@ -2,14 +2,16 @@
     // grid-row: [header-start] / [header-end];
     grid-column:full-start/full-end;
     
+    //https://wallpaperscraft.com/search/?order=&page=1&query=san+francisco&size=3840x2400
     //background-image: linear-gradient(rgba(blue, .10), rgba(green, .10)), url(../../img/san-francisco-3.png);
-    background-image: url(../../img/san-francisco-4.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
+    background-image: url(../../img/san-francisco-6.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
     background-size: cover;
-    background-position: center ;
+
+    background-position: center;
 
     display:grid;
    
-    grid-template-columns: 10rem minmax(40rem,60rem) 1fr;
+    grid-template-columns: 10rem minmax(40rem,55rem) 1fr;
     grid-template-rows: min-content minmax(min-content,75rem) 1fr;
 
 
