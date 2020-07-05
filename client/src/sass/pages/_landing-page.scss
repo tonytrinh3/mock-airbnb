@@ -36,18 +36,23 @@
     // (9) footer
     ;
 
-    @media only screen and (max-width:$bp-large) {
+    @media only screen and (max-width:$bp-large ) {
         grid-template-rows: 
-        [header-start] 60vh [header-end]
+        [header-start] 100rem [header-end]
         repeat(9,min-content)   ;
     
-      
-        
     }
+
+    // @media only screen and (max-height:1300px) {
+    //     grid-template-rows: 
+    //     [header-start] 100vh [header-end]
+    //     repeat(9,min-content)   ;
+    
+    // }
 
     @media only screen and (max-width:$bp-medium) {
         grid-template-rows: 
-        [header-start] 80vh [header-end]
+        [header-start] 100rem [header-end]
         repeat(9,min-content)   ; 
     }
 
