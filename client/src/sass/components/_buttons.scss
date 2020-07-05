@@ -60,46 +60,7 @@
 
 
 
-.google-btn{
-    background-color: transparent;
-    color: black;
-    font-weight: 600;
-    place-items: center;
 
-    border-radius: 30rem;
-    border: solid .3rem $default-font-color;
-    box-shadow:$default-box-shadow ;
-
-    display: grid;
-    grid-template-columns: min-content minmax(10rem,max-content);
-    
-    cursor: pointer;
-    text-align: center;
-  
-    
-
-    &__sign-in{
-        grid-column: 1/-1;
-       
-        
-        justify-self: center;
-        align-self: center;
-        margin: 1rem;
-    }
-
-
-    &__name{
-        margin: 0 2rem;
-
-    }
-
-    &__img{
-        border-radius: 100%;
-        object-fit: cover;
-        height: 5rem;
-    }
-
-}
 
 
 
