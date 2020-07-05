@@ -5,29 +5,47 @@
  
 
     //2nd row is for the dropdown
-    grid-template-rows: minmax(min-content, 10rem) min-content;
+    grid-template-rows: 10rem min-content;
     color: black;
     font-weight: 600;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+
  
+    
+ 
+    @media only screen and (max-width:$bp-small) {
+        // display:none;
+        grid-row: 1;
+        margin-bottom: 1rem;
+        // background-color: lightblue;
+        height: 10rem;
+    }
+
+
 
     &__content{
         // background-color: lightgreen;
         display:grid;
-        place-items: center; //https://developer.mozilla.org/en-US/docs/Web/CSS/place-items
+        //place-items: center; //https://developer.mozilla.org/en-US/docs/Web/CSS/place-items
         //grid-auto-flow: column; //https://www.w3schools.com/cssref/pr_grid-auto-flow.asp
         
         //first one is for pic, 2nd one is for spacing.. but 1 fr can be used for the picture.., 3rd one is for the links.
         //but technically you only need 2 columns and define the spacing from there.. 
         grid-template-columns: minmax(min-content, 6rem) minmax(min-content,1fr) ;
-        align-content: space-evenly;
+        //align-content: space-evenly;
+        // align-self: center;
 
         &__img{
             // grid-column:1;
             height: 100%;
             width: 100%;
             object-fit: contain;
-            margin-left: 5rem;
+            margin-left: 3rem;
+       
+
+            @media only screen and (max-width:$bp-large) {
+                margin-left: 2rem;
+            }
         }
 
         &__links{
@@ -35,21 +53,33 @@
             display: grid;
             grid-gap: 2rem; 
             grid-auto-flow: column; //allow all the elements to flow along the column
-            place-items:center; //apparently this allow the red to wrap around the words
-            
-         
+            place-items: center; //apparently this allow the red to wrap around the words
             justify-self: end;
-            
             //this creates the spacing of columns
             //grid-template-columns: repeat(auto-fill ,minmax(min-content, 25rem) ) ; //https://www.w3schools.com/cssref/pr_grid-auto-columns.asp
             
             margin-right: 3rem;
+
+            @media only screen and (max-width: $bp-medium){
+                grid-gap: 1rem; 
+            }
+            
+        
+
 
             &__link{
                 // background-color: red;
                 padding: 2rem;
                 // width:1rem;// this defines how big the buttons are 
                 text-align: center;
+
+                @media only screen and (max-width: $bp-medium){
+                    display: none;
+                }
+
+                @media only screen and (max-width: $bp-small){
+                    display: none;
+                }
               
             }
 
@@ -135,32 +165,9 @@
         }
 
     }
-
-
-    
-
- 
- 
-
 }
 
-@media only screen and (max-width: 1200px){
 
-    .nav{
-        &__content{
-            &__links{
-                display:none;
-            }
-
-            // &__menu-btn{
-            //     display: grid;
-            // }
-        }
-
-
-    }
-    
-}
 
 
 

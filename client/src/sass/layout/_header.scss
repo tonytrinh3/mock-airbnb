@@ -6,14 +6,21 @@
     //background-image: linear-gradient(rgba(blue, .10), rgba(green, .10)), url(../../img/san-francisco-3.png);
     background-image: url(../../img/san-francisco-6.jpg);//https://www.w3schools.com/css/css3_object-fit.asp
     background-size: cover;
-
     background-position: center;
+
+
 
     display:grid;
    
-    grid-template-columns: 10rem minmax(40rem,55rem) 1fr;
-    grid-template-rows: min-content minmax(min-content,75rem) 1fr;
+    grid-template-columns: [full-start] minmax(1rem,10rem) minmax(min-content,55rem) 1fr [full-end];
+    grid-template-rows: min-content min-content 1fr;
 
+    @media only screen and (max-width:$bp-small) {
+        grid-template-columns:1fr;
+        grid-template-rows: min-content min-content ;
+
+        background-image:none;
+    }
 
     &__caption{
         grid-column: 3;
@@ -30,7 +37,9 @@
         margin-right: 5rem;
         margin-bottom: 5rem;
    
-
+        @media only screen and (max-width:$bp-small) {
+            display: none;
+        }
 
     }
 

@@ -25,12 +25,50 @@ class DateAndGuestsForm extends React.Component{
             numTotal: 0,
             toggleDropdown: false,
             showError: false
-            
-    
         }
-        
     }
 
+    //to reduce calendar from showing 2 to showing 1 and changing default month when window resize
+    updateDateRange=()=>{
+        const {
+            startDate,
+            endDate,
+            focusedInput
+
+        } = this.state;
+
+        if(window.innerWidth <= 420){
+           return <DateRangePicker
+                startDateId="startDate"
+                endDateId="endDate"
+                startDate={startDate}
+                endDate={endDate}
+                onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
+                focusedInput={focusedInput}
+                onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
+                orientation="vertical" verticalHeight={400}
+            />
+         
+        } else {
+            return <DateRangePicker
+                startDateId="startDate"
+                endDateId="endDate"
+                startDate={startDate}
+                endDate={endDate}
+                onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
+                focusedInput={focusedInput}
+                onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
+            />
+        }
+    }
+
+    //to reduce calendar from showing 2 to showing 1 and changing default month when window resize
+    componentDidMount(){
+        this.updateDateRange(); 
+        window.addEventListener("resize", this.updateDateRange); 
+        //https://www.hawatel.com/blog/handle-window-resize-in-react/
+        //window.addEventListener("resize", this.updateMonth.bind(this));
+    }
 
     onSubmit = () =>{
         const {
@@ -93,16 +131,11 @@ class DateAndGuestsForm extends React.Component{
 
     }
 
-    
-
     renderError(){
         const {
             startDate,
             numTotal
         } = this.state;
-
-        
-
 
         //this is always going to change when the state changes due to other functions running to change the state
         if (!this.props.isSignedIn){
@@ -116,8 +149,6 @@ class DateAndGuestsForm extends React.Component{
         } else{
             return null;
         }
-    
-     
     }
 
 
@@ -129,7 +160,6 @@ class DateAndGuestsForm extends React.Component{
         : this.setState({
             toggleDropdown: false
         });
-
     }
 
     additionButton (type) {
@@ -159,7 +189,6 @@ class DateAndGuestsForm extends React.Component{
         }
     }
 
-    
     subtractionButton(type){
         switch(type){
             case "Adults":
@@ -192,29 +221,7 @@ class DateAndGuestsForm extends React.Component{
            
     }
 
- 
-
     renderNumPeople = ()=>{
-
-        // const types = ["Adults","Children","Infants"];
-        // const typeState = [this.state.numAdults,this.state.numChildren,this.state.numInfants]
-        // return types.map((type,i)=>{
-        //     return(
-        //     <div key ={i}>
-        //         <div className="date-guest-forms__guests__dropdown__type">
-        //             <p className="date-guest-forms__guests__dropdown__type__person">{type}</p>
-        //             <p className="date-guest-forms__guests__dropdown__type__person__description">Ages 2–12</p>
-        //         </div>
-        
-        //         <div className="date-guest-forms__guests__dropdown__counter">
-        //             <button className="date-guest-forms__guests__dropdown__counter__btn" onClick= {()=>{this.subtractionButton("Adults")}} >-</button>
-        //             <p className="date-guest-forms__guests__dropdown__counter__num">{typeState[i]}</p>
-        //             <button className="date-guest-forms__guests__dropdown__counter__btn " onClick= {()=>{this.additionButton({type})}}>+</button>
-        //         </div>
-        //     </div>
-        //     )
-        // })
-
         return(
             <div className="date-guest-forms__guests__dropdown">
         
@@ -259,34 +266,20 @@ class DateAndGuestsForm extends React.Component{
 
     }
 
-
     render(){
-
         const {
-            startDate,
-            endDate,
-            focusedInput,
             numTotal,
             toggleDropdown,
             showError
-
         } = this.state;
 
         return (
             <div className = "date-guest-forms">
-                <section className="date-guest-forms__section">
-                <DateRangePicker
-                    startDateId="startDate"
-                    endDateId="endDate"
-                    startDate={startDate}
-                    endDate={endDate}
-                    onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
-                    focusedInput={focusedInput}
-                    onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
-                />
+                <section className="date-guest-forms__section margin-bottom-medium-2">
+                    {this.updateDateRange()}
                 </section>
              
-               <section className="date-guest-forms__section">
+               <section className="date-guest-forms__section margin-bottom-medium-2">
                     <h3 className ="header-small margin-bottom-medium">Guests</h3>
                     <div className = "date-guest-forms__guests input-default" onClick={this.toggleDropdown}>
                         {numTotal ===0? "Add guests" : `${numTotal} guests` }

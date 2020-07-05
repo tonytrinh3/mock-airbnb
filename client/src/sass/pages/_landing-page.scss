@@ -13,15 +13,13 @@
      
          //   grid-template-columns:[full-start body-start] repeat(8, [col-start] minmax(min-content, 1fr ) [col-end]) 
          //   [body-end nav-start] minmax(min-content,$nav-width-ultrawide)  [nav-end full-end];
-     
-     
+
            grid-template-columns:
            [full-start] minmax(1rem, 1fr) [center-start] 
            repeat(8, [col-start] minmax(min-content, 25rem ) [col-end]) 
            [center-end] minmax(1rem, 1fr) [full-end];
-       
-     
-       }
+
+    }
 
 
     grid-template-rows: 
@@ -37,6 +35,27 @@
     // (8) that next and prev button
     // (9) footer
     ;
+
+    @media only screen and (max-width:$bp-large) {
+        grid-template-rows: 
+        [header-start] 60vh [header-end]
+        repeat(9,min-content)   ;
+    
+      
+        
+    }
+
+    @media only screen and (max-width:$bp-medium) {
+        grid-template-rows: 
+        [header-start] 80vh [header-end]
+        repeat(9,min-content)   ; 
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        grid-template-rows: 
+        [header-start] min-content [header-end]
+        repeat(9,min-content)   ; 
+    }
 
     color: $default-landing-page-color;
 

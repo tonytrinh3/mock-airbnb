@@ -6,9 +6,15 @@
     // grid-template-columns: repeat(3,1fr);
     // grid-template-rows: repeat(8, min-content);
 
+    @media only screen and (max-width:$bp-largest){
+        grid-column: 1/-1;
+    }
+
     &__header{
         // grid-column: full-start/col-end 4;
         margin-left: 2rem;
+
+      
     }
 
 
@@ -22,12 +28,19 @@
         // background-color: orange;
         // border: solid 5px black;
         font-size: 1.5rem;
+
+        @media only screen and (max-width:$bp-small){
+            grid-template-columns: 1fr;
+        }
+    
        
       
 
         &__hr{
             margin-top: 4rem;
             grid-column: 1/-1;
+
+        
         }
        
         &__img{
@@ -39,6 +52,10 @@
             object-fit:cover;
             display: block;
             padding-right: 2rem;
+
+        
+
+            
         }
     
         &__description{
@@ -50,6 +67,11 @@
       
             white-space: nowrap;
             overflow: hidden;
+
+            @media only screen and (max-width:$bp-small){
+                grid-template-columns: max-content repeat(3,1fr);
+                margin-top: 2rem;
+            }
     
        
             &__superhost-tag{

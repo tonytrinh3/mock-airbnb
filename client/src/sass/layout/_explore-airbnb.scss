@@ -9,9 +9,20 @@
         display:grid;
 
         grid-template-columns: repeat(auto-fit,minmax(50rem,1fr));
+
+
         grid-column-gap: $default-grid-column-gap;
         
         margin-top: 2rem;
+
+        
+        @media only screen and (max-width: $bp-large){
+            grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+        }
+
+        @media only screen and (max-width: $bp-medium){
+            grid-template-columns: 1fr;
+        }
       
 
         &__card{

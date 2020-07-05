@@ -10,6 +10,13 @@
         grid-column: full-start / full-end;
         margin-top: 5rem;
     }
+
+    @media only screen and (max-width: $bp-medium){
+        margin: 2rem 3rem 3rem 3rem;
+    }
+    // @media only screen and (max-width: $bp-small){
+    //     margin: 2rem;
+    // }
 }
 
 .footer-nav{
@@ -17,6 +24,13 @@
     grid-template-columns: repeat(4,minmax(min-content,1fr));
     justify-items:center;
     column-gap: 2rem;
+
+       
+    @media only screen and (max-width: $bp-small){
+        grid-template-columns: 1fr;
+        column-gap: 0rem;
+        justify-items:start;
+    }
     
     
     &__header{

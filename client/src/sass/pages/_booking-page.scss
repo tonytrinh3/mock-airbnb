@@ -9,6 +9,12 @@
     [center-start] repeat(8, [col-start] minmax(min-content,14rem) [col-end]) [center-end] 
     minmax(6rem, 1fr) [full-end];
 
+
+    @media only screen and (max-width:$bp-largest){
+        grid-template-columns: [full-start] 2rem 
+        [center-start] repeat(8, [col-start] minmax(min-content,1fr) [col-end]) [center-end] 
+        2rem [full-end];
+      }
     // grid-template-rows: 
    
     // repeat(9,min-content) 
@@ -21,7 +27,7 @@
     // (7) stay superhost
     // (8) that next and prev button
     // (9) footer
-    ;
+
 
     // color: $default-font-color;
 

@@ -16,11 +16,21 @@
     box-shadow: $default-box-shadow; 
 
     display: grid;
-   
+
+    @media only screen and (max-width:$bp-small) {
+        grid-column: 1/-1;
+        margin-top: 0rem;
+
+    }
 
     &__header{
         font-size: 3.5rem;
         margin-bottom: 2rem;
+
+        @media only screen and (max-width:$bp-small) {
+            font-size: 3rem;
+
+        }
     }
 
     &__input{
@@ -30,6 +40,10 @@
     &__section h3{
         text-transform: uppercase;
     }
+
+    // &__section {
+    //     align-self: center;
+    // }
 
 };
 
