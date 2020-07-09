@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Mock-Airbnb website that users can search and reserve rooms in San Francisco. Built in React, Redux, and Sass.
 
-##Features ##
+### Features
 
 * Ability to login via Google OAuth2.0
  * Your name and picture from Google are shown on the navigation bar. 
@@ -17,10 +17,12 @@ Mock-Airbnb website that users can search and reserve rooms in San Francisco. Bu
 
 
 
-##Demo ##
-Open [https://master.d14eeu5976vw2v.amplifyapp.com/](Demo Link) to view it in the browser.
+### Demo
+[Demo Link](https://master.d14eeu5976vw2v.amplifyapp.com/) 
 
-
+### Learn More
+Learn more about how the app operates at my website
+[Tony Trinh Portfolio](https://www.tonywtrinh.com) 
 
 
 
