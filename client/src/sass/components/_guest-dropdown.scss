@@ -10,20 +10,23 @@
         -moz-user-select: none;     /* Firefox all */
         -ms-user-select: none;      /* IE 10+ */
         user-select: none;          /* Likely future */      
+        
+     
 
         &__dropdown{
             background-color: white;
             display:grid;
             grid-column: 1/-1;
             //position absolute is the key for the drop down to over from the white box form
-            position: relative; //https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text
-            grid-template-columns: 1fr minmax(min-content, 1fr);
+            position: absolute; //https://www.w3schools.com/css/tryit.asp?filename=trycss_dropdown_text
+            // width: 100%;
+            grid-template-columns: 20rem minmax(min-content, 1fr);
             border: 0.1rem solid $form-input-color;
             border-radius:0.2rem;
             grid-row-gap: 2rem;
-            padding: 1.5rem 0rem 1.5rem 1rem;
+            padding: 1.5rem 1rem 1.5rem 1rem;
             box-sizing:$default-box-shadow;
-            z-index: 1000;
+            // z-index: 1000;
 
            &__type{
               align-self:center;

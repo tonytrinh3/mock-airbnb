@@ -28,6 +28,8 @@ class TripsPage extends React.Component{
             tripsTEMP
 
         } = this.props;
+
+        console.log(tripsTEMP);
         
         //disabled this UNTIL express and mongodb to come into play
         return tripsTEMP.map((trip,i) =>{
